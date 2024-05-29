@@ -213,8 +213,8 @@ class ImagePublisher(Node):
 		pars = camera.GetCameraParameters()	
 
 		# Set ExposureAuto = Off
-		#parAec = pars.GetEnum("ExposureAuto")	
-		#parAec.SetValueStr("Off")
+		parAec = pars.GetEnum("ExposureAuto")	
+		parAec.SetValueStr("Continuous")
 
 		# Set ExposureMode = Timed 
 		#parExposureMode = pars.GetEnum("ExposureMode")
@@ -246,9 +246,14 @@ class ImagePublisher(Node):
 		parAec = pars.GetEnum("ExposureAuto")	
 		parAec.SetValueStr("Continuous")
 
-		# set AecExposureMin = 300us
-		#parAecExpMin = pars.GetInt("AecExposureMin")
-		#parAecExpMin.SetValue(300)
+		# set AecExposureMin = 200us
+		parAecExpMin = pars.GetInt("AecExposureMin")
+		parAecExpMin.SetValue(200)
+
+		# set AecExposureMax = 220us
+		parAecExpMax = pars.GetInt("AecExposureMax")
+		parAecExpMax.SetValue(20000)
+
 
 		# set AecExposureMax = (MAX-MIN)/2
 		#parAecExpMax = pars.GetInt("AecExposureMax")
@@ -265,8 +270,8 @@ class ImagePublisher(Node):
 		#print('Setup AGC')
 
 		# Set GainAuto = Continuous
-		#parAgc = pars.GetEnum("GainAuto")	
-		#parAgc.SetValueStr("Continuous")
+		parAgc = pars.GetEnum("GainAuto")	
+		parAgc.SetValueStr("Continuous")
 
 		# set AgcGainMin = 0.1dB
 		#parAgcGainMin = pars.GetFloat("AgcGainMin")
@@ -275,7 +280,15 @@ class ImagePublisher(Node):
 		# set AgcGainMax = 7dB
 		#parAgcGainMax = pars.GetFloat("AgcGainMax")
 		#parAgcGainMax.SetValue(7.0)
-		
+
+		#setAgcAecAicLuminanceType = Average
+		parAgcAec = pars.GetEnum("AgcAecAicLuminanceType")
+		parAgcAec.SetValueStr("Average")
+
+		#setAgcAecAicSpeed = x6
+		parAgcSpeed = pars.GetEnum("AgcAecAicSpeed")
+		parAgcSpeed.SetValueStr("x6")
+
 	# This function setups the Gain parameters of the camera
 	def SetupGain(self, camera):
 		#global g_gain
@@ -314,9 +327,9 @@ class ImagePublisher(Node):
 	def AcquireImages(self, dev1,data_stream):	
 		
 		self.SetupGain(dev1)
-		#self.SetupExposure(dev1)
+		self.SetupExposure(dev1)
 		self.SetupAec(dev1)
-		#self.SetupAgc(dev1)
+		self.SetupAgc(dev1)
 		
 		gPars = dev1.GetCameraParameters()
 		gPars.SetIntegerValue("TLParamsLocked", 1)
@@ -344,7 +357,7 @@ class ImagePublisher(Node):
 				continue
 			print ('FrameID: ', x, 'W:', buffer.GetWidth(),' H:',buffer.GetHeight())
 			if x % 2 == 1:
-				#libIpxCameraApiPy.PySaveImage(buffer, "PyFrame%d." % (x) + "jpg") 	
+				# libIpxCameraApiPy.PySaveImage(buffer, "PyFrame%d." % (x) + "jpg") 	
 				# convert raw data into numpy array
 				img = np.array(buffer.GetBufferPtr()).reshape((buffer.GetHeight(), buffer.GetWidth()))
 				
@@ -354,17 +367,17 @@ class ImagePublisher(Node):
 				if pixelType != PixelType.Mono8 and pixelType != PixelType.Mono10 and pixelType != PixelType.Mono12:
 					
 					# convert pixel type to opencv bayer code
-					bayerCode = self.PixelTypeToBayerType(pixelType, True)
+					bayerCode = self.PixelTypeToBayerType(pixelType, False)
 					img = cv.cvtColor(img, bayerCode)
 
 				# apply blur filter
 				img = cv.GaussianBlur(img, (5, 5), 0)
-				#img = cv.medianBlur(img, 5)
+				img = cv.medianBlur(img, 5)
 				
 				# save raw image and png compressed
-				#with open("PyFrame%d.raw" % (x), 'wb') as f:
-					#f.write(buffer.GetBufferPtr())
-					#cv.imwrite("PyFrame%d.png" % (x), img, (cv.IMWRITE_PNG_COMPRESSION, 0))
+				# with open("PyFrame%d.raw" % (x), 'wb') as f:
+				# 	f.write(buffer.GetBufferPtr())
+				# 	cv.imwrite("PyFrame%d.png" % (x), img, (cv.IMWRITE_PNG_COMPRESSION, 0))
 				
 				#sending the image to the topic
 				self.publisher_.publish(self.br.cv2_to_imgmsg(img))
