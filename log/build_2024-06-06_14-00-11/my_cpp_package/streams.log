@@ -1,0 +1,11 @@
+[0.311s] Invoking command in '/home/salaheldinm/Penguins/build/my_cpp_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/my_cpp_package -- -j16 -l16
+[0.344s] CMake Error at CMakeLists.txt:1:
+[0.344s]   Parse error.  Expected a command name, got unquoted argument with text
+[0.344s]   "<?xml".
+[0.344s] 
+[0.344s] 
+[0.345s] -- Configuring incomplete, errors occurred!
+[0.345s] See also "/home/salaheldinm/Penguins/build/my_cpp_package/CMakeFiles/CMakeOutput.log".
+[0.345s] See also "/home/salaheldinm/Penguins/build/my_cpp_package/CMakeFiles/CMakeError.log".
+[0.346s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[0.350s] Invoked command in '/home/salaheldinm/Penguins/build/my_cpp_package' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/my_cpp_package -- -j16 -l16

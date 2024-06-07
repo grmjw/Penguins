@@ -1,0 +1,362 @@
+[0.013s] Invoking command in '/home/salaheldinm/Penguins/build/ouster_ros': AMENT_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/salaheldinm/Penguins/src/ouster-ros/ouster-ros -DCMAKE_INSTALL_PREFIX=/home/salaheldinm/Penguins/install/ouster_ros
+[0.027s] -- Build type not specified, using: Release
+[0.089s] -- The C compiler identification is GNU 9.4.0
+[0.156s] -- The CXX compiler identification is GNU 9.4.0
+[0.164s] -- Check for working C compiler: /usr/bin/cc
+[0.256s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.257s] -- Detecting C compiler ABI info
+[0.350s] -- Detecting C compiler ABI info - done
+[0.360s] -- Detecting C compile features
+[0.360s] -- Detecting C compile features - done
+[0.362s] -- Check for working CXX compiler: /usr/bin/c++
+[0.466s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.467s] -- Detecting CXX compiler ABI info
+[0.576s] -- Detecting CXX compiler ABI info - done
+[0.592s] -- Detecting CXX compile features
+[0.592s] -- Detecting CXX compile features - done
+[0.595s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.629s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.629s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.841s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.885s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.891s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.022s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.063s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.168s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.264s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.267s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.268s] -- Looking for pthread.h
+[1.399s] -- Looking for pthread.h - found
+[1.399s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.535s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.535s] -- Looking for pthread_create in pthreads
+[1.746s] -- Looking for pthread_create in pthreads - not found
+[1.746s] -- Looking for pthread_create in pthread
+[1.848s] -- Looking for pthread_create in pthread - found
+[1.849s] -- Found Threads: TRUE  
+[2.042s] -- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[2.132s] -- Found rclcpp_lifecycle: 2.4.3 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[2.242s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.614s] -- Found ouster_sensor_msgs: 0.12.2 (/home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake)
+[2.677s] -- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+[2.697s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[2.720s] -- Found Eigen3: /usr/lib/cmake/eigen3/Eigen3Config.cmake (found version "3.3.7") 
+[2.780s] -- Checking for module 'eigen3'
+[2.861s] --   Found eigen3, version 3.3.7
+[3.043s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[3.044s] -- Eigen found (include: /usr/include/eigen3, version: 3.3.7)
+[3.167s] -- Found Boost: /usr/include (found suitable version "1.71.0", minimum required is "1.55.0") found components: system filesystem date_time iostreams regex 
+[3.170s] -- looking for PCL_COMMON
+[3.174s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[3.175s] -- Found PCL: pcl_common;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_regex.so  
+[3.193s] -- Found pcl_conversions: 2.2.1 (/opt/ros/foxy/share/pcl_conversions/cmake)
+[3.774s] -- Found tf2_eigen: 0.13.14 (/opt/ros/foxy/share/tf2_eigen/cmake)
+[4.359s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[4.366s] -- Found jsoncpp: /usr/lib/x86_64-linux-gnu/cmake/jsoncpp/jsoncppConfig.cmake  
+[4.486s] -- Found CURL: /usr/include/x86_64-linux-gnu (found version "7.68.0") 
+[4.591s] -- Found ament_cmake_gtest: 0.9.12 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+[4.594s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[4.598s] -- Check if compiler accepts -pthread
+[4.702s] -- Check if compiler accepts -pthread - yes
+[4.810s] -- Configuring done
+[4.978s] -- Generating done
+[4.982s] -- Build files have been written to: /home/salaheldinm/Penguins/build/ouster_ros
+[5.004s] Invoked command in '/home/salaheldinm/Penguins/build/ouster_ros' returned '0': AMENT_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/salaheldinm/Penguins/src/ouster-ros/ouster-ros -DCMAKE_INSTALL_PREFIX=/home/salaheldinm/Penguins/install/ouster_ros
+[5.008s] Invoking command in '/home/salaheldinm/Penguins/build/ouster_ros': AMENT_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_ros -- -j16 -l16
+[5.067s] [35m[1mScanning dependencies of target gtest_main[0m
+[5.067s] [35m[1mScanning dependencies of target ouster_generate_header[0m
+[5.069s] [35m[1mScanning dependencies of target gtest[0m
+[5.070s] [35m[1mScanning dependencies of target os_driver[0m
+[5.071s] [35m[1mScanning dependencies of target os_image[0m
+[5.071s] [35m[1mScanning dependencies of target os_sensor[0m
+[5.072s] [35m[1mScanning dependencies of target os_cloud[0m
+[5.073s] [35m[1mScanning dependencies of target os_replay[0m
+[5.085s] [34m[1mGenerating build info header[0m
+[5.097s] [  1%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[5.103s] [  3%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[5.126s] [  5%] [32mBuilding CXX object CMakeFiles/os_replay.dir/rclcpp_components/node_main_os_replay.cpp.o[0m
+[5.129s] [  7%] [32mBuilding CXX object CMakeFiles/os_driver.dir/rclcpp_components/node_main_os_driver.cpp.o[0m
+[5.133s] [  9%] [32mBuilding CXX object CMakeFiles/os_sensor.dir/rclcpp_components/node_main_os_sensor.cpp.o[0m
+[5.133s] [ 11%] [32mBuilding CXX object CMakeFiles/os_image.dir/rclcpp_components/node_main_os_image.cpp.o[0m
+[5.140s] [ 13%] [32mBuilding CXX object CMakeFiles/os_cloud.dir/rclcpp_components/node_main_os_cloud.cpp.o[0m
+[5.210s] [ 13%] Built target ouster_generate_header
+[5.231s] [35m[1mScanning dependencies of target ouster_client[0m
+[5.317s] [ 15%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/client.cpp.o[0m
+[5.320s] [ 16%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/sensor_info.cpp.o[0m
+[5.324s] [ 18%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/lidar_scan.cpp.o[0m
+[5.336s] [ 20%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/image_processing.cpp.o[0m
+[5.338s] [ 22%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/types.cpp.o[0m
+[5.354s] [ 26%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/netcompat.cpp.o[0m
+[5.354s] [ 26%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/buffered_udp_source.cpp.o[0m
+[5.442s] [ 28%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/parsing.cpp.o[0m
+[5.464s] [ 30%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/sensor_http.cpp.o[0m
+[6.236s] [ 32%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/sensor_http_imp.cpp.o[0m
+[8.478s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/src/parsing.cpp:[m[K In member function ‘[01m[Kuint32_t ouster::sensor::packet_format::frame_id(const uint8_t*) const[m[K’:
+[8.478s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/src/parsing.cpp:443:50:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuint16_t ouster::sensor::packet_format::col_frame_id(const uint8_t*) const[m[K’ is deprecated: Use frame_id instead [[01;35m[K-Wdeprecated-declarations[m[K]
+[8.479s]   443 |         return col_frame_id(nth_col(0, lidar_buf)[01;35m[K)[m[K;
+[8.479s]       |                                                  [01;35m[K^[m[K
+[8.479s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/impl/packet_writer.h:8[m[K,
+[8.479s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/src/parsing.cpp:18[m[K:
+[8.479s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/types.h:1102:53:[m[K [01;36m[Knote: [m[Kdeclared here
+[8.479s]  1102 |     [[deprecated("Use frame_id instead")]] uint16_t [01;36m[Kcol_frame_id[m[K(
+[8.479s]       |                                                     [01;36m[K^~~~~~~~~~~~[m[K
+[8.479s] [ 33%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[8.701s] [ 33%] Built target gtest_main
+[8.744s] [ 35%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/sensor_tcp_imp.cpp.o[0m
+[9.706s] [ 37%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/logging.cpp.o[0m
+[12.729s] [ 39%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/profile_extension.cpp.o[0m
+[13.035s] [ 41%] [32m[1mLinking CXX executable os_sensor[0m
+[13.245s] [ 43%] [32m[1mLinking CXX executable os_image[0m
+[13.840s] [ 45%] [32m[1mLinking CXX executable os_driver[0m
+[13.890s] [ 45%] Built target os_sensor
+[13.932s] [ 47%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/util.cpp.o[0m
+[14.029s] [ 47%] Built target os_image
+[14.103s] [ 49%] [32m[1mLinking CXX executable os_replay[0m
+[14.113s] [ 50%] [32m[1mLinking CXX executable os_cloud[0m
+[14.343s] [ 50%] Built target os_driver
+[14.819s] [ 50%] Built target os_replay
+[14.891s] [ 50%] Built target os_cloud
+[21.907s] [ 52%] [32m[1mLinking CXX static library libgtest.a[0m
+[21.968s] [ 52%] Built target gtest
+[23.339s] [ 54%] [32m[1mLinking CXX static library libouster_client.a[0m
+[23.394s] [ 54%] Built target ouster_client
+[23.411s] [35m[1mScanning dependencies of target ouster_ros_library[0m
+[23.497s] [ 56%] [32mBuilding CXX object CMakeFiles/ouster_ros_library.dir/src/os_ros.cpp.o[0m
+[32.999s] [ 58%] [32m[1mLinking CXX shared library libouster_ros_library.so[0m
+[33.256s] [ 58%] Built target ouster_ros_library
+[33.271s] [35m[1mScanning dependencies of target os_image_component[0m
+[33.271s] [35m[1mScanning dependencies of target os_sensor_component[0m
+[33.271s] [35m[1mScanning dependencies of target ouster_ros_test[0m
+[33.272s] [35m[1mScanning dependencies of target os_replay_component[0m
+[33.275s] [35m[1mScanning dependencies of target os_driver_component[0m
+[33.275s] [35m[1mScanning dependencies of target os_cloud_component[0m
+[33.366s] [ 60%] [32mBuilding CXX object CMakeFiles/os_replay_component.dir/src/os_replay_node.cpp.o[0m
+[33.371s] [ 62%] [32mBuilding CXX object CMakeFiles/os_replay_component.dir/src/os_sensor_node_base.cpp.o[0m
+[33.392s] [ 66%] [32mBuilding CXX object CMakeFiles/os_cloud_component.dir/src/os_processing_node_base.cpp.o[0m
+[33.392s] [ 66%] [32mBuilding CXX object CMakeFiles/os_sensor_component.dir/src/os_sensor_node_base.cpp.o[0m
+[33.400s] [ 67%] [32mBuilding CXX object CMakeFiles/os_sensor_component.dir/src/os_sensor_node.cpp.o[0m
+[33.408s] [ 71%] [32mBuilding CXX object CMakeFiles/os_cloud_component.dir/src/os_cloud_node.cpp.o[0m
+[33.408s] [ 71%] [32mBuilding CXX object CMakeFiles/os_image_component.dir/src/os_image_node.cpp.o[0m
+[33.410s] [ 73%] [32mBuilding CXX object CMakeFiles/os_image_component.dir/src/os_processing_node_base.cpp.o[0m
+[33.425s] [ 75%] [32mBuilding CXX object CMakeFiles/os_driver_component.dir/src/os_sensor_node_base.cpp.o[0m
+[33.428s] [ 77%] [32mBuilding CXX object CMakeFiles/os_driver_component.dir/src/os_sensor_node.cpp.o[0m
+[33.451s] [ 79%] [32mBuilding CXX object CMakeFiles/os_driver_component.dir/src/os_driver_node.cpp.o[0m
+[33.468s] [ 81%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/test/ring_buffer_test.cpp.o[0m
+[33.486s] [ 83%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/test/point_transform_test.cpp.o[0m
+[33.487s] [ 84%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/test/point_accessor_test.cpp.o[0m
+[33.502s] [ 86%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/src/os_ros.cpp.o[0m
+[33.504s] [ 88%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/test/point_cloud_compose_test.cpp.o[0m
+[46.183s] [ 90%] [32m[1mLinking CXX shared library libos_replay_component.so[0m
+[47.385s] [ 90%] Built target os_replay_component
+[48.991s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_driver_node.cpp:20[m[K:
+[48.992s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:[m[K In member function ‘[01m[Kbool ouster_ros::LidarPacketHandler::lidar_handler_sensor_time(const ouster::sensor::packet_format&, const uint8_t*)[m[K’:
+[48.992s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:224:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool ouster::ScanBatcher::operator()(const uint8_t*, ouster::LidarScan&)[m[K’ is deprecated: Use ScanBatcher::operator(LidarPacket&, LidarScan&) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[48.992s]   224 |         if (!(*scan_batcher)(lidar_buf, *lidar_scan[01;35m[K)[m[K) return false;
+[48.992s]       |                                                    [01;35m[K^[m[K
+[48.992s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_ros.h:16[m[K,
+[48.992s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_driver_node.cpp:13[m[K:
+[48.992s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/lidar_scan.h:532:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[48.992s]   532 |     [01;36m[Koperator[m[K()(const uint8_t* packet_buf, LidarScan& ls);
+[48.992s]       |     [01;36m[K^~~~~~~~[m[K
+[49.024s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_driver_node.cpp:20[m[K:
+[49.024s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:[m[K In member function ‘[01m[Kbool ouster_ros::LidarPacketHandler::lidar_handler_sensor_time_ptp(const ouster::sensor::packet_format&, const uint8_t*, int64_t)[m[K’:
+[49.025s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:233:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool ouster::ScanBatcher::operator()(const uint8_t*, ouster::LidarScan&)[m[K’ is deprecated: Use ScanBatcher::operator(LidarPacket&, LidarScan&) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[49.025s]   233 |         if (!(*scan_batcher)(lidar_buf, *lidar_scan[01;35m[K)[m[K) return false;
+[49.025s]       |                                                    [01;35m[K^[m[K
+[49.025s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_ros.h:16[m[K,
+[49.025s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_driver_node.cpp:13[m[K:
+[49.025s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/lidar_scan.h:532:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[49.025s]   532 |     [01;36m[Koperator[m[K()(const uint8_t* packet_buf, LidarScan& ls);
+[49.025s]       |     [01;36m[K^~~~~~~~[m[K
+[49.026s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_driver_node.cpp:20[m[K:
+[49.026s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:[m[K In member function ‘[01m[Kbool ouster_ros::LidarPacketHandler::lidar_handler_ros_time(const ouster::sensor::packet_format&, const uint8_t*)[m[K’:
+[49.026s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:250:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool ouster::ScanBatcher::operator()(const uint8_t*, ouster::LidarScan&)[m[K’ is deprecated: Use ScanBatcher::operator(LidarPacket&, LidarScan&) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[49.026s]   250 |         if (!(*scan_batcher)(lidar_buf, *lidar_scan[01;35m[K)[m[K) return false;
+[49.026s]       |                                                    [01;35m[K^[m[K
+[49.026s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_ros.h:16[m[K,
+[49.026s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_driver_node.cpp:13[m[K:
+[49.026s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/lidar_scan.h:532:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[49.026s]   532 |     [01;36m[Koperator[m[K()(const uint8_t* packet_buf, LidarScan& ls);
+[49.026s]       |     [01;36m[K^~~~~~~~[m[K
+[49.150s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_image_node.cpp:23[m[K:
+[49.150s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:[m[K In member function ‘[01m[Kbool ouster_ros::LidarPacketHandler::lidar_handler_sensor_time(const ouster::sensor::packet_format&, const uint8_t*)[m[K’:
+[49.151s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:224:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool ouster::ScanBatcher::operator()(const uint8_t*, ouster::LidarScan&)[m[K’ is deprecated: Use ScanBatcher::operator(LidarPacket&, LidarScan&) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[49.151s]   224 |         if (!(*scan_batcher)(lidar_buf, *lidar_scan[01;35m[K)[m[K) return false;
+[49.151s]       |                                                    [01;35m[K^[m[K
+[49.151s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_ros.h:16[m[K,
+[49.151s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_image_node.cpp:17[m[K:
+[49.151s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/lidar_scan.h:532:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[49.151s]   532 |     [01;36m[Koperator[m[K()(const uint8_t* packet_buf, LidarScan& ls);
+[49.151s]       |     [01;36m[K^~~~~~~~[m[K
+[49.177s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_image_node.cpp:23[m[K:
+[49.177s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:[m[K In member function ‘[01m[Kbool ouster_ros::LidarPacketHandler::lidar_handler_sensor_time_ptp(const ouster::sensor::packet_format&, const uint8_t*, int64_t)[m[K’:
+[49.177s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:233:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool ouster::ScanBatcher::operator()(const uint8_t*, ouster::LidarScan&)[m[K’ is deprecated: Use ScanBatcher::operator(LidarPacket&, LidarScan&) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[49.177s]   233 |         if (!(*scan_batcher)(lidar_buf, *lidar_scan[01;35m[K)[m[K) return false;
+[49.177s]       |                                                    [01;35m[K^[m[K
+[49.178s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_ros.h:16[m[K,
+[49.178s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_image_node.cpp:17[m[K:
+[49.178s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/lidar_scan.h:532:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[49.178s]   532 |     [01;36m[Koperator[m[K()(const uint8_t* packet_buf, LidarScan& ls);
+[49.178s]       |     [01;36m[K^~~~~~~~[m[K
+[49.179s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_image_node.cpp:23[m[K:
+[49.179s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:[m[K In member function ‘[01m[Kbool ouster_ros::LidarPacketHandler::lidar_handler_ros_time(const ouster::sensor::packet_format&, const uint8_t*)[m[K’:
+[49.179s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:250:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool ouster::ScanBatcher::operator()(const uint8_t*, ouster::LidarScan&)[m[K’ is deprecated: Use ScanBatcher::operator(LidarPacket&, LidarScan&) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[49.179s]   250 |         if (!(*scan_batcher)(lidar_buf, *lidar_scan[01;35m[K)[m[K) return false;
+[49.179s]       |                                                    [01;35m[K^[m[K
+[49.179s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_ros.h:16[m[K,
+[49.180s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_image_node.cpp:17[m[K:
+[49.180s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/lidar_scan.h:532:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[49.180s]   532 |     [01;36m[Koperator[m[K()(const uint8_t* packet_buf, LidarScan& ls);
+[49.180s]       |     [01;36m[K^~~~~~~~[m[K
+[49.562s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_image_node.cpp:[m[K At global scope:
+[49.563s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_image_node.cpp:50:78:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstd_msgs::msg::String_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[49.563s]    50 |     void metadata_handler(const std_msgs::msg::String::ConstPtr& metadata_msg[01;35m[K)[m[K {
+[49.563s]       |                                                                              [01;35m[K^[m[K
+[49.563s] In file included from [01m[K/opt/ros/foxy/include/std_msgs/msg/string.hpp:7[m[K,
+[49.563s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_processing_node_base.h:14[m[K,
+[49.563s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_image_node.cpp:21[m[K:
+[49.563s] [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/string__struct.hpp:104:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[49.564s]   104 |     [01;36m[KConstPtr[m[K;
+[49.564s]       |     [01;36m[K^~~~~~~~[m[K
+[49.950s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_cloud_node.cpp:24[m[K:
+[49.950s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:[m[K In member function ‘[01m[Kbool ouster_ros::LidarPacketHandler::lidar_handler_sensor_time(const ouster::sensor::packet_format&, const uint8_t*)[m[K’:
+[49.951s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:224:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool ouster::ScanBatcher::operator()(const uint8_t*, ouster::LidarScan&)[m[K’ is deprecated: Use ScanBatcher::operator(LidarPacket&, LidarScan&) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[49.951s]   224 |         if (!(*scan_batcher)(lidar_buf, *lidar_scan[01;35m[K)[m[K) return false;
+[49.951s]       |                                                    [01;35m[K^[m[K
+[49.951s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_ros.h:16[m[K,
+[49.951s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_cloud_node.cpp:12[m[K:
+[49.951s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/lidar_scan.h:532:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[49.951s]   532 |     [01;36m[Koperator[m[K()(const uint8_t* packet_buf, LidarScan& ls);
+[49.951s]       |     [01;36m[K^~~~~~~~[m[K
+[49.982s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_cloud_node.cpp:24[m[K:
+[49.983s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:[m[K In member function ‘[01m[Kbool ouster_ros::LidarPacketHandler::lidar_handler_sensor_time_ptp(const ouster::sensor::packet_format&, const uint8_t*, int64_t)[m[K’:
+[49.983s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:233:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool ouster::ScanBatcher::operator()(const uint8_t*, ouster::LidarScan&)[m[K’ is deprecated: Use ScanBatcher::operator(LidarPacket&, LidarScan&) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[49.983s]   233 |         if (!(*scan_batcher)(lidar_buf, *lidar_scan[01;35m[K)[m[K) return false;
+[49.983s]       |                                                    [01;35m[K^[m[K
+[49.983s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_ros.h:16[m[K,
+[49.983s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_cloud_node.cpp:12[m[K:
+[49.983s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/lidar_scan.h:532:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[49.983s]   532 |     [01;36m[Koperator[m[K()(const uint8_t* packet_buf, LidarScan& ls);
+[49.983s]       |     [01;36m[K^~~~~~~~[m[K
+[49.984s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_cloud_node.cpp:24[m[K:
+[49.984s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:[m[K In member function ‘[01m[Kbool ouster_ros::LidarPacketHandler::lidar_handler_ros_time(const ouster::sensor::packet_format&, const uint8_t*)[m[K’:
+[49.984s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/lidar_packet_handler.h:250:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool ouster::ScanBatcher::operator()(const uint8_t*, ouster::LidarScan&)[m[K’ is deprecated: Use ScanBatcher::operator(LidarPacket&, LidarScan&) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[49.984s]   250 |         if (!(*scan_batcher)(lidar_buf, *lidar_scan[01;35m[K)[m[K) return false;
+[49.984s]       |                                                    [01;35m[K^[m[K
+[49.984s] In file included from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/include/ouster_ros/os_ros.h:16[m[K,
+[49.984s]                  from [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/src/os_cloud_node.cpp:12[m[K:
+[49.985s] [01m[K/home/salaheldinm/Penguins/src/ouster-ros/ouster-ros/ouster-sdk/ouster_client/include/ouster/lidar_scan.h:532:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[49.985s]   532 |     [01;36m[Koperator[m[K()(const uint8_t* packet_buf, LidarScan& ls);
+[49.985s]       |     [01;36m[K^~~~~~~~[m[K
+[56.982s] [ 92%] [32m[1mLinking CXX shared library libos_sensor_component.so[0m
+[57.625s] [ 92%] Built target os_sensor_component
+[60.699s] [ 94%] [32m[1mLinking CXX executable ouster_ros_test[0m
+[61.310s] [ 94%] Built target ouster_ros_test
+[63.301s] [ 96%] [32m[1mLinking CXX shared library libos_image_component.so[0m
+[63.611s] [ 96%] Built target os_image_component
+[67.430s] [ 98%] [32m[1mLinking CXX shared library libos_driver_component.so[0m
+[67.757s] [ 98%] Built target os_driver_component
+[68.665s] [100%] [32m[1mLinking CXX shared library libos_cloud_component.so[0m
+[68.982s] [100%] Built target os_cloud_component
+[69.000s] Invoked command in '/home/salaheldinm/Penguins/build/ouster_ros' returned '0': AMENT_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_ros -- -j16 -l16
+[69.113s] Invoking command in '/home/salaheldinm/Penguins/build/ouster_ros': AMENT_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/salaheldinm/Penguins/build/ouster_ros
+[69.129s] -- Install configuration: "Release"
+[69.129s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_sensor
+[69.129s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_sensor" to ""
+[69.129s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_replay
+[69.129s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_replay" to ""
+[69.130s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_cloud
+[69.130s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_cloud" to ""
+[69.130s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_image
+[69.130s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_image" to ""
+[69.131s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_driver
+[69.131s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_driver" to ""
+[69.131s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libouster_ros_library.so
+[69.132s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libouster_ros_library.so" to ""
+[69.133s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_sensor_component.so
+[69.135s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_sensor_component.so" to ""
+[69.135s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_replay_component.so
+[69.140s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_replay_component.so" to ""
+[69.140s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_cloud_component.so
+[69.144s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_cloud_component.so" to ""
+[69.144s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_image_component.so
+[69.145s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_image_component.so" to ""
+[69.146s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_driver_component.so
+[69.148s] -- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_driver_component.so" to ""
+[69.148s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include
+[69.148s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros
+[69.148s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_ros.h
+[69.148s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/sensor_point_types.h
+[69.148s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_processing_node_base.h
+[69.149s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_point.h
+[69.149s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/visibility_control.h
+[69.149s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/common_point_types.h
+[69.149s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_sensor_node_base.h
+[69.149s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include
+[69.149s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/optional-lite
+[69.150s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/optional-lite/nonstd
+[69.150s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/optional-lite/nonstd/optional.hpp
+[69.151s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster
+[69.151s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/image_processing.h
+[69.151s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/types.h
+[69.151s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl
+[69.151s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/lidar_scan_impl.h
+[69.151s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/packet_writer.h
+[69.152s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/cartesian.h
+[69.152s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/profile_extension.h
+[69.152s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/lidar_scan.h
+[69.152s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/buffered_udp_source.h
+[69.152s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/version.h
+[69.152s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/defaults.h
+[69.153s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/client.h
+[69.153s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/util.h
+[69.153s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/sensor_http.h
+[69.153s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/optional-lite
+[69.153s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/optional-lite/nonstd
+[69.153s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/optional-lite/nonstd/optional.hpp
+[69.153s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/LICENSE
+[69.154s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch
+[69.154s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.launch.xml
+[69.154s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/replay.independent.launch.xml
+[69.154s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.composite.launch.xml
+[69.154s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/record.launch.xml
+[69.154s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor_mtp.launch.xml
+[69.154s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/record.independent.launch.xml
+[69.155s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.composite.launch.py
+[69.155s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/driver_launch.py
+[69.155s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.independent.launch.py
+[69.155s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/driver.launch.py
+[69.155s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/replay.launch.xml
+[69.155s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/rviz.launch.xml
+[69.155s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.independent.launch.xml
+[69.155s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/rviz.launch.py
+[69.155s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config
+[69.156s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/viz.rviz
+[69.156s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/community_driver.rviz
+[69.156s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/driver_params.yaml
+[69.156s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/viz-reliable.rviz
+[69.156s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/metadata-qos-override.yaml
+[69.156s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/community_driver_config.yaml
+[69.156s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/os_sensor_cloud_image_params.yaml
+[69.157s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/library_path.sh
+[69.157s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/library_path.dsv
+[69.158s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/package_run_dependencies/ouster_ros
+[69.158s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/parent_prefix_path/ouster_ros
+[69.159s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/ament_prefix_path.sh
+[69.159s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/ament_prefix_path.dsv
+[69.160s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/path.sh
+[69.160s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/path.dsv
+[69.160s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.bash
+[69.161s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.sh
+[69.161s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.zsh
+[69.161s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.dsv
+[69.162s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/package.dsv
+[69.162s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/packages/ouster_ros
+[69.162s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/rclcpp_components/ouster_ros
+[69.163s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[69.163s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[69.164s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ament_cmake_export_libraries-extras.cmake
+[69.164s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ouster_rosConfig.cmake
+[69.164s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ouster_rosConfig-version.cmake
+[69.165s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/package.xml
+[69.169s] Invoked command in '/home/salaheldinm/Penguins/build/ouster_ros' returned '0': AMENT_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/salaheldinm/Penguins/build/ouster_ros

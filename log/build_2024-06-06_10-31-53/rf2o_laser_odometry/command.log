@@ -1,0 +1,6 @@
+Invoking command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/salaheldinm/Penguins/src/rf2o_laser_odometry -DCMAKE_INSTALL_PREFIX=/home/salaheldinm/Penguins/install/rf2o_laser_odometry
+Invoked command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/salaheldinm/Penguins/src/rf2o_laser_odometry -DCMAKE_INSTALL_PREFIX=/home/salaheldinm/Penguins/install/rf2o_laser_odometry
+Invoking command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/rf2o_laser_odometry -- -j16 -l16
+Invoked command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/rf2o_laser_odometry -- -j16 -l16
+Invoking command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/rf2o_laser_odometry
+Invoked command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/rf2o_laser_odometry

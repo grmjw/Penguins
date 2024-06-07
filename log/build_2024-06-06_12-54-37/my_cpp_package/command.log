@@ -1,0 +1,6 @@
+Invoking command in '/home/salaheldinm/Penguins/build/my_cpp_package': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/salaheldinm/Penguins/src/my_cpp_package -DCMAKE_INSTALL_PREFIX=/home/salaheldinm/Penguins/install/my_cpp_package
+Invoked command in '/home/salaheldinm/Penguins/build/my_cpp_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/salaheldinm/Penguins/src/my_cpp_package -DCMAKE_INSTALL_PREFIX=/home/salaheldinm/Penguins/install/my_cpp_package
+Invoking command in '/home/salaheldinm/Penguins/build/my_cpp_package': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/my_cpp_package -- -j16 -l16
+Invoked command in '/home/salaheldinm/Penguins/build/my_cpp_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/my_cpp_package -- -j16 -l16
+Invoking command in '/home/salaheldinm/Penguins/build/my_cpp_package': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/my_cpp_package
+Invoked command in '/home/salaheldinm/Penguins/build/my_cpp_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/my_cpp_package

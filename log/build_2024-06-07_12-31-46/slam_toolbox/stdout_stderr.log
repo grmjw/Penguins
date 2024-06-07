@@ -1,0 +1,44 @@
+[  9%] Built target slam_toolbox__rosidl_generator_c
+[ 10%] Built target slam_toolbox__cpp
+[ 12%] Built target kartoSlamToolbox
+[ 30%] Built target slam_toolbox__rosidl_typesupport_c
+[ 30%] Built target slam_toolbox__rosidl_typesupport_cpp
+[ 39%] Built target slam_toolbox__rosidl_typesupport_introspection_c
+[ 48%] Built target slam_toolbox__rosidl_typesupport_introspection_cpp
+[ 57%] Built target slam_toolbox__rosidl_typesupport_fastrtps_cpp
+[ 66%] Built target slam_toolbox__rosidl_typesupport_fastrtps_c
+[ 66%] Built target slam_toolbox
+[35m[1mScanning dependencies of target ceres_solver_plugin[0m
+[ 67%] Built target slam_toolbox__py
+[ 72%] Built target toolbox_common
+[ 80%] Built target slam_toolbox__python
+[ 81%] [32mBuilding CXX object CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o[0m
+[ 83%] Built target SlamToolboxPlugin
+[ 85%] Built target slam_toolbox__rosidl_typesupport_c__pyext
+[ 85%] Built target slam_toolbox__rosidl_typesupport_fastrtps_c__pyext
+[ 86%] Built target merge_maps_kinematic
+[ 88%] Built target sync_slam_toolbox
+[ 90%] Built target lifelong_slam_toolbox
+[ 91%] Built target slam_toolbox__rosidl_typesupport_introspection_c__pyext
+[ 93%] Built target async_slam_toolbox
+[ 94%] Built target localization_slam_toolbox
+[ 95%] Built target sync_slam_toolbox_node
+[ 96%] Built target lifelong_slam_toolbox_node
+[ 97%] Built target async_slam_toolbox_node
+[ 99%] Built target localization_slam_toolbox_node
+[01m[K/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel/solvers/ceres_solver.cpp:90:4:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #debug_logging_
+   90 |   #[01;31m[Kdebug_logging_[m[K = node->get_parameter("debug_logging").as_bool();
+      |    [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel/solvers/ceres_solver.cpp:2:1:[m[K [01;31m[Kerror: [m[K‘[01m[KCeresSolver[m[K’ does not name a type
+    2 | [01;31m[KCeresSolver[m[K::CeresSolver()
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel/solvers/ceres_solver.cpp:12:6:[m[K [01;31m[Kerror: [m[K‘[01m[KCeresSolver[m[K’ has not been declared
+   12 | void [01;31m[KCeresSolver[m[K::Configure(rclcpp::Node::SharedPtr node)
+      |      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel/solvers/ceres_solver.cpp:12:29:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KConfigure[m[K’ declared void
+   12 | void CeresSolver::Configure([01;31m[Krclcpp[m[K::Node::SharedPtr node)
+      |                             [01;31m[K^~~~~~[m[K
+[01m[K/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel/solvers/ceres_solver.cpp:12:29:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+make[2]: *** [CMakeFiles/ceres_solver_plugin.dir/build.make:63: CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:460: CMakeFiles/ceres_solver_plugin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

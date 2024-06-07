@@ -1,0 +1,196 @@
+[0.074s] Invoking command in '/home/salaheldinm/Penguins/build/ouster_sensor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_sensor_msgs -- -j16 -l16
+[0.362s] [  1%] Built target ouster_sensor_msgs__cpp
+[0.363s] [ 12%] Built target ouster_sensor_msgs__rosidl_generator_c
+[0.363s] [ 23%] Built target ouster_sensor_msgs__rosidl_typesupport_introspection_cpp
+[0.363s] [ 34%] Built target ouster_sensor_msgs__rosidl_typesupport_cpp
+[0.364s] [ 45%] Built target ouster_sensor_msgs__rosidl_typesupport_c
+[0.364s] [ 56%] Built target ouster_sensor_msgs__rosidl_typesupport_introspection_c
+[0.364s] [ 67%] Built target ouster_sensor_msgs__rosidl_typesupport_fastrtps_cpp
+[0.364s] [ 78%] Built target ouster_sensor_msgs__rosidl_typesupport_fastrtps_c
+[0.365s] [ 78%] Built target ouster_sensor_msgs
+[0.365s] [ 80%] Built target ouster_sensor_msgs__py
+[0.374s] [ 89%] Built target ouster_sensor_msgs__python
+[0.401s] [ 92%] Built target ouster_sensor_msgs__rosidl_typesupport_introspection_c__pyext
+[0.408s] [ 96%] Built target ouster_sensor_msgs__rosidl_typesupport_c__pyext
+[0.417s] [100%] Built target ouster_sensor_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.443s] Invoked command in '/home/salaheldinm/Penguins/build/ouster_sensor_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_sensor_msgs -- -j16 -l16
+[0.563s] Invoking command in '/home/salaheldinm/Penguins/build/ouster_sensor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/ouster_sensor_msgs
+[0.575s] -- Install configuration: ""
+[0.576s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ament_index/resource_index/rosidl_interfaces/ouster_sensor_msgs
+[0.576s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs
+[0.576s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg
+[0.581s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/packet_msg.h
+[0.581s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail
+[0.582s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__struct.h
+[0.582s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__functions.c
+[0.583s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__functions.h
+[0.583s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__type_support.h
+[0.583s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.583s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv
+[0.583s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/get_metadata.h
+[0.584s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail
+[0.584s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__struct.h
+[0.584s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__struct.h
+[0.584s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__functions.h
+[0.584s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__type_support.h
+[0.585s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__functions.c
+[0.585s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__functions.c
+[0.585s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__functions.c
+[0.585s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__type_support.h
+[0.586s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__struct.h
+[0.586s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__functions.h
+[0.586s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__functions.h
+[0.586s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__type_support.h
+[0.586s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/set_config.h
+[0.586s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/get_config.h
+[0.587s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/environment/library_path.sh
+[0.587s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/environment/library_path.dsv
+[0.587s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/libouster_sensor_msgs__rosidl_generator_c.so
+[0.587s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__rosidl_typesupport_fastrtps_c.h
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__rosidl_typesupport_fastrtps_c.h
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__rosidl_typesupport_fastrtps_c.h
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__rosidl_typesupport_fastrtps_c.h
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/libouster_sensor_msgs__rosidl_typesupport_fastrtps_c.so
+[0.588s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs
+[0.589s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg
+[0.589s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail
+[0.589s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/dds_fastrtps
+[0.589s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[0.589s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.589s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv
+[0.589s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail
+[0.589s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__rosidl_typesupport_fastrtps_cpp.hpp
+[0.589s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/dds_fastrtps
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__rosidl_typesupport_fastrtps_cpp.hpp
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__rosidl_typesupport_fastrtps_cpp.hpp
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/libouster_sensor_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__rosidl_typesupport_introspection_c.h
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__type_support.c
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv
+[0.590s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__rosidl_typesupport_introspection_c.h
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__type_support.c
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__rosidl_typesupport_introspection_c.h
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__type_support.c
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__type_support.c
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__rosidl_typesupport_introspection_c.h
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/libouster_sensor_msgs__rosidl_typesupport_introspection_c.so
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/libouster_sensor_msgs__rosidl_typesupport_c.so
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/packet_msg.hpp
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__type_support.hpp
+[0.591s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__traits.hpp
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__builder.hpp
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__struct.hpp
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/get_metadata.hpp
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__builder.hpp
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__struct.hpp
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__type_support.hpp
+[0.592s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__traits.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__struct.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__traits.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__builder.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__type_support.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__struct.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__type_support.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__builder.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__traits.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/get_config.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/set_config.hpp
+[0.593s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__type_support.cpp
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/msg/detail/packet_msg__rosidl_typesupport_introspection_cpp.hpp
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__rosidl_typesupport_introspection_cpp.hpp
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_metadata__type_support.cpp
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__type_support.cpp
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/get_config__rosidl_typesupport_introspection_cpp.hpp
+[0.594s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__rosidl_typesupport_introspection_cpp.hpp
+[0.595s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/include/ouster_sensor_msgs/srv/detail/set_config__type_support.cpp
+[0.595s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/libouster_sensor_msgs__rosidl_typesupport_introspection_cpp.so
+[0.595s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/libouster_sensor_msgs__rosidl_typesupport_cpp.so
+[0.595s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/environment/pythonpath.sh
+[0.595s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/environment/pythonpath.dsv
+[0.595s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/__init__.py
+[0.611s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/msg
+[0.611s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/msg/_packet_msg_s.c
+[0.611s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/msg/_packet_msg.py
+[0.611s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/msg/__init__.py
+[0.611s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/srv
+[0.611s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/srv/_set_config.py
+[0.612s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/srv/_get_metadata.py
+[0.612s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/srv/_get_metadata_s.c
+[0.613s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/srv/_get_config_s.c
+[0.613s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/srv/_get_config.py
+[0.613s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/srv/__init__.py
+[0.613s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/srv/_set_config_s.c
+[0.613s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/ouster_sensor_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[0.614s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/ouster_sensor_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[0.617s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages/ouster_sensor_msgs/ouster_sensor_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[0.617s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/libouster_sensor_msgs__python.so
+[0.618s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/msg/PacketMsg.idl
+[0.618s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/GetConfig.idl
+[0.618s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/SetConfig.idl
+[0.618s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/GetMetadata.idl
+[0.618s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/msg/PacketMsg.msg
+[0.619s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/GetConfig.srv
+[0.619s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/GetConfig_Request.msg
+[0.619s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/GetConfig_Response.msg
+[0.619s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/SetConfig.srv
+[0.619s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/SetConfig_Request.msg
+[0.620s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/SetConfig_Response.msg
+[0.620s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/GetMetadata.srv
+[0.620s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/GetMetadata_Request.msg
+[0.620s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/srv/GetMetadata_Response.msg
+[0.620s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ament_index/resource_index/package_run_dependencies/ouster_sensor_msgs
+[0.620s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ament_index/resource_index/parent_prefix_path/ouster_sensor_msgs
+[0.620s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/environment/ament_prefix_path.sh
+[0.620s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/environment/ament_prefix_path.dsv
+[0.621s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/environment/path.sh
+[0.621s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/environment/path.dsv
+[0.621s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/local_setup.bash
+[0.621s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/local_setup.sh
+[0.622s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/local_setup.zsh
+[0.622s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/local_setup.dsv
+[0.623s] -- Installing: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/package.dsv
+[0.623s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ament_index/resource_index/packages/ouster_sensor_msgs
+[0.623s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_generator_cExport.cmake
+[0.623s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.623s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.623s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.624s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_typesupport_cExport.cmake
+[0.624s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.624s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_generator_cppExport.cmake
+[0.624s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.624s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.624s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_typesupport_cppExport.cmake
+[0.624s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.624s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/rosidl_cmake-extras.cmake
+[0.625s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.625s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.625s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.625s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.625s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.625s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.625s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgsConfig.cmake
+[0.625s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake/ouster_sensor_msgsConfig-version.cmake
+[0.625s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/package.xml
+[0.638s] Invoked command in '/home/salaheldinm/Penguins/build/ouster_sensor_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/ouster_sensor_msgs

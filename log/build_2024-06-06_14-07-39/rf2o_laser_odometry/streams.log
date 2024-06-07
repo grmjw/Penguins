@@ -1,0 +1,25 @@
+[0.280s] Invoking command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/rf2o_laser_odometry -- -j16 -l16
+[0.357s] [ 40%] Built target rf2o_laser_odometry
+[0.376s] [100%] Built target rf2o_laser_odometry_node
+[0.395s] Invoked command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/rf2o_laser_odometry -- -j16 -l16
+[0.435s] Invoking command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/rf2o_laser_odometry
+[0.450s] -- Install configuration: ""
+[0.451s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/lib/rf2o_laser_odometry/rf2o_laser_odometry_node
+[0.451s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/launch
+[0.451s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/launch/rf2o_laser_odometry.launch.py
+[0.451s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/ament_index/resource_index/package_run_dependencies/rf2o_laser_odometry
+[0.451s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/ament_index/resource_index/parent_prefix_path/rf2o_laser_odometry
+[0.452s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/ament_prefix_path.sh
+[0.452s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/ament_prefix_path.dsv
+[0.452s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/path.sh
+[0.453s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/path.dsv
+[0.453s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.bash
+[0.453s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.sh
+[0.453s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.zsh
+[0.453s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.dsv
+[0.453s] -- Installing: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.dsv
+[0.453s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/ament_index/resource_index/packages/rf2o_laser_odometry
+[0.453s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/cmake/rf2o_laser_odometryConfig.cmake
+[0.454s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/cmake/rf2o_laser_odometryConfig-version.cmake
+[0.454s] -- Up-to-date: /home/salaheldinm/Penguins/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.xml
+[0.474s] Invoked command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/rf2o_laser_odometry

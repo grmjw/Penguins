@@ -1,0 +1,65 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+-- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.3.7") 
+-- Found Curses: /usr/lib/x86_64-linux-gnu/libcurses.so  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/salaheldinm/Penguins/build/my_cpp_package
+[35m[1mScanning dependencies of target odometry_publisher[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/odometry_publisher.dir/src/odometry_publisher.cpp.o[0m
+[100%] [32m[1mLinking CXX executable odometry_publisher[0m
+[100%] Built target odometry_publisher
+-- Install configuration: ""
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/lib/my_cpp_package/odometry_publisher
+-- Set runtime path of "/home/salaheldinm/Penguins/install/my_cpp_package/lib/my_cpp_package/odometry_publisher" to ""
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/ament_index/resource_index/package_run_dependencies/my_cpp_package
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/ament_index/resource_index/parent_prefix_path/my_cpp_package
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/environment/ament_prefix_path.sh
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/environment/ament_prefix_path.dsv
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/environment/path.sh
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/environment/path.dsv
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/local_setup.bash
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/local_setup.sh
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/local_setup.zsh
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/local_setup.dsv
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/package.dsv
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/ament_index/resource_index/packages/my_cpp_package
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/cmake/my_cpp_packageConfig.cmake
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/cmake/my_cpp_packageConfig-version.cmake
+-- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/package.xml

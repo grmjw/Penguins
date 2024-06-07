@@ -1,0 +1,6 @@
+Invoking command in '/home/salaheldinm/Penguins/build/slam_toolbox': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel -DCMAKE_INSTALL_PREFIX=/home/salaheldinm/Penguins/install/slam_toolbox
+Invoked command in '/home/salaheldinm/Penguins/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel -DCMAKE_INSTALL_PREFIX=/home/salaheldinm/Penguins/install/slam_toolbox
+Invoking command in '/home/salaheldinm/Penguins/build/slam_toolbox': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/slam_toolbox -- -j16 -l16
+Invoked command in '/home/salaheldinm/Penguins/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/slam_toolbox -- -j16 -l16
+Invoking command in '/home/salaheldinm/Penguins/build/slam_toolbox': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/slam_toolbox
+Invoked command in '/home/salaheldinm/Penguins/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/slam_toolbox

@@ -1,0 +1,4 @@
+/home/salaheldinm/Penguins/build/ouster_sensor_msgs/rosidl_adapter/ouster_sensor_msgs:msg/PacketMsg.idl
+/home/salaheldinm/Penguins/build/ouster_sensor_msgs/rosidl_adapter/ouster_sensor_msgs:srv/GetConfig.idl
+/home/salaheldinm/Penguins/build/ouster_sensor_msgs/rosidl_adapter/ouster_sensor_msgs:srv/SetConfig.idl
+/home/salaheldinm/Penguins/build/ouster_sensor_msgs/rosidl_adapter/ouster_sensor_msgs:srv/GetMetadata.idl

@@ -1,0 +1,16 @@
+[0.060s] Invoking command in '/home/salaheldinm/Penguins/build/ouster_sensor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_sensor_msgs -- -j16 -l16
+[0.350s] [  1%] Built target ouster_sensor_msgs__cpp
+[0.351s] [ 12%] Built target ouster_sensor_msgs__rosidl_generator_c
+[0.352s] [ 23%] Built target ouster_sensor_msgs__rosidl_typesupport_cpp
+[0.352s] [ 34%] Built target ouster_sensor_msgs__rosidl_typesupport_c
+[0.352s] [ 45%] Built target ouster_sensor_msgs__rosidl_typesupport_fastrtps_cpp
+[0.352s] [ 56%] Built target ouster_sensor_msgs__rosidl_typesupport_introspection_cpp
+[0.352s] [ 67%] Built target ouster_sensor_msgs__rosidl_typesupport_introspection_c
+[0.352s] [ 78%] Built target ouster_sensor_msgs__rosidl_typesupport_fastrtps_c
+[0.352s] [ 78%] Built target ouster_sensor_msgs
+[0.352s] [ 80%] Built target ouster_sensor_msgs__py
+[0.352s] [ 89%] Built target ouster_sensor_msgs__python
+[0.353s] [ 92%] Built target ouster_sensor_msgs__rosidl_typesupport_introspection_c__pyext
+[0.353s] [ 96%] Built target ouster_sensor_msgs__rosidl_typesupport_c__pyext
+[0.354s] [100%] Built target ouster_sensor_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.365s] Invoked command in '/home/salaheldinm/Penguins/build/ouster_sensor_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_sensor_msgs -- -j16 -l16

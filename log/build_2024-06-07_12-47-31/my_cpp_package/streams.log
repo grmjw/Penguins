@@ -1,0 +1,22 @@
+[0.253s] Invoking command in '/home/salaheldinm/Penguins/build/my_cpp_package': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/my_cpp_package -- -j16 -l16
+[0.341s] [100%] Built target odometry_publisher
+[0.357s] Invoked command in '/home/salaheldinm/Penguins/build/my_cpp_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/my_cpp_package -- -j16 -l16
+[0.405s] Invoking command in '/home/salaheldinm/Penguins/build/my_cpp_package': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/my_cpp_package
+[0.420s] -- Install configuration: ""
+[0.421s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/lib/my_cpp_package/odometry_publisher
+[0.421s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/ament_index/resource_index/package_run_dependencies/my_cpp_package
+[0.421s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/ament_index/resource_index/parent_prefix_path/my_cpp_package
+[0.421s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/environment/ament_prefix_path.sh
+[0.421s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/environment/ament_prefix_path.dsv
+[0.421s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/environment/path.sh
+[0.422s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/environment/path.dsv
+[0.422s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/local_setup.bash
+[0.422s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/local_setup.sh
+[0.422s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/local_setup.zsh
+[0.422s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/local_setup.dsv
+[0.422s] -- Installing: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/package.dsv
+[0.422s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/ament_index/resource_index/packages/my_cpp_package
+[0.423s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/cmake/my_cpp_packageConfig.cmake
+[0.424s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/cmake/my_cpp_packageConfig-version.cmake
+[0.425s] -- Up-to-date: /home/salaheldinm/Penguins/install/my_cpp_package/share/my_cpp_package/package.xml
+[0.425s] Invoked command in '/home/salaheldinm/Penguins/build/my_cpp_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/salaheldinm/Penguins/build/my_cpp_package

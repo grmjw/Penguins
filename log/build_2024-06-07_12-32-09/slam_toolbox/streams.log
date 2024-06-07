@@ -1,0 +1,43 @@
+[0.069s] Invoking command in '/home/salaheldinm/Penguins/build/slam_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/slam_toolbox -- -j16 -l16
+[0.373s] [  1%] Built target slam_toolbox__cpp
+[0.374s] [ 10%] Built target slam_toolbox__rosidl_generator_c
+[0.374s] [ 12%] Built target kartoSlamToolbox
+[0.374s] [ 21%] Built target slam_toolbox__rosidl_typesupport_cpp
+[0.374s] [ 39%] Built target slam_toolbox__rosidl_typesupport_introspection_cpp
+[0.374s] [ 42%] Built target slam_toolbox__rosidl_typesupport_introspection_c
+[0.374s] [ 48%] Built target slam_toolbox__rosidl_typesupport_c
+[0.374s] [ 57%] Built target slam_toolbox__rosidl_typesupport_fastrtps_cpp
+[0.374s] [ 66%] Built target slam_toolbox__rosidl_typesupport_fastrtps_c
+[0.374s] [ 66%] Built target slam_toolbox
+[0.374s] [35m[1mScanning dependencies of target ceres_solver_plugin[0m
+[0.375s] [ 67%] Built target slam_toolbox__py
+[0.376s] [ 73%] Built target toolbox_common
+[0.376s] [ 74%] Built target SlamToolboxPlugin
+[0.384s] [ 75%] [32mBuilding CXX object CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o[0m
+[0.389s] [ 83%] Built target slam_toolbox__python
+[0.432s] [ 84%] Built target merge_maps_kinematic
+[0.435s] [ 85%] Built target slam_toolbox__rosidl_typesupport_introspection_c__pyext
+[0.436s] [ 86%] Built target slam_toolbox__rosidl_typesupport_fastrtps_c__pyext
+[0.438s] [ 87%] Built target slam_toolbox__rosidl_typesupport_c__pyext
+[0.445s] [ 90%] Built target localization_slam_toolbox
+[0.446s] [ 92%] Built target lifelong_slam_toolbox
+[0.446s] [ 92%] Built target sync_slam_toolbox
+[0.449s] [ 94%] Built target async_slam_toolbox
+[0.505s] [ 96%] Built target localization_slam_toolbox_node
+[0.510s] [ 97%] Built target sync_slam_toolbox_node
+[0.510s] [ 98%] Built target lifelong_slam_toolbox_node
+[0.512s] [ 99%] Built target async_slam_toolbox_node
+[1.232s] [01m[K/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel/solvers/ceres_solver.cpp:2:1:[m[K [01;31m[Kerror: [m[K‘[01m[KCeresSolver[m[K’ does not name a type
+[1.232s]     2 | [01;31m[KCeresSolver[m[K::CeresSolver()
+[1.232s]       | [01;31m[K^~~~~~~~~~~[m[K
+[1.232s] [01m[K/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel/solvers/ceres_solver.cpp:12:6:[m[K [01;31m[Kerror: [m[K‘[01m[KCeresSolver[m[K’ has not been declared
+[1.232s]    12 | void [01;31m[KCeresSolver[m[K::Configure(rclcpp::Node::SharedPtr node)
+[1.232s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[1.232s] [01m[K/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel/solvers/ceres_solver.cpp:12:29:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KConfigure[m[K’ declared void
+[1.232s]    12 | void CeresSolver::Configure([01;31m[Krclcpp[m[K::Node::SharedPtr node)
+[1.233s]       |                             [01;31m[K^~~~~~[m[K
+[1.233s] [01m[K/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel/solvers/ceres_solver.cpp:12:29:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+[1.256s] make[2]: *** [CMakeFiles/ceres_solver_plugin.dir/build.make:63: CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o] Error 1
+[1.256s] make[1]: *** [CMakeFiles/Makefile2:460: CMakeFiles/ceres_solver_plugin.dir/all] Error 2
+[1.256s] make: *** [Makefile:141: all] Error 2
+[1.274s] Invoked command in '/home/salaheldinm/Penguins/build/slam_toolbox' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/slam_toolbox -- -j16 -l16

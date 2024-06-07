@@ -1,0 +1,5 @@
+[0.054s] Invoking command in '/home/salaheldinm/Penguins/build/slam_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/slam_toolbox -- -j16 -l16
+[0.276s] CMake Error: The source directory "/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel" does not appear to contain CMakeLists.txt.
+[0.276s] Specify --help for usage, or press the help button on the CMake GUI.
+[0.276s] make: *** [Makefile:3600: cmake_check_build_system] Error 1
+[0.276s] Invoked command in '/home/salaheldinm/Penguins/build/slam_toolbox' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/slam_toolbox -- -j16 -l16

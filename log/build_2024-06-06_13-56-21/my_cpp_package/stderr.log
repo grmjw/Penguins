@@ -1,0 +1,24 @@
+[01m[K/home/salaheldinm/Penguins/src/my_cpp_package/src/odometry_publisher.cpp:[m[K In constructor ‘[01m[KOdometryPublisher::OdometryPublisher()[m[K’:
+[01m[K/home/salaheldinm/Penguins/src/my_cpp_package/src/odometry_publisher.cpp:21:65:[m[K [01;31m[Kerror: [m[K‘[01m[KPointCloud2[m[K’ is not a member of ‘[01m[Ksensor_msgs::msg[m[K’
+   21 |         scan_sub_ = this->create_subscription<sensor_msgs::msg::[01;31m[KPointCloud2[m[K>(
+      |                                                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/salaheldinm/Penguins/src/my_cpp_package/src/odometry_publisher.cpp:21:65:[m[K [01;31m[Kerror: [m[K‘[01m[KPointCloud2[m[K’ is not a member of ‘[01m[Ksensor_msgs::msg[m[K’
+[01m[K/home/salaheldinm/Penguins/src/my_cpp_package/src/odometry_publisher.cpp:22:107:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KOdometryPublisher::create_subscription<<expression error> >(const char [14], int, std::_Bind_helper<false, void (OdometryPublisher::*)(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >), OdometryPublisher*, const std::_Placeholder<1>&>::type)[m[K’
+   22 | dometryPublisher::scan_callback, this, std::placeholders::_1)[01;31m[K)[m[K;
+      |                                                              [01;31m[K^[m[K
+
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/salaheldinm/Penguins/src/my_cpp_package/src/odometry_publisher.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class CallbackMessageT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  213 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/salaheldinm/Penguins/src/my_cpp_package/src/odometry_publisher.cpp:22:107:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   22 | dometryPublisher::scan_callback, this, std::placeholders::_1)[01;31m[K)[m[K;
+      |                                                              [01;31m[K^[m[K
+
+make[2]: *** [CMakeFiles/odometry_publisher.dir/build.make:63: CMakeFiles/odometry_publisher.dir/src/odometry_publisher.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/odometry_publisher.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,247 @@
+-- Build type not specified, using: Release
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)
+-- Found rclcpp_lifecycle: 2.4.3 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found ouster_sensor_msgs: 0.12.2 (/home/salaheldinm/Penguins/install/ouster_sensor_msgs/share/ouster_sensor_msgs/cmake)
+-- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Found Eigen3: /usr/lib/cmake/eigen3/Eigen3Config.cmake (found version "3.3.7") 
+-- Checking for module 'eigen3'
+--   Found eigen3, version 3.3.7
+-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+-- Eigen found (include: /usr/include/eigen3, version: 3.3.7)
+-- Found Boost: /usr/include (found suitable version "1.71.0", minimum required is "1.55.0") found components: system filesystem date_time iostreams regex 
+-- looking for PCL_COMMON
+-- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+-- Found PCL: pcl_common;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_regex.so  
+-- Found pcl_conversions: 2.2.1 (/opt/ros/foxy/share/pcl_conversions/cmake)
+-- Found tf2_eigen: 0.13.14 (/opt/ros/foxy/share/tf2_eigen/cmake)
+-- Found Eigen3: TRUE (found version "3.3.7") 
+-- Found jsoncpp: /usr/lib/x86_64-linux-gnu/cmake/jsoncpp/jsoncppConfig.cmake  
+-- Found CURL: /usr/include/x86_64-linux-gnu (found version "7.68.0") 
+-- Found ament_cmake_gtest: 0.9.12 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+-- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/salaheldinm/Penguins/build/ouster_ros
+[35m[1mScanning dependencies of target gtest_main[0m
+[35m[1mScanning dependencies of target ouster_generate_header[0m
+[35m[1mScanning dependencies of target gtest[0m
+[35m[1mScanning dependencies of target os_driver[0m
+[35m[1mScanning dependencies of target os_image[0m
+[35m[1mScanning dependencies of target os_sensor[0m
+[35m[1mScanning dependencies of target os_cloud[0m
+[35m[1mScanning dependencies of target os_replay[0m
+[34m[1mGenerating build info header[0m
+[  1%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[  3%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[  5%] [32mBuilding CXX object CMakeFiles/os_replay.dir/rclcpp_components/node_main_os_replay.cpp.o[0m
+[  7%] [32mBuilding CXX object CMakeFiles/os_driver.dir/rclcpp_components/node_main_os_driver.cpp.o[0m
+[  9%] [32mBuilding CXX object CMakeFiles/os_sensor.dir/rclcpp_components/node_main_os_sensor.cpp.o[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/os_image.dir/rclcpp_components/node_main_os_image.cpp.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/os_cloud.dir/rclcpp_components/node_main_os_cloud.cpp.o[0m
+[ 13%] Built target ouster_generate_header
+[35m[1mScanning dependencies of target ouster_client[0m
+[ 15%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/client.cpp.o[0m
+[ 16%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/sensor_info.cpp.o[0m
+[ 18%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/lidar_scan.cpp.o[0m
+[ 20%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/image_processing.cpp.o[0m
+[ 22%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/types.cpp.o[0m
+[ 26%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/netcompat.cpp.o[0m
+[ 26%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/buffered_udp_source.cpp.o[0m
+[ 28%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/parsing.cpp.o[0m
+[ 30%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/sensor_http.cpp.o[0m
+[ 32%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/sensor_http_imp.cpp.o[0m
+[ 33%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 33%] Built target gtest_main
+[ 35%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/sensor_tcp_imp.cpp.o[0m
+[ 37%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/logging.cpp.o[0m
+[ 39%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/profile_extension.cpp.o[0m
+[ 41%] [32m[1mLinking CXX executable os_sensor[0m
+[ 43%] [32m[1mLinking CXX executable os_image[0m
+[ 45%] [32m[1mLinking CXX executable os_driver[0m
+[ 45%] Built target os_sensor
+[ 47%] [32mBuilding CXX object ouster_example/ouster_client/CMakeFiles/ouster_client.dir/src/util.cpp.o[0m
+[ 47%] Built target os_image
+[ 49%] [32m[1mLinking CXX executable os_replay[0m
+[ 50%] [32m[1mLinking CXX executable os_cloud[0m
+[ 50%] Built target os_driver
+[ 50%] Built target os_replay
+[ 50%] Built target os_cloud
+[ 52%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 52%] Built target gtest
+[ 54%] [32m[1mLinking CXX static library libouster_client.a[0m
+[ 54%] Built target ouster_client
+[35m[1mScanning dependencies of target ouster_ros_library[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/ouster_ros_library.dir/src/os_ros.cpp.o[0m
+[ 58%] [32m[1mLinking CXX shared library libouster_ros_library.so[0m
+[ 58%] Built target ouster_ros_library
+[35m[1mScanning dependencies of target os_image_component[0m
+[35m[1mScanning dependencies of target os_sensor_component[0m
+[35m[1mScanning dependencies of target ouster_ros_test[0m
+[35m[1mScanning dependencies of target os_replay_component[0m
+[35m[1mScanning dependencies of target os_driver_component[0m
+[35m[1mScanning dependencies of target os_cloud_component[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/os_replay_component.dir/src/os_replay_node.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/os_replay_component.dir/src/os_sensor_node_base.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/os_cloud_component.dir/src/os_processing_node_base.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/os_sensor_component.dir/src/os_sensor_node_base.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/os_sensor_component.dir/src/os_sensor_node.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/os_cloud_component.dir/src/os_cloud_node.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/os_image_component.dir/src/os_image_node.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/os_image_component.dir/src/os_processing_node_base.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/os_driver_component.dir/src/os_sensor_node_base.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/os_driver_component.dir/src/os_sensor_node.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/os_driver_component.dir/src/os_driver_node.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/test/ring_buffer_test.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/test/point_transform_test.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/test/point_accessor_test.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/src/os_ros.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/ouster_ros_test.dir/test/point_cloud_compose_test.cpp.o[0m
+[ 90%] [32m[1mLinking CXX shared library libos_replay_component.so[0m
+[ 90%] Built target os_replay_component
+[ 92%] [32m[1mLinking CXX shared library libos_sensor_component.so[0m
+[ 92%] Built target os_sensor_component
+[ 94%] [32m[1mLinking CXX executable ouster_ros_test[0m
+[ 94%] Built target ouster_ros_test
+[ 96%] [32m[1mLinking CXX shared library libos_image_component.so[0m
+[ 96%] Built target os_image_component
+[ 98%] [32m[1mLinking CXX shared library libos_driver_component.so[0m
+[ 98%] Built target os_driver_component
+[100%] [32m[1mLinking CXX shared library libos_cloud_component.so[0m
+[100%] Built target os_cloud_component
+-- Install configuration: "Release"
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_sensor
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_sensor" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_replay
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_replay" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_cloud
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_cloud" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_image
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_image" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_driver
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_driver" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libouster_ros_library.so
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libouster_ros_library.so" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_sensor_component.so
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_sensor_component.so" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_replay_component.so
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_replay_component.so" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_cloud_component.so
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_cloud_component.so" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_image_component.so
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_image_component.so" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_driver_component.so
+-- Set runtime path of "/home/salaheldinm/Penguins/install/ouster_ros/lib/libos_driver_component.so" to ""
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_ros.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/sensor_point_types.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_processing_node_base.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_point.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/visibility_control.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/common_point_types.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_sensor_node_base.h
+-- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/optional-lite
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/optional-lite/nonstd
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/optional-lite/nonstd/optional.hpp
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/image_processing.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/types.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/lidar_scan_impl.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/packet_writer.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/cartesian.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/profile_extension.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/lidar_scan.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/buffered_udp_source.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/version.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/defaults.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/client.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/util.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/sensor_http.h
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/optional-lite
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/optional-lite/nonstd
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/optional-lite/nonstd/optional.hpp
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/LICENSE
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.launch.xml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/replay.independent.launch.xml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.composite.launch.xml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/record.launch.xml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor_mtp.launch.xml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/record.independent.launch.xml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.composite.launch.py
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/driver_launch.py
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.independent.launch.py
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/driver.launch.py
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/replay.launch.xml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/rviz.launch.xml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.independent.launch.xml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/rviz.launch.py
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/viz.rviz
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/community_driver.rviz
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/driver_params.yaml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/viz-reliable.rviz
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/metadata-qos-override.yaml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/community_driver_config.yaml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/os_sensor_cloud_image_params.yaml
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/library_path.sh
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/library_path.dsv
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/package_run_dependencies/ouster_ros
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/parent_prefix_path/ouster_ros
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/ament_prefix_path.sh
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/ament_prefix_path.dsv
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/path.sh
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/path.dsv
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.bash
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.sh
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.zsh
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.dsv
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/package.dsv
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/packages/ouster_ros
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/rclcpp_components/ouster_ros
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ouster_rosConfig.cmake
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ouster_rosConfig-version.cmake
+-- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/package.xml

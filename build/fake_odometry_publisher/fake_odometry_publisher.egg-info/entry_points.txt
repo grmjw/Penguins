@@ -1,0 +1,3 @@
+[console_scripts]
+fake_odometry_publisher = fake_odometry_publisher.fake_odometry_publisher:main
+

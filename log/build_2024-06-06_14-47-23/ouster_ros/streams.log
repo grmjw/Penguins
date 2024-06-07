@@ -1,0 +1,110 @@
+[0.021s] Invoking command in '/home/salaheldinm/Penguins/build/ouster_ros': CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/home/salaheldinm/Penguins/install/nav2_bringup:/home/salaheldinm/Penguins/install/slam_toolbox:/home/salaheldinm/Penguins/install/rf2o_laser_odometry:/home/salaheldinm/Penguins/install/ouster_ros:/home/salaheldinm/Penguins/install/my_cpp_package:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:/home/salaheldinm/Penguins/install/slam_toolbox/lib:/home/salaheldinm/Penguins/install/ouster_ros/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:/home/salaheldinm/Penguins/install/slam_toolbox/lib/python3.8/site-packages:/home/salaheldinm/Penguins/install/fake_odometry_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_ros -- -j16 -l16
+[0.112s] [  7%] Built target gtest
+[0.112s] [  7%] Built target gtest_main
+[0.114s] [34m[1mGenerating build info header[0m
+[0.128s] [ 13%] Built target os_driver
+[0.128s] [ 15%] Built target os_sensor
+[0.137s] [ 22%] Built target os_replay
+[0.137s] [ 22%] Built target os_image
+[0.137s] [ 26%] Built target os_cloud
+[0.160s] [ 26%] Built target ouster_generate_header
+[0.217s] [ 54%] Built target ouster_client
+[0.264s] [ 58%] Built target ouster_ros_library
+[0.305s] [ 64%] Built target os_replay_component
+[0.319s] [ 73%] Built target os_sensor_component
+[0.319s] [ 75%] Built target os_image_component
+[0.323s] [ 81%] Built target os_cloud_component
+[0.335s] [ 88%] Built target os_driver_component
+[0.341s] [100%] Built target ouster_ros_test
+[0.358s] Invoked command in '/home/salaheldinm/Penguins/build/ouster_ros' returned '0': CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/home/salaheldinm/Penguins/install/nav2_bringup:/home/salaheldinm/Penguins/install/slam_toolbox:/home/salaheldinm/Penguins/install/rf2o_laser_odometry:/home/salaheldinm/Penguins/install/ouster_ros:/home/salaheldinm/Penguins/install/my_cpp_package:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:/home/salaheldinm/Penguins/install/slam_toolbox/lib:/home/salaheldinm/Penguins/install/ouster_ros/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:/home/salaheldinm/Penguins/install/slam_toolbox/lib/python3.8/site-packages:/home/salaheldinm/Penguins/install/fake_odometry_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_ros -- -j16 -l16
+[0.472s] Invoking command in '/home/salaheldinm/Penguins/build/ouster_ros': CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/home/salaheldinm/Penguins/install/nav2_bringup:/home/salaheldinm/Penguins/install/slam_toolbox:/home/salaheldinm/Penguins/install/rf2o_laser_odometry:/home/salaheldinm/Penguins/install/ouster_ros:/home/salaheldinm/Penguins/install/my_cpp_package:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:/home/salaheldinm/Penguins/install/slam_toolbox/lib:/home/salaheldinm/Penguins/install/ouster_ros/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:/home/salaheldinm/Penguins/install/slam_toolbox/lib/python3.8/site-packages:/home/salaheldinm/Penguins/install/fake_odometry_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --install /home/salaheldinm/Penguins/build/ouster_ros
+[0.493s] -- Install configuration: "Release"
+[0.493s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_sensor
+[0.493s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_replay
+[0.494s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_cloud
+[0.494s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_image
+[0.494s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/ouster_ros/os_driver
+[0.495s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/libouster_ros_library.so
+[0.495s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_sensor_component.so
+[0.496s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_replay_component.so
+[0.496s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_cloud_component.so
+[0.496s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_image_component.so
+[0.497s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/lib/libos_driver_component.so
+[0.497s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include
+[0.497s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros
+[0.497s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_ros.h
+[0.498s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/sensor_point_types.h
+[0.498s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_processing_node_base.h
+[0.498s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_point.h
+[0.499s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/visibility_control.h
+[0.501s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/common_point_types.h
+[0.501s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster_ros/os_sensor_node_base.h
+[0.502s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include
+[0.502s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/optional-lite
+[0.502s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/optional-lite/nonstd
+[0.502s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/optional-lite/nonstd/optional.hpp
+[0.502s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster
+[0.502s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/image_processing.h
+[0.503s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/types.h
+[0.503s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl
+[0.503s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/lidar_scan_impl.h
+[0.503s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/packet_writer.h
+[0.503s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/cartesian.h
+[0.503s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/impl/profile_extension.h
+[0.504s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/lidar_scan.h
+[0.504s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/buffered_udp_source.h
+[0.504s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/version.h
+[0.505s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/defaults.h
+[0.505s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/client.h
+[0.505s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/util.h
+[0.505s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/include/ouster/sensor_http.h
+[0.505s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/optional-lite
+[0.506s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/optional-lite/nonstd
+[0.506s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/include/ouster_ros/optional-lite/nonstd/optional.hpp
+[0.506s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/LICENSE
+[0.506s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch
+[0.506s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.launch.xml
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/replay.independent.launch.xml
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.composite.launch.xml
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/record.launch.xml
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor_mtp.launch.xml
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/record.independent.launch.xml
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.composite.launch.py
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/driver_launch.py
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.independent.launch.py
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/driver.launch.py
+[0.507s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/replay.launch.xml
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/rviz.launch.xml
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/sensor.independent.launch.xml
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/launch/rviz.launch.py
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/viz.rviz
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/community_driver.rviz
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/driver_params.yaml
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/viz-reliable.rviz
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/metadata-qos-override.yaml
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/community_driver_config.yaml
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/os_sensor_cloud_image_params.yaml
+[0.508s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/config/mapper_params_online_async.yaml
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/library_path.sh
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/library_path.dsv
+[0.508s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/package_run_dependencies/ouster_ros
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/parent_prefix_path/ouster_ros
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/ament_prefix_path.sh
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/ament_prefix_path.dsv
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/path.sh
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/environment/path.dsv
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.bash
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.sh
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.zsh
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/local_setup.dsv
+[0.509s] -- Installing: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/package.dsv
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/packages/ouster_ros
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ament_index/resource_index/rclcpp_components/ouster_ros
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ament_cmake_export_libraries-extras.cmake
+[0.509s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ouster_rosConfig.cmake
+[0.510s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/cmake/ouster_rosConfig-version.cmake
+[0.510s] -- Up-to-date: /home/salaheldinm/Penguins/install/ouster_ros/share/ouster_ros/package.xml
+[0.510s] Invoked command in '/home/salaheldinm/Penguins/build/ouster_ros' returned '0': CMAKE_PREFIX_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs:/home/salaheldinm/Penguins/install/nav2_bringup:/home/salaheldinm/Penguins/install/slam_toolbox:/home/salaheldinm/Penguins/install/rf2o_laser_odometry:/home/salaheldinm/Penguins/install/ouster_ros:/home/salaheldinm/Penguins/install/my_cpp_package:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy LD_LIBRARY_PATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib:/home/salaheldinm/Penguins/install/slam_toolbox/lib:/home/salaheldinm/Penguins/install/ouster_ros/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/salaheldinm/Penguins/install/ouster_sensor_msgs/lib/python3.8/site-packages:/home/salaheldinm/Penguins/install/slam_toolbox/lib/python3.8/site-packages:/home/salaheldinm/Penguins/install/fake_odometry_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --install /home/salaheldinm/Penguins/build/ouster_ros

@@ -1,0 +1,5 @@
+[0.330s] Invoking command in '/home/salaheldinm/Penguins/build/my_cpp_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/my_cpp_package -- -j16 -l16
+[0.402s] [35m[1mScanning dependencies of target odometry_publisher[0m
+[0.472s] [ 50%] [32mBuilding CXX object CMakeFiles/odometry_publisher.dir/src/odometry_publisher.cpp.o[0m
+[9.365s] [100%] [32m[1mLinking CXX executable odometry_publisher[0m
+[10.270s] [100%] Built target odometry_publisher

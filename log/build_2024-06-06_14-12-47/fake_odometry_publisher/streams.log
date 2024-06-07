@@ -1,0 +1,21 @@
+[0.698s] Invoking command in '/home/salaheldinm/Penguins/src/fake_odometry_publisher/fake_odometry_publisher': PYTHONPATH=/home/salaheldinm/Penguins/build/fake_odometry_publisher/prefix_override:/home/salaheldinm/Penguins/install/fake_odometry_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/fake_odometry_publisher build --build-base /home/salaheldinm/Penguins/build/fake_odometry_publisher/build install --record /home/salaheldinm/Penguins/build/fake_odometry_publisher/install.log --single-version-externally-managed install_data
+[0.896s] running egg_info
+[0.896s] writing ../../../build/fake_odometry_publisher/fake_odometry_publisher.egg-info/PKG-INFO
+[0.896s] writing dependency_links to ../../../build/fake_odometry_publisher/fake_odometry_publisher.egg-info/dependency_links.txt
+[0.896s] writing entry points to ../../../build/fake_odometry_publisher/fake_odometry_publisher.egg-info/entry_points.txt
+[0.897s] writing requirements to ../../../build/fake_odometry_publisher/fake_odometry_publisher.egg-info/requires.txt
+[0.897s] writing top-level names to ../../../build/fake_odometry_publisher/fake_odometry_publisher.egg-info/top_level.txt
+[0.920s] reading manifest file '../../../build/fake_odometry_publisher/fake_odometry_publisher.egg-info/SOURCES.txt'
+[0.920s] writing manifest file '../../../build/fake_odometry_publisher/fake_odometry_publisher.egg-info/SOURCES.txt'
+[0.920s] running build
+[0.920s] running build_py
+[0.921s] running install
+[0.921s] running install_lib
+[0.925s] running install_data
+[0.925s] running install_egg_info
+[0.926s] removing '/home/salaheldinm/Penguins/install/fake_odometry_publisher/lib/python3.8/site-packages/fake_odometry_publisher-0.0.0-py3.8.egg-info' (and everything under it)
+[0.926s] Copying ../../../build/fake_odometry_publisher/fake_odometry_publisher.egg-info to /home/salaheldinm/Penguins/install/fake_odometry_publisher/lib/python3.8/site-packages/fake_odometry_publisher-0.0.0-py3.8.egg-info
+[0.927s] running install_scripts
+[0.942s] Installing fake_odometry_publisher script to /home/salaheldinm/Penguins/install/fake_odometry_publisher/lib/fake_odometry_publisher
+[0.942s] writing list of installed files to '/home/salaheldinm/Penguins/build/fake_odometry_publisher/install.log'
+[0.981s] Invoked command in '/home/salaheldinm/Penguins/src/fake_odometry_publisher/fake_odometry_publisher' returned '0': PYTHONPATH=/home/salaheldinm/Penguins/build/fake_odometry_publisher/prefix_override:/home/salaheldinm/Penguins/install/fake_odometry_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/fake_odometry_publisher build --build-base /home/salaheldinm/Penguins/build/fake_odometry_publisher/build install --record /home/salaheldinm/Penguins/build/fake_odometry_publisher/install.log --single-version-externally-managed install_data
