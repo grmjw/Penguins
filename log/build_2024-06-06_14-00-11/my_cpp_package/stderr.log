@@ -1,6 +1,0 @@
-CMake Error at CMakeLists.txt:1:
-  Parse error.  Expected a command name, got unquoted argument with text
-  "<?xml".
-
-
-make: *** [Makefile:266: cmake_check_build_system] Error 1

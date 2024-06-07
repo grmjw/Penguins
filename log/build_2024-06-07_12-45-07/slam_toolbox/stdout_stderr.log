@@ -1,3 +1,0 @@
-CMake Error: The source directory "/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel" does not exist.
-Specify --help for usage, or press the help button on the CMake GUI.
-make: *** [Makefile:3600: cmake_check_build_system] Error 1

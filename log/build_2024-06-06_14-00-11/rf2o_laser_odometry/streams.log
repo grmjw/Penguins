@@ -1,3 +1,0 @@
-[0.308s] Invoking command in '/home/salaheldinm/Penguins/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/rf2o_laser_odometry -- -j16 -l16
-[0.397s] [ 40%] Built target rf2o_laser_odometry
-[0.405s] [100%] Built target rf2o_laser_odometry_node

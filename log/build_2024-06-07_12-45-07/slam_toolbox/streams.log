@@ -1,5 +1,0 @@
-[0.048s] Invoking command in '/home/salaheldinm/Penguins/build/slam_toolbox': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/slam_toolbox -- -j16 -l16
-[0.317s] CMake Error: The source directory "/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel" does not exist.
-[0.318s] Specify --help for usage, or press the help button on the CMake GUI.
-[0.319s] make: *** [Makefile:3600: cmake_check_build_system] Error 1
-[0.319s] Invoked command in '/home/salaheldinm/Penguins/build/slam_toolbox' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/slam_toolbox -- -j16 -l16

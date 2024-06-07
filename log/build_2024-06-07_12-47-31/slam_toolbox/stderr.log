@@ -1,3 +1,0 @@
-CMake Error: The source directory "/home/salaheldinm/Penguins/src/slam_toolbox-foxy-devel" does not appear to contain CMakeLists.txt.
-Specify --help for usage, or press the help button on the CMake GUI.
-make: *** [Makefile:3600: cmake_check_build_system] Error 1

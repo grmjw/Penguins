@@ -1,2 +1,0 @@
-Invoking command in '/home/salaheldinm/Penguins/build/ouster_sensor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_sensor_msgs -- -j16 -l16
-Invoked command in '/home/salaheldinm/Penguins/build/ouster_sensor_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/salaheldinm/Penguins/install/fake_odometry_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/salaheldinm/Penguins/build/ouster_sensor_msgs -- -j16 -l16

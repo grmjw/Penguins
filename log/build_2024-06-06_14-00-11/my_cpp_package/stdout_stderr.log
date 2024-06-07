@@ -1,9 +1,0 @@
-CMake Error at CMakeLists.txt:1:
-  Parse error.  Expected a command name, got unquoted argument with text
-  "<?xml".
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/salaheldinm/Penguins/build/my_cpp_package/CMakeFiles/CMakeOutput.log".
-See also "/home/salaheldinm/Penguins/build/my_cpp_package/CMakeFiles/CMakeError.log".
-make: *** [Makefile:266: cmake_check_build_system] Error 1
