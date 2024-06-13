@@ -17,6 +17,7 @@ import sys
 import os
 import platform
 import numpy as np
+import time
 
 #Device number from command prompt
 g_devNum = -1
@@ -144,26 +145,41 @@ class ImagePublisher(Node):
 			for dv in devListInt:
 				devList.append(dv)
 				print ('[', gv_num, ']    ',dv.GetModel())
-				gv_num+=1
+				#gv_num+=1
 		
 		if(len(devList)<1):
 			print('No device found')
 			return None
-		else:
-			if g_devNum>-1:
-				return devList[g_devNum]	
+		# else:
+		# 	if g_devNum>-1:
+		# 		return devList[g_devNum]	
 
-		print('Please select the camera number to connect to: ')
-		dv_select = sys.stdin.readline()[:-1]
-		# Return None if user does not select any camera
-		if not dv_select:
-			return None
+		# print('Please select the camera number to connect to: ')
+		# dv_select = sys.stdin.readline()[:-1]
+		# # Return None if user does not select any camera
+		# if not dv_select:
+		# 	return None
 
-		# Return selected camera's DeviceInfo object
-		if (int(dv_select)<gv_num) :
-			return devList[int(dv_select)]
-		else:
-			return 0
+		# # Return selected camera's DeviceInfo object
+		# if (int(dv_select)<gv_num) :
+		# 	return devList[int(dv_select)]
+		# else:
+		# 	return 0
+		return devList[0]
+	
+	def reconnect_device(self, ipxSystem):
+		for attempt in range(6):
+			print(f"Attempt {attempt + 1} to reconnect.")
+			deviceInfo = self.SelectDevice(ipxSystem)
+			if deviceInfo:
+				dev1 = self.connectToDevice(deviceInfo)
+				if dev1:
+					print("Reconnected to device.")
+					return dev1
+			print("Failed to reconnect. Waiting 10 seconds before retrying...")
+			time.sleep(10)
+			print("Failed to reconnect after 6 attempts.")
+		return None
 
 	# This function connects to the camera, specified by devInfo argument
 	def connectToDevice(self, devInfo):
@@ -330,6 +346,9 @@ class ImagePublisher(Node):
 		self.SetupExposure(dev1)
 		self.SetupAec(dev1)
 		self.SetupAgc(dev1)
+
+		# Get PyIpxSystem object
+		PyIpxSystem1 = libIpxCameraApiPy.PyIpxSystem()
 		
 		gPars = dev1.GetCameraParameters()
 		gPars.SetIntegerValue("TLParamsLocked", 1)
@@ -346,33 +365,49 @@ class ImagePublisher(Node):
 		# image to display
 		img = None
 		x = 0
+		reconnect_attempts = 0
 		while True:
 		# Acquire the image. Timeout = 1000ms (1 second). Use value of -1 for Infinite timeout
 			buffer = data_stream.GetBuffer(1000)
-			if buffer==None :
+			if buffer is None:
 				err_code = data_stream.GetLastError()
-				if err_code!=0 :
-					print ('Error code: ', err_code) 
+				if err_code != 0:
+					print('Error code: ', err_code)
+					reconnect_attempts += 1
+					if reconnect_attempts >= 6:
+						print("Max reconnect attempts reached. Exiting.")
+						break
+					print("Attempting to reconnect...")
+					dev1 = self.reconnect_device(PyIpxSystem1)
+					if dev1 is None:
+						print("Reconnection failed. Exiting.")
+						break
+					print("Reconnection successful. Continuing acquisition.")
+					data_stream = dev1.GetStreamByIndex(0)
+					self.CreateDataStreamBuffers(data_stream)
+					self.AcquireImages(dev1, data_stream)
+					reconnect_attempts = 0
+				else:
+					print("Buffer is None, but no error code. Continuing.")
 					break
-				continue
 			print ('FrameID: ', x, 'W:', buffer.GetWidth(),' H:',buffer.GetHeight())
 			if x % 2 == 1:
-				# libIpxCameraApiPy.PySaveImage(buffer, "PyFrame%d." % (x) + "jpg") 	
+				#libIpxCameraApiPy.PySaveImage(buffer, "PyFrame%d." % (x) + "jpg") 	
 				# convert raw data into numpy array
 				img = np.array(buffer.GetBufferPtr()).reshape((buffer.GetHeight(), buffer.GetWidth()))
 				
 				######################################### OpenCV Code #########################################
 
 				# check pixel type to decide if Bayer conversion is needed
-				if pixelType != PixelType.Mono8 and pixelType != PixelType.Mono10 and pixelType != PixelType.Mono12:
+				# if pixelType != PixelType.Mono8 and pixelType != PixelType.Mono10 and pixelType != PixelType.Mono12:
 					
-					# convert pixel type to opencv bayer code
-					bayerCode = self.PixelTypeToBayerType(pixelType, False)
-					img = cv.cvtColor(img, bayerCode)
+				# 	# convert pixel type to opencv bayer code
+				# 	bayerCode = self.PixelTypeToBayerType(pixelType, False)
+				# 	img = cv.cvtColor(img, bayerCode)
 
 				# apply blur filter
 				img = cv.GaussianBlur(img, (5, 5), 0)
-				img = cv.medianBlur(img, 5)
+				#img = cv.medianBlur(img, 5)
 				
 				# save raw image and png compressed
 				# with open("PyFrame%d.raw" % (x), 'wb') as f:
@@ -380,7 +415,7 @@ class ImagePublisher(Node):
 				# 	cv.imwrite("PyFrame%d.png" % (x), img, (cv.IMWRITE_PNG_COMPRESSION, 0))
 				
 				#sending the image to the topic
-				self.publisher_.publish(self.br.cv2_to_imgmsg(img))
+				self.publisher_.publish(self.br.cv2_to_imgmsg(img, encoding='mono8'))
 
 				###############################################################################################
 

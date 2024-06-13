@@ -264,7 +264,7 @@ class ImageSubscriber(Node):
 		# Used to convert between ROS and OpenCV images
 		self.br = CvBridge()
 
-		with open('/home/thomas/Penguins/install/cv_basics/lib/python3.8/site-packages/cv_basics/intrinsic.npy', 'rb') as f:
+		with open('/home/abbas/Penguins/install/cv_basics/lib/python3.8/site-packages/cv_basics/intrinsic.npy', 'rb') as f:
 			self.intrinsic = np.load(f)
 
 		skip_frames = 2
@@ -325,25 +325,25 @@ class ImageSubscriber(Node):
 		total_time = end - start
 		
 		#uncomment this for visualizing the camera odometry
-		#fps = 1 / total_time
+		fps = 1 / total_time
 
-		#cv2.putText(self.new_frame, f'FPS: {int(fps)}', (20,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
+		cv2.putText(self.new_frame, f'FPS: {int(fps)}', (20,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
 
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 0],2)), (260,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 1],2)), (340,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 2],2)), (420,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 0],2)), (260,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 1],2)), (340,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 2],2)), (420,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 0],2)), (260,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 1],2)), (340,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 2],2)), (420,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 0],2)), (260,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 1],2)), (340,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 2],2)), (420,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 0],2)), (260,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 1],2)), (340,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 2],2)), (420,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 0],2)), (260,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 1],2)), (340,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 2],2)), (420,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
 
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 3],2)), (540,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 3],2)), (540,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
-		#cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 3],2)), (540,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 3],2)), (540,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 3],2)), (540,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
+		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 3],2)), (540,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
 
-		#cv2.imshow("img", self.new_frame)
+		cv2.imshow("img", self.new_frame)
 		
 class OdomPublisher(Node):
 	def __init__(self):
@@ -383,3 +383,5 @@ def main(args=None):
 
 if __name__ == '__main__':
 	main()
+
+
