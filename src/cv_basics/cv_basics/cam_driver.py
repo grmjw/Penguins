@@ -178,7 +178,7 @@ class ImagePublisher(Node):
 					return dev1
 			print("Failed to reconnect. Waiting 10 seconds before retrying...")
 			time.sleep(10)
-			print("Failed to reconnect after 6 attempts.")
+		print("Failed to reconnect after 6 attempts.")
 		return None
 
 	# This function connects to the camera, specified by devInfo argument
