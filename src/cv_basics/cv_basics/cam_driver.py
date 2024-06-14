@@ -22,6 +22,7 @@ import time
 #Device number from command prompt
 g_devNum = -1
 
+#This class defines an enumeration of flags using the IntFlag class from the enum module in Python. 
 class PixelTypeFlags(enum.IntFlag):
 	PixelTypeIdBit = 0
 	PixelTypeIdMask = 0xFFFF << PixelTypeIdBit
@@ -30,7 +31,7 @@ class PixelTypeFlags(enum.IntFlag):
 	PixelChromaticityBit = 24
 	PixelChromaticityMask = 0xFF << PixelChromaticityBit
 
-
+#This class is an enumeration (enum) that defines various pixel types along with their corresponding hexadecimal values. 
 class PixelType(enum.IntEnum):
 	Mono8                    = 0x01080001 # PFNC Monochrome 8-bit
 	Mono8s                   = 0x01080002 # PFNC Monochrome 8-bit signed
@@ -77,7 +78,8 @@ class PixelType(enum.IntEnum):
 	BayerRG12Packed          = 0x010C002B # GigE Vision 2.0 Bayer Red-Green 12-bit packed
 	BayerGB12Packed          = 0x010C002C # GigE Vision 2.0 Bayer Green-Blue 12-bit packed
 	BayerBG12Packed          = 0x010C002D # GigE Vision 2.0 Bayer Blue-Green 12-bit packed
- 
+
+#This class is responsible for publishing images to the 'image_raw' topic. 
 class ImagePublisher(Node):
 	"""
 	Create an ImagePublisher class, which is a subclass of the Node class.
@@ -147,6 +149,7 @@ class ImagePublisher(Node):
 				print ('[', gv_num, ']    ',dv.GetModel())
 				#gv_num+=1
 		
+		#Checks the number of devices
 		if(len(devList)<1):
 			print('No device found')
 			return None
@@ -209,7 +212,8 @@ class ImagePublisher(Node):
 	def FreeDataStreamBuffers(self, data_stream, sbLst):
 		for x in sbLst:
 			data_stream.RevokeBuffer(x)
-			
+
+	#This function is used to convert a pixel type to an OpenCV Bayer conversion code. 	
 	def PixelTypeToBayerType(self, pixelType, isBGR):
 		if pixelType == PixelType.BayerGR8 or pixelType == PixelType.BayerGR10 or pixelType == PixelType.BayerGR12:
 			return cv.COLOR_BayerGR2BGR if isBGR else cv.COLOR_BayerGR2RGB
@@ -252,7 +256,8 @@ class ImagePublisher(Node):
 		#	print('Value ', expVal, 'is out of range')
 		#else: 
 		#	parExposureTime.SetValue(expVal)
-		
+	
+	#This method configures the Auto Exposure Control (AEC) parameters for a camera. 
 	def SetupAec(self, camera):
 		pars = camera.GetCameraParameters()	
 

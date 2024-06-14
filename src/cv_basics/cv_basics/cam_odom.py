@@ -29,7 +29,10 @@ import os
 import numpy as np
 
 class CameraPoses():
-    
+
+    #data_dir is directory containing data to be processed (But not used since we have live camera)
+    #skip_frames is number of frames to skip during processing
+    #intrinsic contains internal camera parameters (needs to be calibrated first)
     def __init__(self, data_dir, skip_frames, intrinsic):
         
         self.K = intrinsic
@@ -44,7 +47,8 @@ class CameraPoses():
         self.world_points = []
 
         self.current_pose = None
-        
+    
+    #load_images not used for live camera
     @staticmethod
     def _load_images(filepath, skip_frames):
     
@@ -60,6 +64,8 @@ class CameraPoses():
         return images
     
 
+    #Creates 4x4 homogeneous transformation matrix using
+    #3x3 rotation matrix and 3 element translation vector
     @staticmethod
     def _form_transf(R, t):
         
@@ -69,9 +75,12 @@ class CameraPoses():
         
         return T
 
+    #Method to get world points
     def get_world_points(self):
         return np.array(self.world_points)
     
+    #This function finds and matches keypoints between 2 images
+    #Using ORB feature detector and FLANN matcher
     def get_matches(self, img1, img2):
    
         # Find the keypoints and descriptors with ORB
@@ -107,6 +116,8 @@ class CameraPoses():
         else:
             return None, None
 
+    #Function estimates the relative pose (rotation and translation)
+    #Between two sets of corresponding 2D points from two images.
     def get_pose(self, q1, q2):
     
         # Essential matrix
@@ -121,6 +132,9 @@ class CameraPoses():
         return transformation_matrix
 
 
+    #This function decomposes the essential matrix E into possible rotation
+    #And translation matrix. then selects the correct pair based on the reconstructed 3D points.
+    #This is done by checking which pair results in the most points lying in front of both cameras 
     def decomp_essential_mat(self, E, q1, q2):
 
         R1, R2, t = cv2.decomposeEssentialMat(E)
@@ -178,7 +192,9 @@ class CameraPoses():
             # print(t)
             return R2, np.ndarray.flatten(t)
         
-        
+    #This function decomposes the essential matrix E into possible rotation
+    #And translation matrix. then selects the correct pair based on the reconstructed 3D points.
+    #This is done by checking which pair results in the most points lying in front of both cameras     
     def decomp_essential_mat_old(self, E, q1, q2):
         def sum_z_cal_relative_scale(R, t):
             # Get the transformation matrix
@@ -244,7 +260,9 @@ class CameraPoses():
         self.world_points.append(Q1)
 
         return [R1, t]
- 
+
+#This node is responsible for subscribing to an image topic called 'video_frames' it estimates camera motion
+#And update cameras pose over time. 
 class ImageSubscriber(Node):
 	"""
 	Create an ImageSubscriber class, which is a subclass of the Node class.
@@ -282,7 +300,8 @@ class ImageSubscriber(Node):
 		self.new_frame = None
 		self.frame_counter = 0
 		self.cur_pose = self.start_pose
-				
+
+    #Callback function that processes incoming video frames received as ROS			
 	def listener_callback(self, data):
 		"""
 		Callback function.
@@ -298,7 +317,8 @@ class ImageSubscriber(Node):
 
 		cv2.waitKey(1)
 
-
+    #This method is for processing video frames to estimate camera motion and update
+    #The camera's pose over time
 	def start_calc(self):
 		self.frame_counter += 1
 		start = time.perf_counter()
@@ -344,7 +364,9 @@ class ImageSubscriber(Node):
 		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 3],2)), (540,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
 
 		cv2.imshow("img", self.new_frame)
-		
+
+#This class publishes odometry information to topic called 'cam_odom'
+#With message type odom		
 class OdomPublisher(Node):
 	def __init__(self):
 		super().__init__('odom_publisher')
