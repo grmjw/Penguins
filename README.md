@@ -19,7 +19,7 @@ In this specific case:
     - 34 is the high pin.
     - 36 is the low pin.
 
-Details on these pins and their functions can be found in the motor controller datasheet. For more information, refer to the [L298N Motor Controller Datasheet](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf). Details on which pin is which on the jetson board can be found using this manual: [J202 Jetson board Datasheet]([https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf](https://files.seeedstudio.com/products/102991695/reComputer%20J202%20datasheet.pdf)). Additionally you can also look at the board anc figure out pin numbers since they are written on it.
+Details on these pins and their functions can be found in the motor controller datasheet. For more information, refer to the [L298N Motor Controller Datasheet](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf). Details on which pin is which on the jetson board can be found using this manual: [J202 Jetson board Datasheet](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf](https://files.seeedstudio.com/products/102991695/reComputer%20J202%20datasheet.pdf). Additionally you can also look at the board anc figure out pin numbers since they are written on it.
 
 ### Running the Code
 
