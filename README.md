@@ -1,4 +1,4 @@
-# Penguine Readme
+# Penguin Readme
 
 ## Motors
 
