@@ -1,0 +1,34 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Penguins
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Yusef
+    family-names: Ahmed
+  - given-names: Ayudh
+    family-names: Haldar
+  - given-names: Yoonah
+    family-names: Jung
+  - given-names: Abbas
+    family-names: Hussain
+  - given-names: Bence
+    family-names: Racsko
+  - given-names: Salaheldin
+    family-names: Nounou
+  - given-names: Defne
+    family-names: Gulmez
+  - given-names: Thomas
+    family-names: Rosendaal
+  - given-names: Sinem
+    family-names: Uner
+  - given-names: Divo
+    family-names: Abimanyu
+  - given-names: Subin
+    family-names: Lee
+repository-code: 'https://github.com/grmjw/Penguins'
+abstract: Autonomous object detection for TU/e's Team Polar
