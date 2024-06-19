@@ -76,10 +76,8 @@ IPv4 (Link-local):  `169.254.245.175` (without the `/16`)
 ### Setting Up the ROS SDK
 
 #### Steps on How to Set Up the Files for LiDAR with ROS
-Go to this website there are 2 ways to do it again, one is to go to this website and follow the steps in their readme since we have already set up the LiDAR:
+Go to this website there are 2 ways to do it again, one is to go to this website and follow the steps in their readme and the easier but less detailed way is to follow these steps here at the end of which you will have a live rviz vizualization of the lidar sensor data.:
 [Ouster ROS](https://github.com/ouster-lidar/ouster-ros/tree/ros2)
-
-Follow the steps on the website till this step:
 
 #### Overview
 This ROS package provides support for all Ouster sensors with FW v2.0 or later targeting ROS2 distros. Upon launch, the driver will configure and connect to the selected sensor device. Once connected, the driver will handle incoming IMU and LiDAR packets, decode LiDAR frames, and publish corresponding ROS messages on the topics of `/ouster/imu` and `/ouster/points`. If the used sensor supports dual return and it was configured to use this capability, another topic will be published under the name `/ouster/points2` which corresponds to the second point cloud.
