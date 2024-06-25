@@ -171,3 +171,53 @@ If it doesn't run properly, open a new terminal and run this command in parallel
 ```
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world os_sensor
 ```
+
+
+## Camera 
+
+### Getting Started 
+
+Clone the repository onto your workspace 
+
+Navigate to the workspace directory and build the package 
+
+```
+cd Penguins
+colcon build
+```
+
+After building, the Ipx Camera API needs to be transferred to the correct folder so it gets recognised when running the camera publisher node.
+To do this the **lib** folder in the following directory:
+
+```
+Penguins/src/cv_basics
+```
+
+needs to be transferred to the following location:
+
+```
+Penguins/install/cv_basics/lib/python3.8/site-packages/cv_basics
+```
+
+Open a new terminal and run the following commands to run the image publisher:
+
+```
+cd Penguins
+source /opt/ros/foxy/setup.bash
+source install/setup.bash
+export PYTHONPATH=${PYTHONPATH}:$PWD/install/cv_basics/lib/python3.8/site-packages/cv_basics/lib/Linux64_x64/
+ros2 run cv_basics img_publisher
+```
+
+The system should now connect to the camera available and start receiving video frames
+
+To see the received video frames and camera odometry in action, open a new terminal (**Do not close the terminal with the img_publisher running**)
+
+Run the following commands in the new terminal: 
+
+```
+cd Penguins
+source /opt/ros/foxy/setup.bash
+source install/setup.bash
+ros2 run cv_basics img_subscriber
+```
