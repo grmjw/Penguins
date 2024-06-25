@@ -199,6 +199,8 @@ needs to be transferred to the following location:
 Penguins/install/cv_basics/lib/python3.8/site-packages/cv_basics
 ```
 
+### Running the camera
+
 Open a new terminal and run the following commands to run the image publisher:
 
 ```
