@@ -18,9 +18,9 @@ import os
 import platform
 import numpy as np
 import time
+import logging
 
-#Device number from command prompt
-g_devNum = -1
+logger = logging.getLogger(__name__)
 
 #This class defines an enumeration of flags using the IntFlag class from the enum module in Python. 
 class PixelTypeFlags(enum.IntFlag):
@@ -79,7 +79,7 @@ class PixelType(enum.IntEnum):
 	BayerGB12Packed          = 0x010C002C # GigE Vision 2.0 Bayer Green-Blue 12-bit packed
 	BayerBG12Packed          = 0x010C002D # GigE Vision 2.0 Bayer Blue-Green 12-bit packed
 
-#This class is responsible for publishing images to the 'image_raw' topic. 
+#This class is responsible for publishing images to the 'cam_frames' topic. 
 class ImagePublisher(Node):
 	"""
 	Create an ImagePublisher class, which is a subclass of the Node class.
@@ -89,110 +89,69 @@ class ImagePublisher(Node):
 		Class constructor to set up the node
 		"""
 		# Initiate the Node class's constructor and give it a name
+		logger.debug('Initializing the Node class constructor')		
 		super().__init__('image_publisher')
 
 		# Create the publisher. This publisher will publish an Image
 		# to the video_frames topic. The queue size is 10 messages.
-		self.publisher_ = self.create_publisher(Image, 'video_frames', 100)
-
-		# We will publish a message every 0.1 seconds
-		#timer_period = 0.1  # seconds
-
-		# Create the timer
-		#self.timer = self.create_timer(timer_period, self.timer_callback)
-		 
-		# Create a VideoCapture object
-		# The argument '0' gets the default webcam.
-		#self.cap = cv2.VideoCapture(3)
+		logger.debug('creating the publisher')
+		self.publisher_ = self.create_publisher(Image, 'cam_frames', 100)
  
 		# Used to convert between ROS and OpenCV images
+		logger.debug('create CVBridge object')
 		self.br = CvBridge()
-
-	#def timer_callback(self):
-	"""
-	Callback function.
-	This function gets called every 0.1 seconds.
-	"""
-	# Capture frame-by-frame
-	# This method returns True/False as well
-	# as the video frame.
-	#ret, frame = self.cap.read()
-	  
-	#if ret == True:
-	# Publish the image.
-	# The 'cv2_to_imgmsg' method converts an OpenCV
-	# image to a ROS 2 image message
-	# self.publisher_.publish(self.br.cv2_to_imgmsg(frame))
-
-	# Display the message on the console
-	#self.get_logger().info('Publishing video frame')
     
 	# This function allows user to select the interface and camera to get the IpxCam::DeviceInfo object
 	def SelectDevice(self, ipxSystem):
-		global g_devNum
+		
 		# Get Interface list
+		logger.debug('get the interface list')
 		intLst = ipxSystem.GetInterfaceList()
 		if(len(intLst)<1):
-			print('No interface found')
+			logger.error('No interface found')
 			return None
 
 		# Get list of cameras connected to each interface 
 		devList=[]
 		gv_num=0
 		for infs in intLst:
-			print (infs.GetDescription(), ':')
+			logger.debug('currently checking interface: ' + infs.GetDescription())
 			# Get list of cameras connected to the current interface
 			infs.ReEnumerateDevices(500)
 			devListInt = infs.GetDeviceInfoList()
 			for dv in devListInt:
 				devList.append(dv)
-				print ('[', gv_num, ']    ',dv.GetModel())
-				#gv_num+=1
+				logger.debug(dv.GetModel() + ' connected to interface: ' + infs.GetDescription())
 		
 		#Checks the number of devices
 		if(len(devList)<1):
-			print('No device found')
+			logger.error('No device found')
 			return None
-		# else:
-		# 	if g_devNum>-1:
-		# 		return devList[g_devNum]	
-
-		# print('Please select the camera number to connect to: ')
-		# dv_select = sys.stdin.readline()[:-1]
-		# # Return None if user does not select any camera
-		# if not dv_select:
-		# 	return None
-
-		# # Return selected camera's DeviceInfo object
-		# if (int(dv_select)<gv_num) :
-		# 	return devList[int(dv_select)]
-		# else:
-		# 	return 0
+		#should figure out how to log the thing you are connecting to
 		return devList[0]
 	
 	def reconnect_device(self, ipxSystem):
 		for attempt in range(6):
-			print(f"Attempt {attempt + 1} to reconnect.")
+			logger.info("Attempt %d to reconnect", attempt)
 			deviceInfo = self.SelectDevice(ipxSystem)
 			if deviceInfo:
 				dev1 = self.connectToDevice(deviceInfo)
 				if dev1:
-					print("Reconnected to device.")
+					logger.info('reconnected to device')
 					return dev1
-			print("Failed to reconnect. Waiting 10 seconds before retrying...")
+			logger.error('failed to reconnect. Waiting 10 seconds before retrying')
 			time.sleep(10)
-		print("Failed to reconnect after 6 attempts.")
+		logger.critical('failed to reconnect after 6 attempts')
 		return None
 
 	# This function connects to the camera, specified by devInfo argument
 	def connectToDevice(self, devInfo):
-		print ('connecting to ', devInfo.GetDisplayName())
-		dev1 = IpxCameraApiPy.PyIpxCreateDevice(devInfo) if platform.system()=='Windows' else libIpxCameraApiPy.PyIpxCreateDevice(devInfo) 	
-		err_code = IpxCameraApiPy.GetLastError() if platform.system()=='Windows' else libIpxCameraApiPy.GetLastError()	
+		logger.info('connecting to: ' + devInfo.GetDisplayName()) 
+		dev1 = libIpxCameraApiPy.PyIpxCreateDevice(devInfo) 	
+		err_code = libIpxCameraApiPy.GetLastError()	
 		if err_code!=0:
-			print ('Error code: ', err_code) 
+			logger.error('Error code: %d', err_code)
 			return 0
-		print ('device model: ', devInfo.GetModel())
 		tCnt = dev1.GetNumStreams()	
 		if tCnt < 1 :		
 			return 0
@@ -202,9 +161,12 @@ class ImagePublisher(Node):
 	# This function creates the buffers queue
 	def CreateDataStreamBuffers(self, data_stream):	
 		bufSize = data_stream.GetBufferSize()	
+		logger.debug('Buffer size: %d', bufSize)
 		minNumBuffers = data_stream.GetMinNumBuffers()	
+		logger.debug('Minimum number of buffers: %d', minNumBuffers)
 		list1 = []
 		for x in range(minNumBuffers+1):
+			logger.debug('created buffer number %d', x)
 			list1.append(data_stream.CreateBuffer(bufSize))
 		return list1
 
@@ -212,142 +174,67 @@ class ImagePublisher(Node):
 	def FreeDataStreamBuffers(self, data_stream, sbLst):
 		for x in sbLst:
 			data_stream.RevokeBuffer(x)
+		logger.debug('Revoked buffers')
 
 	#This function is used to convert a pixel type to an OpenCV Bayer conversion code. 	
 	def PixelTypeToBayerType(self, pixelType, isBGR):
 		if pixelType == PixelType.BayerGR8 or pixelType == PixelType.BayerGR10 or pixelType == PixelType.BayerGR12:
+			logger.debug('recolouring pixel of type %r', pixelType)
 			return cv.COLOR_BayerGR2BGR if isBGR else cv.COLOR_BayerGR2RGB
 		elif pixelType == PixelType.BayerRG8 or pixelType == PixelType.BayerRG10 or pixelType == PixelType.BayerRG12:
+			logger.debug('recolouring pixel of type %r', pixelType)
 			return cv.COLOR_BayerRG2BGR if isBGR else cv.COLOR_BayerRG2RGB
 		elif pixelType == PixelType.BayerGB8 or pixelType == PixelType.BayerGB10 or pixelType == PixelType.BayerGB12:
+			logger.debug('recolouring pixel of type %r', pixelType)
 			return cv.COLOR_BayerGB2BGR if isBGR else cv.COLOR_BayerGB2RGB
-		# default
-		#elif pixelType == BayerBG8 or pixelType == BayerBG10 or pixelType == BayerBG12:	
+		# default	
 		return cv.COLOR_BayerBG2BGR if isBGR else cv.COLOR_BayerBG2RGB
 		
 	# Function to set Exposure parameters
 	def SetupExposure(self, camera):
-		#global g_expValue
-		#global g_paramsFromPrompt
-
 		pars = camera.GetCameraParameters()	
-
-		# Set ExposureAuto = Off
-		parAec = pars.GetEnum("ExposureAuto")	
-		parAec.SetValueStr("Continuous")
-
-		# Set ExposureMode = Timed 
-		#parExposureMode = pars.GetEnum("ExposureMode")
-		#parExposureMode.SetValueStr("Timed")
-
-		# Set ExposureTime in microseconds
-		#parExposureTime = pars.GetFloat("ExposureTime")
-		#expMin = parExposureTime.GetMin()
-		#expMax = parExposureTime.GetMax()
-		#expCur = parExposureTime.GetValue()
-
-		#if g_paramsFromPrompt :
-		#	expVal=g_expValue
-		#else:
-		#print('Enter Exposure value in microseconds, Min=',expMin[1], 'Max=',expMax[1], 'Current=',expCur[1])
-		#expVal = float(sys.stdin.readline()[:-1])
 		
-		#if expVal > expMax[1] or expVal < expMin[1] :
-		#	print('Value ', expVal, 'is out of range')
-		#else: 
-		#	parExposureTime.SetValue(expVal)
+		parAec = pars.GetEnum("ExposureAuto")	
+		logger.debug('set exposure to continious')
+		parAec.SetValueStr("Continuous")
 	
 	#This method configures the Auto Exposure Control (AEC) parameters for a camera. 
 	def SetupAec(self, camera):
 		pars = camera.GetCameraParameters()	
-
-		#print('Setup AEC')
-
-		# Set ExposureAuto = Continuous
+		
 		parAec = pars.GetEnum("ExposureAuto")	
+		logger.debug('set AEC to continuous')
 		parAec.SetValueStr("Continuous")
-
-		# set AecExposureMin = 200us
+		
 		parAecExpMin = pars.GetInt("AecExposureMin")
+		logger.debug('set minimum AEC exposure to 200')
 		parAecExpMin.SetValue(200)
-
-		# set AecExposureMax = 220us
+		
 		parAecExpMax = pars.GetInt("AecExposureMax")
+		logger.debug('set maximum AEC exposure to 200')
 		parAecExpMax.SetValue(20000)
-
-
-		# set AecExposureMax = (MAX-MIN)/2
-		#parAecExpMax = pars.GetInt("AecExposureMax")
-		#aecExpMaxMax = parAecExpMax.GetMax()[1]
-		#aecExpMaxMin = parAecExpMax.GetMin()[1]
-		#parAecExpMax.SetValue((aecExpMaxMax-aecExpMaxMin)/2)
 	
 	# This function setups the AGC parameters of the camera
 	# AGC / AEC function not included in models: POE-C2000, POE-C2400  
 	def SetupAgc(self, camera):
-
 		pars = camera.GetCameraParameters()	
-
-		#print('Setup AGC')
-
-		# Set GainAuto = Continuous
+		
 		parAgc = pars.GetEnum("GainAuto")	
+		logger.debug('set AGC to continuous')
 		parAgc.SetValueStr("Continuous")
 
-		# set AgcGainMin = 0.1dB
-		#parAgcGainMin = pars.GetFloat("AgcGainMin")
-		#parAgcGainMin.SetValue(1)
-
-		# set AgcGainMax = 7dB
-		#parAgcGainMax = pars.GetFloat("AgcGainMax")
-		#parAgcGainMax.SetValue(7.0)
-
-		#setAgcAecAicLuminanceType = Average
 		parAgcAec = pars.GetEnum("AgcAecAicLuminanceType")
+		logger.debug('set AGC/AEC function to average')
 		parAgcAec.SetValueStr("Average")
 
-		#setAgcAecAicSpeed = x6
 		parAgcSpeed = pars.GetEnum("AgcAecAicSpeed")
+		logger.debug('set AGC speed to x6')
 		parAgcSpeed.SetValueStr("x6")
 
-	# This function setups the Gain parameters of the camera
-	def SetupGain(self, camera):
-		#global g_gain
-		#global g_paramsFromPrompt
-		pars = camera.GetCameraParameters()	
-
-		# Set GainAuto = Off
-		parAgc = pars.GetEnum("GainAuto")	
-		parAgc.SetValueStr("Continious")
-
-		# Set Digital Gain =1 dB, DigitalOffset=0
-		#parDigGain = pars.GetFloat("DigitalGain")
-		#parDigGain.SetValue(1.0)
-		#parDigOffset = pars.GetInt("DigitalOffset")
-		#if(not parDigOffset):
-		#	parDigOffset= pars.GetFloat("DigitalBlackLevel")
-		#parDigOffset.SetValue(0)
-			
-		# Set Gain in dB
-		#parGain = pars.GetFloat("Gain")
-		#gainMin = parGain.GetMin()
-		#gainMax = parGain.GetMax()
-		#currGain = parGain.GetValue()
-
-		#if g_paramsFromPrompt :
-		#	gainVal=g_gain
-		#else:
-		#print('Enter Gain value in dB, Min=',gainMin[1], 'Max=',gainMax[1], 'Current=', currGain[1])
-		#gainVal = float (sys.stdin.readline()[:-1])
-		#if gainVal > gainMax[1] or gainVal < gainMin[1] :
-		#	print('Value ', gainVal, 'is out of range')
-		#else: 
-		#	parGain.SetValue(gainVal)
-
 	# Process image with OpenCV library here
-	def AcquireImages(self, dev1,data_stream):	
+	def AcquireImages(self, dev1, data_stream):	
 		
-		self.SetupGain(dev1)
+		logger.info('set device parameters')
 		self.SetupExposure(dev1)
 		self.SetupAec(dev1)
 		self.SetupAgc(dev1)
@@ -357,101 +244,93 @@ class ImagePublisher(Node):
 		
 		gPars = dev1.GetCameraParameters()
 		gPars.SetIntegerValue("TLParamsLocked", 1)
-		print("Send AcquisitionStart command.")
+		logger.debug('send aquisition start command')
 		data_stream.StartAcquisition()
 		gPars.ExecuteCommand("AcquisitionStart")
 
 		# get pixel type
+		logger.debug('getting pixel type')
 		res, pixelType = gPars.GetEnumValue("PixelFormat")
 		if not res:
-			print("Error while reading PixelFormat parameter")
+			logger.error("Error while reading PixelFormat parameter")
 			return
 
-		# image to display
-		img = None
+		img = None # image to display
 		x = 0
 		reconnect_attempts = 0
-		while True:
 		# Acquire the image. Timeout = 1000ms (1 second). Use value of -1 for Infinite timeout
+		while True:
 			buffer = data_stream.GetBuffer(1000)
 			if buffer is None:
 				err_code = data_stream.GetLastError()
 				if err_code != 0:
-					print('Error code: ', err_code)
+					logger.error('Error code: %d', err_code)
 					reconnect_attempts += 1
 					if reconnect_attempts >= 6:
-						print("Max reconnect attempts reached. Exiting.")
+						logger.critical("Max reconnect attempts reached. Exiting.")
 						break
-					print("Attempting to reconnect...")
+					logger.info("Attempting to reconnect...")
 					dev1 = self.reconnect_device(PyIpxSystem1)
 					if dev1 is None:
-						print("Reconnection failed. Exiting.")
+						logger.error("Reconnection failed. Exiting.")
 						break
-					print("Reconnection successful. Continuing acquisition.")
+					logger.info("Reconnection successful. Continuing acquisition.")
+					logger.debug('Open the stream to device')
 					data_stream = dev1.GetStreamByIndex(0)
+					logger.debug('Create buffers')
 					self.CreateDataStreamBuffers(data_stream)
+					logger.debug('Acquire the images')
 					self.AcquireImages(dev1, data_stream)
 					reconnect_attempts = 0
 				else:
-					print("Buffer is None, but no error code. Continuing.")
+					logger.warning("Buffer is None, but no error code. Continuing.")
 					break
-			print ('FrameID: ', x, 'W:', buffer.GetWidth(),' H:',buffer.GetHeight())
+			logger.info('Frame %d received', x)
+			logger.debug('frame width: %d and frame height: %d', buffer.GetWidth(), buffer.GetHeight())
 			if x % 2 == 1:
-				#libIpxCameraApiPy.PySaveImage(buffer, "PyFrame%d." % (x) + "jpg") 	
+				#uncomment this command to save each frame to a jpg file
+				#libIpxCameraApiPy.PySaveImage(buffer, "PyFrame%d." % (x) + "jpg") 
+					
 				# convert raw data into numpy array
+				logger.debug('convert buffer data to np array')
 				img = np.array(buffer.GetBufferPtr()).reshape((buffer.GetHeight(), buffer.GetWidth()))
-				
-				######################################### OpenCV Code #########################################
 
 				# check pixel type to decide if Bayer conversion is needed
-				# if pixelType != PixelType.Mono8 and pixelType != PixelType.Mono10 and pixelType != PixelType.Mono12:
-					
-				# 	# convert pixel type to opencv bayer code
-				# 	bayerCode = self.PixelTypeToBayerType(pixelType, False)
-				# 	img = cv.cvtColor(img, bayerCode)
+				logger.debug('check for pixel conversion')
+				if pixelType != PixelType.Mono8 and pixelType != PixelType.Mono10 and pixelType != PixelType.Mono12:
+				 	# convert pixel type to opencv bayer code
+				 	bayerCode = self.PixelTypeToBayerType(pixelType, False)
+				 	img = cv.cvtColor(img, bayerCode)
 
 				# apply blur filter
+				logger.debug('apply blur filter')
 				img = cv.GaussianBlur(img, (5, 5), 0)
 				#img = cv.medianBlur(img, 5)
 				
-				# save raw image and png compressed
-				# with open("PyFrame%d.raw" % (x), 'wb') as f:
-				# 	f.write(buffer.GetBufferPtr())
-				# 	cv.imwrite("PyFrame%d.png" % (x), img, (cv.IMWRITE_PNG_COMPRESSION, 0))
-				
 				#sending the image to the topic
-				self.publisher_.publish(self.br.cv2_to_imgmsg(img, encoding='mono8'))
-
-				###############################################################################################
+				logger.info('publish frame %d', x)
+				self.publisher_.publish(self.br.cv2_to_imgmsg(img))
 
 			x +=1
 			data_stream.QueueBuffer(buffer)
-
-		# display output image
-		#if not img is None:
-			# OpenCV Code
-			#hist = cv.calcHist([img],[0],None,[256],[0,256])
-			#plt.subplot(121), plt.imshow(img)
-			#plt.subplot(122), plt.plot(hist)
-			#plt.show()
 		
-		print("Sending AcquisitionStop command to the device")
+		logger.debug('Sending AcquisitionStop command')
 		gPars.ExecuteCommand("AcquisitionStop")
 		data_stream.StopAcquisition(1)
 		gPars.SetIntegerValue("TLParamsLocked", 0)
 
 def main(args=None):
-	#getting the arguments from the command line
-	#if len(sys.argv)>1 :
-	#	g_devNum=int(sys.argv[1])
+	logging.basicConfig(stream=sys.stderr, level=logging.INFO)
 	
 	# Initialize the rclpy library
 	rclpy.init(args=args)
   
 	# Create the node
+	logger.info('Initializing image publisher node')
 	image_publisher = ImagePublisher()
 	
 	# Get PyIpxSystem object
+	logger.debug('Intializing Ipx library')
 	PyIpxSystem1 = libIpxCameraApiPy.PyIpxSystem()
 
 	# An example of how to register external GenTL
@@ -459,34 +338,39 @@ def main(args=None):
 	#if PyIpxSystem1.RegisterGenTLProvider(r"c:\Program Files\KAYA Instruments\Common\bin\KYFGLibGenTL.cti") == False:
 	#	print('Unable to register Kaya cti')
 
-	print(PyIpxSystem1.GetDisplayName())
-	print('Interfaces available:' )
+	logger.debug('Ipx Library object: ' + PyIpxSystem1.GetDisplayName())
 	
 	# Select the Camera
+	logger.info('Selecting device')
 	deviceInfo = image_publisher.SelectDevice(PyIpxSystem1)
 	if deviceInfo != None: # none has been selected
 		if deviceInfo != 0: # wrong index has been selected
         	# Connect to the camera
+			logger.info('Device selected')
+			logger.info('Connecting to device')
 			dev1 = image_publisher.connectToDevice(deviceInfo)
 			if dev1 != 0:
-				print ('Open the stream to device')
+				logger.info('Device connected')
+				logger.debug('Open the stream to device')
 				data_stream = dev1.GetStreamByIndex(0)
-				print ('Create the buffers, size: ', data_stream.GetBufferSize())
+				logger.debug('Create buffers')
 				sbLst = image_publisher.CreateDataStreamBuffers(data_stream)
-				print ('Acquire the images')			
+				logger.debug('Acquire the images')		
 				image_publisher.AcquireImages(dev1,data_stream)
-				print ('Flush the buffers')
+				logger.debug('Flush buffers')
 				data_stream.FlushBuffers(data_stream.Flush_AllDiscard)
-				print ('Release the buffers')
+				logger.debug('Release the buffers')
 				image_publisher.FreeDataStreamBuffers(data_stream, sbLst)
-				print ('Close the stream')	
+				logger.debug('Close the stream')	
 				data_stream.Release()
-				print ('Disconnect the device')
+				logger.info('Disconnect device')
 				dev1.Release()		
 			else:
-				print ('Incorrect device')
+				logger.critical('Incorrect device')
 		else:
-			print ('Incorrect choice or no cameras found')
+			logger.critical('Incorrect choice or no cameras found')
+	else:
+		logger.critical('Unable to select a device')
   	
 	# Spin the node so the callback function is called.
 	#rclpy.spin(image_publisher)
@@ -494,6 +378,7 @@ def main(args=None):
 	# Destroy the node explicitly
 	# (optional - otherwise it will be done automatically
 	# when the garbage collector destroys the node object)
+	logger.info('Destroying image publisher node')
 	image_publisher.destroy_node()
   
 	# Shutdown the ROS client library for Python

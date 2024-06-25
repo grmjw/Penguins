@@ -48,7 +48,8 @@ class CameraPoses():
 
         self.current_pose = None
     
-    #load_images not used for live camera
+    #load_images from data set
+    #not used for live camera
     @staticmethod
     def _load_images(filepath, skip_frames):
     
