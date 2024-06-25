@@ -1,10 +1,10 @@
 from setuptools import setup
 
-package_name = 'cv_basics'
+package_name = 'cam_driver'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='1.0',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -13,15 +13,14 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='thomas',
-    maintainer_email='thomasrosendaal0@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    maintainer='Thomas Rosendaal, Abbas Hussain',
+    maintainer_email='t.r.e.rosendaal@student.tue.nl, a.hussain@student.tue.nl',
+    description='ROS2 camera driver for Imperx Cheetah P67-C1911 CMOS 2.86 NP camera',
+    license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        	'img_publisher = cv_basics.cam_driver:main',
-        	'img_subscriber = cv_basics.cam_odom:main',
+        	'img_publisher = cam_driver.cam_driver:main'
         ],
     },
 )
