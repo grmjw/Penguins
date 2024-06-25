@@ -283,7 +283,7 @@ class ImageSubscriber(Node):
 		# Used to convert between ROS and OpenCV images
 		self.br = CvBridge()
 
-		with open('/home/abbas/Penguins/install/cv_basics/lib/python3.8/site-packages/cv_basics/intrinsic.npy', 'rb') as f:
+		with open('/home/thomas/Penguins/install/cam_odom/lib/python3.8/site-packages/cam_odom/intrinsic.npy', 'rb') as f:
 			self.intrinsic = np.load(f)
 
 		skip_frames = 2

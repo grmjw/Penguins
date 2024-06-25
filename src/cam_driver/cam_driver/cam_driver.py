@@ -1,11 +1,3 @@
-# Basic ROS 2 program to publish real-time streaming 
-# video from your built-in webcam
-# Author:
-# - Addison Sears-Collins
-# - https://automaticaddison.com
-  
-# Import the necessary libraries
-
 import cv2 as cv # OpenCV library
 import libIpxCameraApiPy
 import rclpy # Python library for ROS 2
@@ -371,9 +363,6 @@ def main(args=None):
 			logger.critical('Incorrect choice or no cameras found')
 	else:
 		logger.critical('Unable to select a device')
-  	
-	# Spin the node so the callback function is called.
-	#rclpy.spin(image_publisher)
   
 	# Destroy the node explicitly
 	# (optional - otherwise it will be done automatically
