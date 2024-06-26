@@ -1,4 +1,4 @@
-# Penguine Readme
+# Penguin Readme
 
 ## Motors
 
@@ -49,6 +49,70 @@ ros2 topic pub /motor_speed std_msgs/Float32 "data: 50.0"  # 50% duty cycle
 The code runs with a default speed of 50% and continuously monitors the speed change on a topic. This command updates the speed on that topic.
 
 Note that the `50%` value represents power, not speed. It is analogous to pressing the gas pedal in a car. Consistently keeping it at 50% does not ensure 50% speed; it ensures 50% force from the motors at all times. Given that mass is constant, force is proportional to acceleration (F = ma).
+
+## Radar Setup
+## Steps to set-up Radar with ROS Foxy on Ubuntu 20.04
+## Step 1
+After connecting the PEAK CAN to USB converter from the radar to your device, the CAN interface must be established.
+Load the necessary CAN modules by running:
+```
+        sudo modprobe can \
+        sudo modprobe can_raw \
+        sudo modprobe can_dev \
+        sudo modprobe peak_can
+```
+## Step 2
+Set and bring up can connection named can0:
+```
+sudo ip link set can0 up type can bitrate 500000
+```
+To check if the CAN interface has been properly set up you can run (assuming can0 is the interface name):
+```
+ip link show can0
+```
+The output should look something like this:
+
+
+3: can0: <NOARP,UP,LOWER_UP> mtu 16 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 10
+
+## Step 3 
+Ensure these two libraries are installed:
+```
+sudo apt install ros-foxy-point-cloud-msg-wrapper
+```
+```
+pip install python-can
+```
+## Step 4 
+In the penguins directory navigate to src then to obtain permission to build and get access to updated smartmicro utilities run:
+```
+./smart_extract.sh
+```
+## Step 5 
+Now navigate back to the Penguins directory and source by running:
+```
+source intstall/setup.bash
+```
+## Step 6 
+Then run the radar code by typing:
+```
+ros2 launch umrr_ros2_driver radar.launch.py
+```
+## Step 7 
+To visualize the point cloud data on rviz it is possible to run:
+```
+rviz2 -d smart_rviz_plugin/config/rviz/recorder.rviz
+```
+## Step 8 
+To check the ROS topic on which the point cloud data is recieved from the radar with more detail, you can run:
+```
+ros2 topic echo \smart_radar\targets_0
+```
+## Step 9 
+To remove the warning for the visualization on rviz you can type:
+```
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world umrr
+```
 
 ## LiDAR Setup
 
