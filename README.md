@@ -190,13 +190,26 @@ After building, the Ipx Camera API needs to be transferred to the correct folder
 To do this the **lib** folder in the following directory:
 
 ```
-Penguins/src/cv_basics
+Penguins/src/cam_driver
 ```
 
 needs to be transferred to the following location:
 
 ```
-Penguins/install/cv_basics/lib/python3.8/site-packages/cv_basics
+Penguins/install/cam_driver/lib/python3.8/site-packages/cam_driver
+```
+
+The **intrinsic.npy** file also needs to be put in the correct location, this contains the calibration of the camera that we use for odometry.
+
+**intrinsic.npy** is in the following folder:
+```
+Penguins/src/cam_odom
+```
+
+Tranfer the file to the following location:
+
+```
+Penguins/install/cam_driver/lib/python3.8/site-packages/cam_driver
 ```
 
 ### Running the camera
@@ -207,8 +220,8 @@ Open a new terminal and run the following commands to run the image publisher:
 cd Penguins
 source /opt/ros/foxy/setup.bash
 source install/setup.bash
-export PYTHONPATH=${PYTHONPATH}:$PWD/install/cv_basics/lib/python3.8/site-packages/cv_basics/lib/Linux64_x64/
-ros2 run cv_basics img_publisher
+export PYTHONPATH=${PYTHONPATH}:$PWD/install/cam_driver/lib/python3.8/site-packages/cam_driver/lib/Linux64_x64/
+ros2 run cam_driver img_publisher
 ```
 
 The system should now connect to the camera available and start receiving video frames
@@ -221,5 +234,5 @@ Run the following commands in the new terminal:
 cd Penguins
 source /opt/ros/foxy/setup.bash
 source install/setup.bash
-ros2 run cv_basics img_subscriber
+ros2 run cam_odom img_subscriber
 ```
