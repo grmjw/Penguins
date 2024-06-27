@@ -122,8 +122,9 @@ A better version of the steps below can be found on this page (I suggest you use
 ### Steps to Set-up LiDAR with ROS on Ubuntu
 
 #### Step 1
-Go into the settings for the wired connection and into IPv4 and do link local only, or else nothing will work.
+After connecting the lidar to device, go into the settings for the wired connection and into IPv4 and set it to "link-local only" as seen below.
 
+![Image](https://github.com/grmjw/Penguins/blob/main/link_local_only.png)
 #### Step 2
 Go to this website: 
 ```
