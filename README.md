@@ -285,7 +285,7 @@ Open a new terminal and run the following commands to run the image publisher:
 cd Penguins
 source /opt/ros/foxy/setup.bash
 source install/setup.bash
-export PYTHONPATH=${PYTHONPATH}:$PWD/install/cam_driver/lib/python3.8/site-packages/cam_driver/lib/Linux64_x64/
+export PYTHONPATH=${PYTHONPATH}:$PWD/install/cam_driver/lib/python3.8/site-packages/cam_driver/lib/Linux64_ARM/
 ros2 run cam_driver img_publisher
 ```
 
