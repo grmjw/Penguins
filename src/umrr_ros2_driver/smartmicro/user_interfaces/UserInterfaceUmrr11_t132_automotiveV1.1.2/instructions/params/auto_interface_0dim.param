@@ -1,0 +1,255 @@
+{
+   "format_version_major" : 1,
+   "format_version_minor" : 0,
+   "format_version_patch" : 0,
+   "name"                 : "auto_interface_0dim",
+   "section"              : 2010,
+   "comment"              : "Automotive user interface 0dimensional parameters",
+   "parameters"           : [
+      {
+         "id"      : 0,
+         "name"    : "tx_antenna_idx",
+         "type"    : "u8",
+         "comment" : "Index of Transmit Antenna (0 and 1 are ACC, 2 is AEB)",
+         "access"  : "rw",
+         "save"    : true,
+         "min"     : 0,
+         "max"     : 2,
+         "default" : 2
+      },           
+      {            
+         "id"      : 1,
+         "name"    : "center_frequency_idx",
+         "type"    : "u8",
+         "comment" : "Index of center frequency (0..3 in ACC selectable. In AEB mode values 2 and 3 are similar to 1.)",
+         "access"  : "rw",
+         "save"    : true,
+         "min"     : 0,
+         "max"     : 3,
+         "default" : 0
+      },           
+      {            
+         "id"      : 2,
+         "name"    : "frequency_sweep_idx",
+         "type"    : "u8",
+         "comment" : "Index of sweep (currently always 0 because only one sweep for every TX-antenna)",
+         "access"  : "rw",
+         "save"    : true,
+         "min"     : 0,
+         "max"     : 0,
+         "default" : 0
+      },
+      {
+         "id"      : 3,
+         "name"    : "enable_tx_ant_toggle",
+         "type"    : "u8",
+         "comment" : "Automatic toggle of TX-Antenna 0->2->0 every radar cycle",
+         "access"  : "rw",
+         "save"    : true,
+         "min"     : 0,
+         "max"     : 1,
+         "default" : 0
+      },
+      {
+         "id"      : 4,
+         "name"    : "angular_separation",
+         "type"    : "u8",
+         "comment" : "0 = Disable Angular Separation, 1 = Enable Angular Separation",
+         "access"  : "rw",
+         "save"    : true,
+         "min"     : 0,
+         "max"     : 1,
+         "default" : 0
+      },
+      {
+         "id"      : 10,
+         "name"    : "prf_selector_manual",
+         "type"    : "u8",
+         "comment" : "0 = PRF switching active, 1 = PRF index given in prf_selector_index is used",
+         "access"  : "rw",
+         "save"    : true,
+         "min"     : 0,
+         "max"     : 1,
+         "default" : 0
+      },
+      {
+         "id"      : 11,
+         "name"    : "prf_set_selector",
+         "type"    : "u8",
+         "comment" : "Select PRF set index (in manual or automatic PRF mode)",
+         "access"  : "rw",
+         "save"    : true,
+         "min"     : 0,
+         "max"     : 1,
+         "default" : 0
+      },
+      {
+         "id"      : 12,
+         "name"    : "prf_manual_value_idx",
+         "type"    : "u8",
+         "comment" : "In manual PRF mode only: use nth element of selected set",
+         "access"  : "rw",
+         "save"    : true,
+         "min"     : 0,
+         "max"     : 2,
+         "default" : 0
+      },
+      {
+         "id"     : 200,
+         "name"   : "output_control_target_list_can",
+         "type"   : "u8",
+         "comment": "send raw targets via CAN, 0 = disabled, 1 = enabled",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 0,
+         "max"    : 1,
+         "default": 1
+      },
+      {
+         "id"     : 201,
+         "name"   : "output_control_object_list_can",
+         "type"   : "u8",
+         "comment": "send objects via CAN, 0 = disabled, 1 = enabled",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 0,
+         "max"    : 0,
+         "default": 0
+      },
+      {
+         "id"     : 202,
+         "name"   : "output_control_target_list_eth",
+         "type"   : "u8",
+         "comment": "send raw targets via Ethernet, 0 = disabled, 1 = enabled",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 0,
+         "max"    : 1,
+         "default": 1
+      },
+      {
+         "id"     : 203,
+         "name"   : "output_control_object_list_eth",
+         "type"   : "u8",
+         "comment": "send objects via Ethernet, 0 = disabled, 1 = enabled",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 0,
+         "max"    : 0,
+         "default": 0
+      },
+      {
+         "id"     : 231,
+         "name"   : "ip_source_address",
+         "type"   : "u32",
+         "access" : "rw",
+         "save"   : true,
+         "comment": "IP source address (32bit)",
+         "default": 3232238347
+      },
+      {
+         "id"     : 233,
+         "name"   : "subnet_mask",
+         "type"   : "u32",
+         "access" : "rw",
+         "save"   : true,
+         "comment": "Subnet mask (32bit)",
+         "default": 4294967040
+      },
+      {
+         "id"     : 235,
+         "name"   : "ip_dest_address",
+         "type"   : "u32",
+         "access" : "rw",
+         "save"   : true,
+         "comment": "IP destination address (32bit)",
+         "default": 3232238353
+      },
+      {
+         "id"     : 236,
+         "name"   : "ip_dest_port",
+         "type"   : "u16",
+         "access" : "rw",
+         "save"   : true,
+         "comment": "IP destination port",
+         "default": 55555
+      },
+      {
+         "id"     : 300,
+         "name"   : "sync_mode",
+         "type"   : "u8",
+         "comment": "(Master+Slave config) 0=off, 1=master, 2=slave",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 0,
+         "max"    : 2,
+         "default": 0
+      },
+      {
+         "id"     : 301,
+         "name"   : "sync_slave_identifier",
+         "type"   : "u8",
+         "comment": "(Slave config) Unique Sync Slave Identifier, ignored on master (always 0)",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 0,
+         "max"    : 7,
+         "default": 0
+      },
+      {
+         "id"     : 302,
+         "name"   : "sync_group_identifier",
+         "type"   : "u8",
+         "comment": "(Slave config) Sync Group Identifier, ignored on master (always 0)",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 0,
+         "max"    : 1,
+         "default": 0
+      },
+      {
+         "id"     : 303,
+         "name"   : "sync_nof_devices_1st_group",
+         "type"   : "u8",
+         "comment": "(Master config) Number of synced devices (incl. master) in first group, ignored on slave",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 1,
+         "max"    : 8,
+         "default": 1
+      },
+      {
+         "id"     : 304,
+         "name"   : "sync_nof_devices_2nd_group",
+         "type"   : "u8",
+         "comment": "(Master config) Number of synced devices in second group, ignored on slave",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 0,
+         "max"    : 7,
+         "default": 0
+      },
+      {
+         "id"     : 320,
+         "name"   : "time_sync_mode",
+         "type"   : "u8",
+         "comment": "(Time Sync: Master+Slave config) 0=off, 1=master, 2=slave",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 0,
+         "max"    : 2,
+         "default": 0
+      },
+      {
+         "id"     : 321,
+         "name"   : "time_sync_nof_devices",
+         "type"   : "u8",
+         "comment": "(Time Sync: Master config) Number of time synced devices (incl. master), ignored on slave",
+         "access" : "rw",
+         "save"   : true,
+         "min"    : 1,
+         "max"    : 8,
+         "default": 1
+      }
+   ]
+}

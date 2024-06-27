@@ -1,0 +1,4 @@
+Invoking command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox -- -j12 -l12
+Invoked command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox -- -j12 -l12
+Invoking command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox
+Invoked command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox

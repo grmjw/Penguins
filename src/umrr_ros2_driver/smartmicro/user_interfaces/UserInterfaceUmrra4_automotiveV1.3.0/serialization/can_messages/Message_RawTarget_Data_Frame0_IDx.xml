@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<message _messageName="RawTarget_Data_Frame0" name="$(_messageName)$(_nameSufix)" _nameSufix="" _sensor_id="ID0"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <alias_name>Message_RawTarget_Data_Frame0$(_sensor_id)</alias_name>
+    <base_id>0x400</base_id>
+    <base_id_offset_range start="0x01" end="0x7F"/>
+    <data_format>INTEL</data_format>
+    <object_type>TARGET</object_type>
+    <signal_list>
+        <signal name="ObjectNumber">
+            <alias_name>RawTarget_Object_Number</alias_name>
+            <use_id_bits>true</use_id_bits>
+            <use_base_id_offset>true</use_base_id_offset>
+            <id_offset>0x001</id_offset>
+            <start_byte>0</start_byte>
+            <end_byte>1</end_byte>
+        </signal>
+        <!-- Signal Mode Signal -->
+        <signal name="ModeBit" _mode_bit="0">
+            <alias_name>RawTarget_Mode_Bit</alias_name>
+            <start_byte>0</start_byte>
+            <end_byte>0</end_byte>
+            <start_bit>0</start_bit>
+            <end_bit>0</end_bit>
+            <data_type>SP_MODE</data_type>
+            <const_int>0</const_int>
+        </signal>
+        <!-- Signal Target Range -->
+        <signal name="Range">
+            <alias_name>RawTarget_Range</alias_name>
+            <start_byte>0</start_byte>
+            <end_byte>1</end_byte>
+            <start_bit>1</start_bit>
+            <end_bit>5</end_bit>
+            <data_unit>_m</data_unit>
+            <resolution>0.04</resolution>
+        </signal>
+        <!--Signal Sensor Radial Speed -->
+        <signal name="SpeedRadial">
+            <alias_name>RawTarget_Speed_radial</alias_name>
+            <start_byte>4</start_byte>
+            <end_byte>6</end_byte>
+            <start_bit>7</start_bit>
+            <end_bit>2</end_bit>
+            <data_unit>_m_per_s</data_unit>
+            <resolution>0.04</resolution>
+            <offset>2992</offset>
+        </signal>
+        <!--Signal Sensor Winkel Azimuth in Grad -->
+        <signal name="AzimuthAngleDeg">
+            <alias_name>RawTarget_Angle_Azimuth_deg</alias_name>
+            <start_byte>2</start_byte>
+            <end_byte>3</end_byte>
+            <start_bit>6</start_bit>
+            <end_bit>7</end_bit>
+            <data_unit>_deg</data_unit>
+            <resolution>0.16</resolution>
+            <offset>511</offset>
+        </signal>
+        <!--Signal Sensor Winkel Azimuth in Rad -->
+        <signal name="AzimuthAngle">
+            <alias_name>RawTarget_Angle_az_rad</alias_name>
+            <start_byte>2</start_byte>
+            <end_byte>3</end_byte>
+            <start_bit>6</start_bit>
+            <end_bit>7</end_bit>
+            <data_unit>_rad</data_unit>
+            <resolution>0.002792</resolution>
+            <offset>511</offset>
+        </signal>
+    </signal_list>
+</message>

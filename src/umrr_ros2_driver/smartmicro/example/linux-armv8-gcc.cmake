@@ -1,0 +1,6 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_C_COMPILER aarch64-linux-gnu-gcc-7)
+set(CMAKE_CXX_COMPILER aarch64-linux-gnu-g++-7)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=armv8-a -fPIC")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -march=armv8-a -fPIC")
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -march=armv8-a -fPIC")

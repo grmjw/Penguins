@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>motor_controller_pkg</name>
+  <version>0.0.0</version>
+  <description>ROS 2 package to control a motor using Jetson GPIO</description>
+  <maintainer email="ayudhhaldarprofesional@gmail.com">ayudh</maintainer>
+  <license>none</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>rclpy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>pynput</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

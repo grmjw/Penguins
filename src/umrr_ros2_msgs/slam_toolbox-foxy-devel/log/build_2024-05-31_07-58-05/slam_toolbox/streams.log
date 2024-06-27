@@ -1,0 +1,725 @@
+[0.010s] Invoking command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/lesu0330/slam_toolbox-foxy-devel -DCMAKE_INSTALL_PREFIX=/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox
+[0.054s] -- The C compiler identification is GNU 9.4.0
+[0.102s] -- The CXX compiler identification is GNU 9.4.0
+[0.106s] -- Check for working C compiler: /usr/bin/cc
+[0.160s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.161s] -- Detecting C compiler ABI info
+[0.225s] -- Detecting C compiler ABI info - done
+[0.242s] -- Detecting C compile features
+[0.242s] -- Detecting C compile features - done
+[0.245s] -- Check for working CXX compiler: /usr/bin/c++
+[0.309s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.310s] -- Detecting CXX compiler ABI info
+[0.373s] -- Detecting CXX compiler ABI info - done
+[0.384s] -- Detecting CXX compile features
+[0.384s] -- Detecting CXX compile features - done
+[0.386s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.408s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.408s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.603s] -- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)
+[0.607s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[0.633s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.639s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.700s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.726s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.796s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.957s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.999s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.000s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.001s] -- Looking for pthread.h
+[1.058s] -- Looking for pthread.h - found
+[1.059s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.131s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.132s] -- Looking for pthread_create in pthreads
+[1.204s] -- Looking for pthread_create in pthreads - not found
+[1.204s] -- Looking for pthread_create in pthread
+[1.315s] -- Looking for pthread_create in pthread - found
+[1.317s] -- Found Threads: TRUE  
+[1.455s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.526s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[1.536s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[1.856s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[1.927s] -- Found pluginlib: 2.5.4 (/opt/ros/foxy/share/pluginlib/cmake)
+[1.944s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[1.952s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[1.955s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[1.980s] -- Found tf2_sensor_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_sensor_msgs/cmake)
+[1.997s] -- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+[2.007s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[2.018s] -- Found nav2_map_server: 0.4.7 (/opt/ros/foxy/share/nav2_map_server/cmake)
+[2.020s] -- Found rviz_common: 8.2.8 (/opt/ros/foxy/share/rviz_common/cmake)
+[2.035s] -- Setting OGRE_DIR to: '/opt/ros/foxy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[2.037s] -- Found OGRE
+[2.037s] --   static     : OFF
+[2.037s] --   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[2.037s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[2.037s] --   media      : /opt/ros/foxy/opt/rviz_ogre_vendor/share/OGRE/Media
+[2.037s] -- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[2.037s] -- OGRE_LIBRARY_DIRS: /opt/ros/foxy/opt/rviz_ogre_vendor/lib
+[2.037s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[2.038s] -- OGRE_PLUGIN_DIR: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/OGRE
+[2.038s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[2.038s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[2.038s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[2.038s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[2.055s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[2.059s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[2.129s] -- Found X11: /usr/include   
+[2.129s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[2.191s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[2.192s] -- Looking for gethostbyname
+[2.254s] -- Looking for gethostbyname - found
+[2.254s] -- Looking for connect
+[2.327s] -- Looking for connect - found
+[2.327s] -- Looking for remove
+[2.392s] -- Looking for remove - found
+[2.392s] -- Looking for shmat
+[2.493s] -- Looking for shmat - found
+[2.494s] -- Looking for IceConnectionNumber in ICE
+[2.609s] -- Looking for IceConnectionNumber in ICE - found
+[2.615s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_RELEASE: _render_system_gl_static_library_abs-NOTFOUND
+[2.616s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_DEBUG: _render_system_gl_static_library_abs-NOTFOUND
+[2.626s] -- library: libassimp.so.5
+[2.701s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[2.778s] -- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+[2.782s] -- Found rviz_default_plugins: 8.2.8 (/opt/ros/foxy/share/rviz_default_plugins/cmake)
+[3.131s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system serialization filesystem thread 
+[3.220s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+[3.224s] -- Found CSPARSE: /usr/include/suitesparse  
+[3.264s] -- Found CHOLMOD: /usr/include/suitesparse  
+[3.266s] -- Looking for sgemm_
+[3.322s] -- Looking for sgemm_ - not found
+[3.354s] -- Looking for sgemm_
+[3.415s] -- Looking for sgemm_ - found
+[3.415s] -- Found BLAS: /usr/lib/x86_64-linux-gnu/libblas.so  
+[3.417s] -- Looking for cheev_
+[3.476s] -- Looking for cheev_ - not found
+[3.485s] -- Looking for cheev_
+[3.559s] -- Looking for cheev_ - found
+[3.559s] -- A library with LAPACK API found.
+[3.562s] -- Found installed version of Eigen: /usr/lib/cmake/eigen3
+[3.563s] -- Found required Ceres dependency: Eigen version 3.3.7 in /usr/include/eigen3
+[3.565s] -- Found required Ceres dependency: glog
+[3.567s] -- Found installed version of gflags: /usr/lib/x86_64-linux-gnu/cmake/gflags
+[3.568s] -- Detected gflags version: 2.2.2
+[3.568s] -- Found required Ceres dependency: gflags
+[3.569s] -- Found Ceres version: 1.14.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, OpenMP, Multithreading]
+[3.602s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.860s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[4.138s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.277s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.301s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[4.302s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[4.326s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[4.326s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.326s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[4.326s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[4.346s] -- Found PythonExtra: .so  
+[4.584s] -- Configuring done
+[4.856s] -- Generating done
+[4.860s] -- Build files have been written to: /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox
+[4.874s] Invoked command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/lesu0330/slam_toolbox-foxy-devel -DCMAKE_INSTALL_PREFIX=/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox
+[4.877s] Invoking command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox -- -j12 -l12
+[4.916s] [35m[1mScanning dependencies of target kartoSlamToolbox[0m
+[4.916s] [35m[1mScanning dependencies of target slam_toolbox__cpp[0m
+[4.917s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.926s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[4.953s] [  3%] [32mBuilding CXX object lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/src/Karto.cpp.o[0m
+[4.956s] [  3%] [32mBuilding CXX object lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/src/Mapper.cpp.o[0m
+[5.746s] [  3%] Built target slam_toolbox__cpp
+[5.756s] [  6%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.756s] [  6%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.756s] [  6%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[5.844s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_generator_c[0m
+[5.862s] [  8%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/pause__functions.c.o[0m
+[5.862s] [  9%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/clear__functions.c.o[0m
+[5.862s] [  9%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/clear_queue__functions.c.o[0m
+[5.862s] [  9%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/toggle_interactive__functions.c.o[0m
+[5.863s] [ 10%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/merge_maps__functions.c.o[0m
+[5.863s] [ 10%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/save_map__functions.c.o[0m
+[5.863s] [ 11%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/loop_closure__functions.c.o[0m
+[6.037s] [ 12%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/serialize_pose_graph__functions.c.o[0m
+[6.039s] [ 13%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/add_submap__functions.c.o[0m
+[6.039s] [ 13%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_generator_c.dir/rosidl_generator_c/slam_toolbox/srv/detail/deserialize_pose_graph__functions.c.o[0m
+[6.222s] [ 14%] [32m[1mLinking C shared library libslam_toolbox__rosidl_generator_c.so[0m
+[6.257s] [ 14%] Built target slam_toolbox__rosidl_generator_c
+[6.266s] [ 15%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[6.271s] [ 16%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[6.440s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_typesupport_cpp[0m
+[6.458s] [ 17%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/clear_queue__type_support.cpp.o[0m
+[6.458s] [ 19%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/pause__type_support.cpp.o[0m
+[6.458s] [ 19%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/toggle_interactive__type_support.cpp.o[0m
+[6.458s] [ 19%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/save_map__type_support.cpp.o[0m
+[6.458s] [ 20%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/clear__type_support.cpp.o[0m
+[6.458s] [ 20%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/loop_closure__type_support.cpp.o[0m
+[6.687s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_typesupport_introspection_cpp[0m
+[6.714s] [ 21%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/pause__type_support.cpp.o[0m
+[6.905s] [ 22%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/clear_queue__type_support.cpp.o[0m
+[6.911s] [ 23%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/merge_maps__type_support.cpp.o[0m
+[6.920s] [ 24%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/add_submap__type_support.cpp.o[0m
+[6.920s] [ 24%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/deserialize_pose_graph__type_support.cpp.o[0m
+[6.923s] [ 25%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/slam_toolbox/srv/serialize_pose_graph__type_support.cpp.o[0m
+[6.933s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_typesupport_fastrtps_cpp[0m
+[6.937s] [ 25%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/toggle_interactive__type_support.cpp.o[0m
+[6.982s] [ 26%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/pause__type_support.cpp.o[0m
+[7.186s] [ 27%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/clear__type_support.cpp.o[0m
+[7.282s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_typesupport_c[0m
+[7.305s] [ 27%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/pause__type_support.cpp.o[0m
+[7.337s] [ 27%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/clear_queue__type_support.cpp.o[0m
+[7.352s] [ 28%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/clear_queue__type_support.cpp.o[0m
+[7.373s] [ 29%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/toggle_interactive__type_support.cpp.o[0m
+[7.375s] [ 29%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/clear__type_support.cpp.o[0m
+[7.379s] [ 30%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/save_map__type_support.cpp.o[0m
+[7.397s] [ 31%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/loop_closure__type_support.cpp.o[0m
+[7.419s] [ 32%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/save_map__type_support.cpp.o[0m
+[7.420s] [ 32%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/add_submap__type_support.cpp.o[0m
+[7.420s] [ 33%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/merge_maps__type_support.cpp.o[0m
+[7.424s] [ 34%] [32m[1mLinking CXX shared library libslam_toolbox__rosidl_typesupport_cpp.so[0m
+[7.427s] [ 35%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/deserialize_pose_graph__type_support.cpp.o[0m
+[7.445s] [ 36%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_c.dir/rosidl_typesupport_c/slam_toolbox/srv/serialize_pose_graph__type_support.cpp.o[0m
+[7.464s] [ 36%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/loop_closure__type_support.cpp.o[0m
+[7.485s] [ 36%] Built target slam_toolbox__rosidl_typesupport_cpp
+[7.490s] [ 37%] [32m[1mLinking CXX shared library libslam_toolbox__rosidl_typesupport_c.so[0m
+[7.495s] [ 38%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/merge_maps__type_support.cpp.o[0m
+[7.497s] [ 39%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/add_submap__type_support.cpp.o[0m
+[7.537s] [ 40%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/deserialize_pose_graph__type_support.cpp.o[0m
+[7.541s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_typesupport_introspection_c[0m
+[7.553s] [ 40%] Built target slam_toolbox__rosidl_typesupport_c
+[7.566s] [ 40%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/slam_toolbox/srv/detail/serialize_pose_graph__type_support.cpp.o[0m
+[7.566s] [ 41%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/pause__type_support.c.o[0m
+[7.626s] [ 41%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/clear_queue__type_support.c.o[0m
+[7.672s] [ 42%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/toggle_interactive__type_support.c.o[0m
+[7.684s] [ 43%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/toggle_interactive__type_support.cpp.o[0m
+[7.690s] [ 44%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/clear__type_support.c.o[0m
+[7.731s] [ 44%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/save_map__type_support.c.o[0m
+[7.749s] [ 45%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/loop_closure__type_support.c.o[0m
+[7.792s] [ 46%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/merge_maps__type_support.c.o[0m
+[7.808s] [ 47%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/add_submap__type_support.c.o[0m
+[7.851s] [ 47%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/deserialize_pose_graph__type_support.c.o[0m
+[7.869s] [ 49%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/clear__type_support.cpp.o[0m
+[7.869s] [ 49%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/slam_toolbox/srv/detail/serialize_pose_graph__type_support.c.o[0m
+[7.914s] [ 50%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/save_map__type_support.cpp.o[0m
+[7.930s] [ 51%] [32m[1mLinking C shared library libslam_toolbox__rosidl_typesupport_introspection_c.so[0m
+[7.935s] [ 51%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/loop_closure__type_support.cpp.o[0m
+[7.962s] [ 52%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/merge_maps__type_support.cpp.o[0m
+[7.976s] [ 53%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/add_submap__type_support.cpp.o[0m
+[7.979s] [ 53%] Built target slam_toolbox__rosidl_typesupport_introspection_c
+[7.992s] [ 54%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/deserialize_pose_graph__type_support.cpp.o[0m
+[8.034s] [ 54%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/slam_toolbox/srv/detail/dds_fastrtps/serialize_pose_graph__type_support.cpp.o[0m
+[8.050s] [ 55%] [32m[1mLinking CXX shared library libslam_toolbox__rosidl_typesupport_introspection_cpp.so[0m
+[8.145s] [ 55%] Built target slam_toolbox__rosidl_typesupport_introspection_cpp
+[8.700s] [ 56%] [32m[1mLinking CXX shared library libslam_toolbox__rosidl_typesupport_fastrtps_cpp.so[0m
+[8.781s] [ 56%] Built target slam_toolbox__rosidl_typesupport_fastrtps_cpp
+[8.791s] [ 57%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[9.506s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_typesupport_fastrtps_c[0m
+[9.543s] [ 57%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/save_map__type_support_c.cpp.o[0m
+[9.544s] [ 57%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/pause__type_support_c.cpp.o[0m
+[9.544s] [ 58%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/clear_queue__type_support_c.cpp.o[0m
+[9.544s] [ 59%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/toggle_interactive__type_support_c.cpp.o[0m
+[9.545s] [ 60%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/clear__type_support_c.cpp.o[0m
+[9.546s] [ 62%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/loop_closure__type_support_c.cpp.o[0m
+[9.546s] [ 62%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/add_submap__type_support_c.cpp.o[0m
+[9.547s] [ 62%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/deserialize_pose_graph__type_support_c.cpp.o[0m
+[9.553s] [ 63%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/merge_maps__type_support_c.cpp.o[0m
+[9.554s] [ 64%] [32mBuilding CXX object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/slam_toolbox/srv/detail/serialize_pose_graph__type_support_c.cpp.o[0m
+[10.178s] [ 65%] [32m[1mLinking CXX shared library libslam_toolbox__rosidl_typesupport_fastrtps_c.so[0m
+[10.256s] [ 65%] Built target slam_toolbox__rosidl_typesupport_fastrtps_c
+[10.265s] [35m[1mScanning dependencies of target slam_toolbox[0m
+[10.274s] [ 65%] Built target slam_toolbox
+[10.283s] [ 65%] [34m[1mGenerating rviz_plugin/moc_slam_toolbox_rviz_plugin.cpp[0m
+[10.283s] [35m[1mScanning dependencies of target slam_toolbox__py[0m
+[10.292s] [ 66%] [34m[1mGenerating Python code for ROS interfaces[0m
+[10.294s] [35m[1mScanning dependencies of target SlamToolboxPlugin[0m
+[10.381s] [ 68%] [32mBuilding CXX object CMakeFiles/SlamToolboxPlugin.dir/rviz_plugin/slam_toolbox_rviz_plugin.cpp.o[0m
+[10.381s] [ 68%] [32mBuilding CXX object CMakeFiles/SlamToolboxPlugin.dir/rviz_plugin/moc_slam_toolbox_rviz_plugin.cpp.o[0m
+[12.005s] [ 68%] Built target slam_toolbox__py
+[12.015s] [35m[1mScanning dependencies of target slam_toolbox__python[0m
+[12.050s] [ 68%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_clear_queue_s.c.o[0m
+[12.052s] [ 71%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_pause_s.c.o[0m
+[12.052s] [ 71%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_toggle_interactive_s.c.o[0m
+[12.052s] [ 71%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_clear_s.c.o[0m
+[12.052s] [ 72%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_save_map_s.c.o[0m
+[12.053s] [ 73%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_merge_maps_s.c.o[0m
+[12.054s] [ 74%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_add_submap_s.c.o[0m
+[12.063s] [ 74%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_loop_closure_s.c.o[0m
+[12.224s] [ 74%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_serialize_pose_graph_s.c.o[0m
+[12.229s] [ 75%] [32mBuilding C object CMakeFiles/slam_toolbox__python.dir/rosidl_generator_py/slam_toolbox/srv/_deserialize_pose_graph_s.c.o[0m
+[12.347s] [ 76%] [32m[1mLinking C shared library rosidl_generator_py/slam_toolbox/libslam_toolbox__python.so[0m
+[12.391s] [ 76%] Built target slam_toolbox__python
+[12.400s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_typesupport_c__pyext[0m
+[12.401s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_typesupport_introspection_c__pyext[0m
+[12.404s] [35m[1mScanning dependencies of target slam_toolbox__rosidl_typesupport_fastrtps_c__pyext[0m
+[12.421s] [ 77%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/slam_toolbox/_slam_toolbox_s.ep.rosidl_typesupport_c.c.o[0m
+[12.421s] [ 77%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/slam_toolbox/_slam_toolbox_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[12.435s] [ 77%] [32mBuilding C object CMakeFiles/slam_toolbox__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/slam_toolbox/_slam_toolbox_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[12.761s] [ 78%] [32m[1mLinking C shared library rosidl_generator_py/slam_toolbox/slam_toolbox_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[12.773s] [ 79%] [32m[1mLinking CXX shared library rosidl_generator_py/slam_toolbox/slam_toolbox_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[12.804s] [ 79%] Built target slam_toolbox__rosidl_typesupport_c__pyext
+[12.850s] [ 79%] Built target slam_toolbox__rosidl_typesupport_fastrtps_c__pyext
+[12.931s] [ 79%] [32m[1mLinking C shared library rosidl_generator_py/slam_toolbox/slam_toolbox_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[12.976s] [ 79%] Built target slam_toolbox__rosidl_typesupport_introspection_c__pyext
+[24.970s] [ 79%] [32m[1mLinking CXX shared library libSlamToolboxPlugin.so[0m
+[26.114s] [ 79%] Built target SlamToolboxPlugin
+[26.253s] [ 80%] [32m[1mLinking CXX shared library libkartoSlamToolbox.so[0m
+[26.610s] [ 80%] Built target kartoSlamToolbox
+[26.619s] [35m[1mScanning dependencies of target ceres_solver_plugin[0m
+[26.619s] [35m[1mScanning dependencies of target toolbox_common[0m
+[26.679s] [ 81%] [32mBuilding CXX object CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o[0m
+[26.727s] [ 81%] [32mBuilding CXX object CMakeFiles/toolbox_common.dir/src/loop_closure_assistant.cpp.o[0m
+[26.728s] [ 82%] [32mBuilding CXX object CMakeFiles/toolbox_common.dir/src/slam_toolbox_common.cpp.o[0m
+[26.729s] [ 83%] [32mBuilding CXX object CMakeFiles/toolbox_common.dir/src/map_saver.cpp.o[0m
+[26.730s] [ 84%] [32mBuilding CXX object CMakeFiles/toolbox_common.dir/src/slam_mapper.cpp.o[0m
+[26.730s] [ 85%] [32mBuilding CXX object CMakeFiles/toolbox_common.dir/src/laser_utils.cpp.o[0m
+[40.390s] [ 86%] [32m[1mLinking CXX shared library libceres_solver_plugin.so[0m
+[40.804s] [ 86%] Built target ceres_solver_plugin
+[55.016s] [ 87%] [32m[1mLinking CXX shared library libtoolbox_common.so[0m
+[55.543s] [ 87%] Built target toolbox_common
+[55.553s] [35m[1mScanning dependencies of target localization_slam_toolbox[0m
+[55.553s] [35m[1mScanning dependencies of target lifelong_slam_toolbox[0m
+[55.553s] [35m[1mScanning dependencies of target sync_slam_toolbox[0m
+[55.553s] [35m[1mScanning dependencies of target merge_maps_kinematic[0m
+[55.553s] [35m[1mScanning dependencies of target async_slam_toolbox[0m
+[55.615s] [ 88%] [32mBuilding CXX object CMakeFiles/merge_maps_kinematic.dir/src/merge_maps_kinematic.cpp.o[0m
+[55.636s] [ 89%] [32mBuilding CXX object CMakeFiles/sync_slam_toolbox.dir/src/slam_toolbox_sync.cpp.o[0m
+[55.638s] [ 90%] [32mBuilding CXX object CMakeFiles/localization_slam_toolbox.dir/src/slam_toolbox_localization.cpp.o[0m
+[55.638s] [ 91%] [32mBuilding CXX object CMakeFiles/async_slam_toolbox.dir/src/slam_toolbox_async.cpp.o[0m
+[55.662s] [ 92%] [32mBuilding CXX object CMakeFiles/lifelong_slam_toolbox.dir/src/experimental/slam_toolbox_lifelong.cpp.o[0m
+[66.573s] [ 93%] [32m[1mLinking CXX shared library libasync_slam_toolbox.so[0m
+[66.967s] [ 93%] Built target async_slam_toolbox
+[66.976s] [35m[1mScanning dependencies of target async_slam_toolbox_node[0m
+[67.056s] [ 94%] [32mBuilding CXX object CMakeFiles/async_slam_toolbox_node.dir/src/slam_toolbox_async_node.cpp.o[0m
+[67.406s] [ 95%] [32m[1mLinking CXX shared library liblifelong_slam_toolbox.so[0m
+[67.606s] [ 96%] [32m[1mLinking CXX shared library libsync_slam_toolbox.so[0m
+[67.852s] [ 96%] Built target lifelong_slam_toolbox
+[67.863s] [35m[1mScanning dependencies of target lifelong_slam_toolbox_node[0m
+[67.949s] [ 96%] [32mBuilding CXX object CMakeFiles/lifelong_slam_toolbox_node.dir/src/experimental/slam_toolbox_lifelong_node.cpp.o[0m
+[68.043s] [ 96%] Built target sync_slam_toolbox
+[68.051s] [35m[1mScanning dependencies of target sync_slam_toolbox_node[0m
+[68.136s] [ 96%] [32mBuilding CXX object CMakeFiles/sync_slam_toolbox_node.dir/src/slam_toolbox_sync_node.cpp.o[0m
+[70.676s] [ 96%] [32m[1mLinking CXX executable merge_maps_kinematic[0m
+[71.304s] [ 96%] [32m[1mLinking CXX shared library liblocalization_slam_toolbox.so[0m
+[71.410s] [ 96%] Built target merge_maps_kinematic
+[71.757s] [ 96%] Built target localization_slam_toolbox
+[71.767s] [35m[1mScanning dependencies of target localization_slam_toolbox_node[0m
+[71.856s] [ 97%] [32mBuilding CXX object CMakeFiles/localization_slam_toolbox_node.dir/src/slam_toolbox_localization_node.cpp.o[0m
+[77.986s] [ 97%] [32m[1mLinking CXX executable async_slam_toolbox_node[0m
+[78.572s] [ 97%] Built target async_slam_toolbox_node
+[78.785s] [ 98%] [32m[1mLinking CXX executable lifelong_slam_toolbox_node[0m
+[78.845s] [ 99%] [32m[1mLinking CXX executable sync_slam_toolbox_node[0m
+[79.403s] [ 99%] Built target lifelong_slam_toolbox_node
+[79.467s] [ 99%] Built target sync_slam_toolbox_node
+[82.704s] [100%] [32m[1mLinking CXX executable localization_slam_toolbox_node[0m
+[83.285s] [100%] Built target localization_slam_toolbox_node
+[83.296s] Invoked command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox -- -j12 -l12
+[83.458s] Invoking command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox
+[83.465s] -- Install configuration: "Release"
+[83.465s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/ament_index/resource_index/rosidl_interfaces/slam_toolbox
+[83.465s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox
+[83.465s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/loop_closure.h
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/clear_queue.h
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/deserialize_pose_graph.h
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/save_map.h
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/merge_maps.h
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/pause.h
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/toggle_interactive.h
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/add_submap.h
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__functions.c
+[83.466s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__functions.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__functions.c
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__functions.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__type_support.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__struct.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__functions.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__struct.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__struct.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__functions.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__struct.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__struct.h
+[83.467s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__functions.c
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__type_support.h
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__functions.h
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__functions.h
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__type_support.h
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__type_support.h
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__struct.h
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__functions.c
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__struct.h
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__functions.c
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__functions.h
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__functions.c
+[83.468s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__functions.c
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__type_support.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__type_support.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__type_support.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__functions.c
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__struct.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__functions.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__type_support.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__functions.c
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__type_support.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__functions.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__functions.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__functions.c
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__type_support.h
+[83.469s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__struct.h
+[83.470s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__struct.h
+[83.470s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/clear.h
+[83.470s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/serialize_pose_graph.h
+[83.470s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg
+[83.470s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg/rosidl_generator_c__visibility_control.h
+[83.470s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/environment/library_path.sh
+[83.470s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/environment/library_path.dsv
+[83.470s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_generator_c.so
+[83.470s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_generator_c.so" to ""
+[83.470s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox
+[83.470s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv
+[83.470s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__rosidl_typesupport_fastrtps_c.h
+[83.471s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[83.471s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_fastrtps_c.so
+[83.471s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_fastrtps_c.so" to ""
+[83.472s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox
+[83.472s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv
+[83.472s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__rosidl_typesupport_fastrtps_cpp.hpp
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__rosidl_typesupport_fastrtps_cpp.hpp
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__rosidl_typesupport_fastrtps_cpp.hpp
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__rosidl_typesupport_fastrtps_cpp.hpp
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__rosidl_typesupport_fastrtps_cpp.hpp
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__rosidl_typesupport_fastrtps_cpp.hpp
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__rosidl_typesupport_fastrtps_cpp.hpp
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/dds_fastrtps
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__rosidl_typesupport_fastrtps_cpp.hpp
+[83.472s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__rosidl_typesupport_fastrtps_cpp.hpp
+[83.473s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__rosidl_typesupport_fastrtps_cpp.hpp
+[83.473s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg
+[83.473s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[83.473s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_fastrtps_cpp.so
+[83.473s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_fastrtps_cpp.so" to ""
+[83.473s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox
+[83.473s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv
+[83.473s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail
+[83.473s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__type_support.c
+[83.473s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__rosidl_typesupport_introspection_c.h
+[83.473s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__rosidl_typesupport_introspection_c.h
+[83.473s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__type_support.c
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__type_support.c
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__rosidl_typesupport_introspection_c.h
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__type_support.c
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__rosidl_typesupport_introspection_c.h
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__rosidl_typesupport_introspection_c.h
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__type_support.c
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__type_support.c
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__rosidl_typesupport_introspection_c.h
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__rosidl_typesupport_introspection_c.h
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__rosidl_typesupport_introspection_c.h
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__type_support.c
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__rosidl_typesupport_introspection_c.h
+[83.474s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__type_support.c
+[83.475s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__type_support.c
+[83.475s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__rosidl_typesupport_introspection_c.h
+[83.475s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__type_support.c
+[83.475s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg
+[83.475s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[83.475s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_introspection_c.so
+[83.475s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_introspection_c.so" to ""
+[83.475s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_c.so
+[83.475s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_c.so" to ""
+[83.475s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox
+[83.475s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv
+[83.475s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/pause.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/merge_maps.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/toggle_interactive.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/save_map.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/loop_closure.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/clear.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/clear_queue.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/serialize_pose_graph.hpp
+[83.476s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__type_support.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__traits.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__struct.hpp
+[83.476s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__builder.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__struct.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__traits.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__traits.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__builder.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__struct.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__type_support.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__traits.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__struct.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__traits.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__traits.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__traits.hpp
+[83.477s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__type_support.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__builder.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__type_support.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__type_support.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__struct.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__builder.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__builder.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__struct.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__type_support.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__struct.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__type_support.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__builder.hpp
+[83.478s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__builder.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__builder.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__struct.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__builder.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__struct.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__traits.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__traits.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__builder.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__traits.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__type_support.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__type_support.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__type_support.hpp
+[83.479s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__struct.hpp
+[83.480s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/deserialize_pose_graph.hpp
+[83.480s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/add_submap.hpp
+[83.480s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg
+[83.480s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/msg/rosidl_generator_cpp__visibility_control.hpp
+[83.480s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox
+[83.480s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv
+[83.480s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail
+[83.480s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__type_support.cpp
+[83.480s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__rosidl_typesupport_introspection_cpp.hpp
+[83.480s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__rosidl_typesupport_introspection_cpp.hpp
+[83.480s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__type_support.cpp
+[83.480s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__rosidl_typesupport_introspection_cpp.hpp
+[83.480s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__rosidl_typesupport_introspection_cpp.hpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/deserialize_pose_graph__type_support.cpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__type_support.cpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear_queue__type_support.cpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__rosidl_typesupport_introspection_cpp.hpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/merge_maps__rosidl_typesupport_introspection_cpp.hpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__rosidl_typesupport_introspection_cpp.hpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/toggle_interactive__rosidl_typesupport_introspection_cpp.hpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__rosidl_typesupport_introspection_cpp.hpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/serialize_pose_graph__type_support.cpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/loop_closure__type_support.cpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/clear__type_support.cpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/save_map__type_support.cpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/add_submap__type_support.cpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/srv/detail/pause__rosidl_typesupport_introspection_cpp.hpp
+[83.481s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_introspection_cpp.so
+[83.482s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_introspection_cpp.so" to ""
+[83.482s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_cpp.so
+[83.482s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__rosidl_typesupport_cpp.so" to ""
+[83.482s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/environment/pythonpath.sh
+[83.482s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/environment/pythonpath.dsv
+[83.482s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/__init__.py
+[83.508s] Compiling '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/__init__.py'...
+[83.511s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv
+[83.511s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_add_submap_s.c
+[83.511s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_loop_closure.py
+[83.511s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_clear_s.c
+[83.511s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/__init__.py
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_loop_closure_s.c
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_serialize_pose_graph.py
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_save_map.py
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_merge_maps_s.c
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_clear_queue_s.c
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_toggle_interactive_s.c
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_add_submap.py
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_pause_s.c
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_serialize_pose_graph_s.c
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_merge_maps.py
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_clear_queue.py
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_clear.py
+[83.512s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_save_map_s.c
+[83.513s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_toggle_interactive.py
+[83.513s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_deserialize_pose_graph_s.c
+[83.513s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_pause.py
+[83.513s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/srv/_deserialize_pose_graph.py
+[83.513s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/slam_toolbox_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[83.513s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/slam_toolbox_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[83.513s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/slam_toolbox_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[83.514s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/slam_toolbox_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[83.514s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/slam_toolbox_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[83.514s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages/slam_toolbox/slam_toolbox_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[83.515s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__python.so
+[83.515s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libslam_toolbox__python.so" to ""
+[83.515s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/Pause.idl
+[83.515s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/ClearQueue.idl
+[83.515s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/ToggleInteractive.idl
+[83.515s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/Clear.idl
+[83.515s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/SaveMap.idl
+[83.515s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/LoopClosure.idl
+[83.516s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/MergeMaps.idl
+[83.516s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/AddSubmap.idl
+[83.516s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/DeserializePoseGraph.idl
+[83.516s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srv/SerializePoseGraph.idl
+[83.516s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/Pause.srv
+[83.516s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/Pause_Request.msg
+[83.516s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/Pause_Response.msg
+[83.516s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/ClearQueue.srv
+[83.516s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/ClearQueue_Request.msg
+[83.517s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/ClearQueue_Response.msg
+[83.517s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/ToggleInteractive.srv
+[83.517s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/ToggleInteractive_Request.msg
+[83.517s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/ToggleInteractive_Response.msg
+[83.517s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/Clear.srv
+[83.517s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/Clear_Request.msg
+[83.517s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/Clear_Response.msg
+[83.517s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/SaveMap.srv
+[83.517s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/SaveMap_Request.msg
+[83.518s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/SaveMap_Response.msg
+[83.518s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/LoopClosure.srv
+[83.518s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/LoopClosure_Request.msg
+[83.518s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/LoopClosure_Response.msg
+[83.518s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/MergeMaps.srv
+[83.518s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/MergeMaps_Request.msg
+[83.518s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/MergeMaps_Response.msg
+[83.518s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/AddSubmap.srv
+[83.518s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/AddSubmap_Request.msg
+[83.519s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/AddSubmap_Response.msg
+[83.519s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/DeserializePoseGraph.srv
+[83.519s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/DeserializePoseGraph_Request.msg
+[83.519s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/DeserializePoseGraph_Response.msg
+[83.519s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/SerializePoseGraph.srv
+[83.519s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/SerializePoseGraph_Request.msg
+[83.519s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/srvs/SerializePoseGraph_Response.msg
+[83.519s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/rviz_plugins.xml
+[83.519s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/solver_plugins.xml
+[83.520s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/async_slam_toolbox_node
+[83.520s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/async_slam_toolbox_node" to ""
+[83.520s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/sync_slam_toolbox_node
+[83.521s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/sync_slam_toolbox_node" to ""
+[83.521s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/localization_slam_toolbox_node
+[83.522s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/localization_slam_toolbox_node" to ""
+[83.522s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/lifelong_slam_toolbox_node
+[83.523s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/lifelong_slam_toolbox_node" to ""
+[83.523s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/merge_maps_kinematic
+[83.524s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/slam_toolbox/merge_maps_kinematic" to ""
+[83.524s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libtoolbox_common.so
+[83.527s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libtoolbox_common.so" to ""
+[83.527s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libSlamToolboxPlugin.so
+[83.528s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libSlamToolboxPlugin.so" to ""
+[83.528s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libceres_solver_plugin.so
+[83.529s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libceres_solver_plugin.so" to ""
+[83.529s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libasync_slam_toolbox.so
+[83.530s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libasync_slam_toolbox.so" to ""
+[83.530s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libsync_slam_toolbox.so
+[83.531s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libsync_slam_toolbox.so" to ""
+[83.532s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/liblocalization_slam_toolbox.so
+[83.533s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/liblocalization_slam_toolbox.so" to ""
+[83.533s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/liblifelong_slam_toolbox.so
+[83.534s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/liblifelong_slam_toolbox.so" to ""
+[83.534s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libSlamToolboxPlugin.so
+[83.535s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include
+[83.535s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/visualization_utils.hpp
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/experimental
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/experimental/slam_toolbox_lifelong.hpp
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/get_pose_helper.hpp
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/slam_toolbox_async.hpp
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/slam_toolbox_localization.hpp
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/map_saver.hpp
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/loop_closure_assistant.hpp
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/merge_maps_kinematic.hpp
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/snap_utils.hpp
+[83.535s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/laser_utils.hpp
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/toolbox_types.hpp
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/slam_mapper.hpp
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/slam_toolbox_common.hpp
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/toolbox_msgs.hpp
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/slam_toolbox_sync.hpp
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/slam_toolbox/serialization.hpp
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/launch
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/launch/offline_launch.py
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/launch/online_sync_launch.py
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/launch/localization_launch.py
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/launch/lifelong_launch.py
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/launch/merge_maps_kinematic_launch.py
+[83.536s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/launch/online_async_launch.py
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/config
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/config/mapper_params_localization.yaml
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/config/mapper_params_online_sync.yaml
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/config/mapper_params_offline.yaml
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/config/mapper_params_online_async.yaml
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/config/mapper_params_lifelong.yaml
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/solver_plugins.xml
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/rviz_plugins.xml
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/ament_index/resource_index/package_run_dependencies/slam_toolbox
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/ament_index/resource_index/parent_prefix_path/slam_toolbox
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/environment/ament_prefix_path.sh
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/environment/ament_prefix_path.dsv
+[83.537s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/environment/path.sh
+[83.538s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/environment/path.dsv
+[83.538s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/local_setup.bash
+[83.538s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/local_setup.sh
+[83.538s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/local_setup.zsh
+[83.538s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/local_setup.dsv
+[83.538s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.dsv
+[83.538s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/ament_index/resource_index/packages/slam_toolbox
+[83.538s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/ament_index/resource_index/rviz_common__pluginlib__plugin/slam_toolbox
+[83.539s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/ament_index/resource_index/slam_toolbox__pluginlib__plugin/slam_toolbox
+[83.539s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_generator_cExport.cmake
+[83.539s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_generator_cExport-release.cmake
+[83.539s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_typesupport_introspection_cExport.cmake
+[83.539s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_typesupport_introspection_cExport-release.cmake
+[83.539s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_typesupport_cExport.cmake
+[83.539s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_typesupport_cExport-release.cmake
+[83.540s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_generator_cppExport.cmake
+[83.540s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_typesupport_introspection_cppExport.cmake
+[83.540s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_typesupport_introspection_cppExport-release.cmake
+[83.540s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_typesupport_cppExport.cmake
+[83.540s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolbox__rosidl_typesupport_cppExport-release.cmake
+[83.540s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/SlamToolboxPluginExport.cmake
+[83.540s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/SlamToolboxPluginExport-release.cmake
+[83.541s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/rosidl_cmake-extras.cmake
+[83.541s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/ament_cmake_export_dependencies-extras.cmake
+[83.541s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/ament_cmake_export_libraries-extras.cmake
+[83.541s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/ament_cmake_export_targets-extras.cmake
+[83.541s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/ament_cmake_export_include_directories-extras.cmake
+[83.541s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[83.541s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[83.541s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolboxConfig.cmake
+[83.542s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/cmake/slam_toolboxConfig-version.cmake
+[83.542s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.xml
+[83.542s] -- Up-to-date: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include/
+[83.542s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include//karto_sdk
+[83.542s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include//karto_sdk/Macros.h
+[83.542s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include//karto_sdk/nanoflann_adaptors.h
+[83.542s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include//karto_sdk/nanoflann.hpp
+[83.542s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include//karto_sdk/Karto.h
+[83.542s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include//karto_sdk/Mapper.h
+[83.543s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include//karto_sdk/Types.h
+[83.543s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/include//karto_sdk/Math.h
+[83.543s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libkartoSlamToolbox.so
+[83.546s] -- Set runtime path of "/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/libkartoSlamToolbox.so" to ""
+[83.546s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/environment/library_path.sh
+[83.546s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/environment/library_path.dsv
+[83.546s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/ament_index/resource_index/package_run_dependencies/karto_sdk
+[83.547s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/ament_index/resource_index/parent_prefix_path/karto_sdk
+[83.547s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/environment/ament_prefix_path.sh
+[83.547s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/environment/ament_prefix_path.dsv
+[83.547s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/environment/path.sh
+[83.547s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/environment/path.dsv
+[83.547s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/local_setup.bash
+[83.547s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/local_setup.sh
+[83.547s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/local_setup.zsh
+[83.547s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/local_setup.dsv
+[83.548s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/package.dsv
+[83.548s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/ament_index/resource_index/packages/karto_sdk
+[83.548s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[83.548s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[83.548s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/cmake/ament_cmake_export_dependencies-extras.cmake
+[83.548s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/cmake/karto_sdkConfig.cmake
+[83.548s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/cmake/karto_sdkConfig-version.cmake
+[83.548s] -- Installing: /home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/karto_sdk/package.xml
+[83.550s] Invoked command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox

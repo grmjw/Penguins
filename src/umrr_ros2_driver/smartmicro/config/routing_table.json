@@ -1,0 +1,23 @@
+{
+    "name": "Client Routing Table",
+    "version": "1.0.0",
+    "clients": [
+        {
+            "client_id": 1,
+            "link_type": "can",
+            "can_network_id": 0,
+            "dev_id": 1
+        },
+        {
+            "client_id": 2,
+            "link_type": "rs485",
+            "dev_id": 1
+        },
+        {
+            "client_id": 3,
+            "link_type": "eth",
+            "ip": "192.168.11.100",
+            "port": 55555
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+   "format_version_major"  : 1,
+   "format_version_minor"  : 1,
+   "format_version_patch"  : 0,
+   "name"                  : "umrr11_t132_automotive",
+   "identifier"            : 4,
+   "version_major"         : 1,
+   "version_minor"         : 1,
+   "version_patch"         : 2,
+   "content"               :
+   [
+      "auto_interface_0dim.param",
+      "auto_interface.status",
+      "auto_interface.command",
+	  "comTargetBaseList_v1_0_0.port",
+	  "comTargetList_v2_1_0.port"
+   ]
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<message _messageName="RawTarget_Header2" name="$(_messageName)$(_nameSufix)" _sensor_id="ID0" _nameSufix="" _base_id_offset="0x000"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <alias_name>Message_RawTarget_Header2$(_sensor_id)</alias_name>
+    <base_id>0x400</base_id>
+    <base_id_offset int="0x00"/>
+    <data_format>INTEL</data_format>
+    <object_type>CONTROL</object_type>
+    <signal_list>
+        <!-- Signal Mode Signal -->
+        <signal name="ModeBit" _mode_bit="2">
+            <alias_name>RawTarget_Mode_Bit</alias_name>
+            <start_byte>7</start_byte>
+            <end_byte>7</end_byte>
+            <start_bit>6</start_bit>
+            <end_bit>7</end_bit>
+            <data_type>SP_MODE</data_type>
+            <const_int>2</const_int>
+        </signal>
+        <!-- Fraction part of Timestamp of Data Acquisition -->
+        <signal name="AcqTimeStampFraction">
+            <start_byte>0</start_byte>
+            <end_byte>3</end_byte>
+            <start_bit>0</start_bit>
+            <end_bit>7</end_bit>
+            <resolution>0.00000000023283064365386962890625</resolution>
+        </signal>
+    </signal_list>
+</message>

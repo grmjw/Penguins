@@ -1,0 +1,26 @@
+{
+    "name": "HW Inventory List",
+        "version" : "1.0.0",
+        "hwItems" :
+        [
+            {
+                "type"     : "can",
+                "dev_id"       : 1,
+                "iface_name"   : "can0",
+                "baudrate" : 500000
+            },
+            {
+                "type"   : "rs485",
+                "dev_id"     : 1,
+                "iface_name" : "/dev/ttyS0",
+                "baudrate" : 115200
+            },
+            {
+                "type"     : "eth",
+                "dev_id"       : 1,
+                "iface_name"   : "eth0",
+                "port" : 55555
+            }
+        ]
+}
+

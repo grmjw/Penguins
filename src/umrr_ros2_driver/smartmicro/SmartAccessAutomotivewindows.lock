@@ -1,0 +1,968 @@
+{
+ "graph_lock": {
+  "nodes": {
+   "0": {
+    "ref": "SmartAccessAutomotive/3.7.0@smartmicro/stable",
+    "requires": [
+     "1",
+     "28",
+     "33",
+     "38",
+     "43",
+     "48",
+     "53",
+     "58",
+     "63",
+     "68",
+     "73",
+     "78",
+     "83",
+     "88",
+     "93",
+     "98",
+     "103",
+     "108",
+     "113",
+     "118"
+    ],
+    "path": "conanfile.py",
+    "context": "host"
+   },
+   "1": {
+    "ref": "SmartAccessBaselineMeta/5.2.1@smartmicro/stable",
+    "requires": [
+     "2",
+     "13",
+     "20",
+     "25"
+    ],
+    "context": "host"
+   },
+   "2": {
+    "ref": "ComLibRelease/2.6.1@smartmicro/stable",
+    "requires": [
+     "3",
+     "4",
+     "7",
+     "8",
+     "9"
+    ],
+    "context": "host"
+   },
+   "3": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "4": {
+    "ref": "ComLibCommon/4.2.0@smartmicro/stable",
+    "requires": [
+     "5"
+    ],
+    "context": "host"
+   },
+   "5": {
+    "ref": "byteorder/2.0.2@smartmicro/stable",
+    "requires": [
+     "6"
+    ],
+    "context": "host"
+   },
+   "6": {
+    "ref": "typedefs/2.0.1@smartmicro/stable",
+    "context": "host"
+   },
+   "7": {
+    "ref": "UserInterfaceApi/3.2.1@smartmicro/stable",
+    "requires": [
+     "4"
+    ],
+    "context": "host"
+   },
+   "8": {
+    "ref": "ComLibApi/2.3.2@smartmicro/stable",
+    "context": "host"
+   },
+   "9": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "3",
+     "7",
+     "10",
+     "11",
+     "12"
+    ],
+    "context": "host"
+   },
+   "10": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "11": {
+    "ref": "cJSON/1.7.14@smartmicro/stable",
+    "context": "host"
+   },
+   "12": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "3"
+    ],
+    "context": "host"
+   },
+   "13": {
+    "ref": "SmartAccessApi/2.7.0@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "7",
+     "14",
+     "15"
+    ],
+    "context": "host"
+   },
+   "14": {
+    "ref": "pugixml/1.11@smartmicro/stable",
+    "context": "host"
+   },
+   "15": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "16",
+     "7",
+     "17",
+     "18",
+     "19"
+    ],
+    "context": "host"
+   },
+   "16": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "17": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "18": {
+    "ref": "cJSON/1.7.14@smartmicro/stable",
+    "context": "host"
+   },
+   "19": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "18",
+     "16"
+    ],
+    "context": "host"
+   },
+   "20": {
+    "ref": "UserInterfaceBaseV1.0.2/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "21"
+    ],
+    "context": "host"
+   },
+   "21": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "22",
+     "7",
+     "23",
+     "11",
+     "24"
+    ],
+    "context": "host"
+   },
+   "22": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "23": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "24": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "22"
+    ],
+    "context": "host"
+   },
+   "25": {
+    "ref": "SmartAccessApiPythonBinding/1.3.2@smartmicro/stable",
+    "requires": [
+     "13",
+     "26",
+     "27"
+    ],
+    "context": "host"
+   },
+   "26": {
+    "ref": "python-lib/3.8.8@smartmicro/stable",
+    "context": "host"
+   },
+   "27": {
+    "ref": "pybind11/2.9.2@smartmicro/stable",
+    "context": "host"
+   },
+   "28": {
+    "ref": "UserInterfaceUmrr11_t132_automotiveV1.1.1/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "29"
+    ],
+    "context": "host"
+   },
+   "29": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "30",
+     "7",
+     "31",
+     "11",
+     "32"
+    ],
+    "context": "host"
+   },
+   "30": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "31": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "32": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "30"
+    ],
+    "context": "host"
+   },
+   "33": {
+    "ref": "UserInterfaceUmrr11_t132_automotiveV1.1.2/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "34"
+    ],
+    "context": "host"
+   },
+   "34": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "35",
+     "7",
+     "36",
+     "11",
+     "37"
+    ],
+    "context": "host"
+   },
+   "35": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "36": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "37": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "35"
+    ],
+    "context": "host"
+   },
+   "38": {
+    "ref": "UserInterfaceUmrr96_t153_automotiveV1.2.1/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "39"
+    ],
+    "context": "host"
+   },
+   "39": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "40",
+     "7",
+     "41",
+     "11",
+     "42"
+    ],
+    "context": "host"
+   },
+   "40": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "41": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "42": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "40"
+    ],
+    "context": "host"
+   },
+   "43": {
+    "ref": "UserInterfaceUmrr96_t153_automotiveV1.2.2/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "44"
+    ],
+    "context": "host"
+   },
+   "44": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "45",
+     "7",
+     "46",
+     "11",
+     "47"
+    ],
+    "context": "host"
+   },
+   "45": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "46": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "47": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "45"
+    ],
+    "context": "host"
+   },
+   "48": {
+    "ref": "UserInterfaceUmrr9f_t169_automotiveV1.1.1/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "49"
+    ],
+    "context": "host"
+   },
+   "49": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "50",
+     "7",
+     "51",
+     "11",
+     "52"
+    ],
+    "context": "host"
+   },
+   "50": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "51": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "52": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "50"
+    ],
+    "context": "host"
+   },
+   "53": {
+    "ref": "UserInterfaceUmrr9f_t169_automotiveV2.0.0/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "54"
+    ],
+    "context": "host"
+   },
+   "54": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "55",
+     "7",
+     "56",
+     "11",
+     "57"
+    ],
+    "context": "host"
+   },
+   "55": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "56": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "57": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "55"
+    ],
+    "context": "host"
+   },
+   "58": {
+    "ref": "UserInterfaceUmrr9f_t169_automotiveV2.1.1/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "59"
+    ],
+    "context": "host"
+   },
+   "59": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "60",
+     "7",
+     "61",
+     "11",
+     "62"
+    ],
+    "context": "host"
+   },
+   "60": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "61": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "62": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "60"
+    ],
+    "context": "host"
+   },
+   "63": {
+    "ref": "UserInterfaceUmrr9f_t169_automotiveV2.2.0/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "64"
+    ],
+    "context": "host"
+   },
+   "64": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "65",
+     "7",
+     "66",
+     "11",
+     "67"
+    ],
+    "context": "host"
+   },
+   "65": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "66": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "67": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "65"
+    ],
+    "context": "host"
+   },
+   "68": {
+    "ref": "UserInterfaceUmrr9f_t169_automotiveV2.2.1/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "69"
+    ],
+    "context": "host"
+   },
+   "69": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "70",
+     "7",
+     "71",
+     "11",
+     "72"
+    ],
+    "context": "host"
+   },
+   "70": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "71": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "72": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "70"
+    ],
+    "context": "host"
+   },
+   "73": {
+    "ref": "UserInterfaceUmrr9f_t169_automotiveV2.5.0/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "74"
+    ],
+    "context": "host"
+   },
+   "74": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "75",
+     "7",
+     "76",
+     "11",
+     "77"
+    ],
+    "context": "host"
+   },
+   "75": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "76": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "77": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "75"
+    ],
+    "context": "host"
+   },
+   "78": {
+    "ref": "UserInterfaceUmrr9d_t152_automotiveV1.0.2/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "79"
+    ],
+    "context": "host"
+   },
+   "79": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "80",
+     "7",
+     "81",
+     "11",
+     "82"
+    ],
+    "context": "host"
+   },
+   "80": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "81": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "82": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "80"
+    ],
+    "context": "host"
+   },
+   "83": {
+    "ref": "UserInterfaceUmrr9d_t152_automotiveV1.0.3/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "84"
+    ],
+    "context": "host"
+   },
+   "84": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "85",
+     "7",
+     "86",
+     "11",
+     "87"
+    ],
+    "context": "host"
+   },
+   "85": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "86": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "87": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "85"
+    ],
+    "context": "host"
+   },
+   "88": {
+    "ref": "UserInterfaceUmrr9d_t152_automotiveV1.2.2/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "89"
+    ],
+    "context": "host"
+   },
+   "89": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "90",
+     "7",
+     "91",
+     "11",
+     "92"
+    ],
+    "context": "host"
+   },
+   "90": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "91": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "92": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "90"
+    ],
+    "context": "host"
+   },
+   "93": {
+    "ref": "UserInterfaceUmrr9d_t152_automotiveV1.5.0/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "94"
+    ],
+    "context": "host"
+   },
+   "94": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "95",
+     "7",
+     "96",
+     "11",
+     "97"
+    ],
+    "context": "host"
+   },
+   "95": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "96": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "97": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "95"
+    ],
+    "context": "host"
+   },
+   "98": {
+    "ref": "UserInterfaceUmrr11_t132_mseV1.1.1/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "99"
+    ],
+    "context": "host"
+   },
+   "99": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "100",
+     "7",
+     "101",
+     "11",
+     "102"
+    ],
+    "context": "host"
+   },
+   "100": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "101": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "102": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "100"
+    ],
+    "context": "host"
+   },
+   "103": {
+    "ref": "UserInterfaceUmrra4_automotiveV1.0.0/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "104"
+    ],
+    "context": "host"
+   },
+   "104": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "105",
+     "7",
+     "106",
+     "11",
+     "107"
+    ],
+    "context": "host"
+   },
+   "105": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "106": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "107": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "105"
+    ],
+    "context": "host"
+   },
+   "108": {
+    "ref": "UserInterfaceUmrra4_automotiveV1.0.1/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "109"
+    ],
+    "context": "host"
+   },
+   "109": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "110",
+     "7",
+     "111",
+     "11",
+     "112"
+    ],
+    "context": "host"
+   },
+   "110": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "111": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "112": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "110"
+    ],
+    "context": "host"
+   },
+   "113": {
+    "ref": "UserInterfaceUmrra4_automotiveV1.3.0/4.2.2@smartmicro/stable",
+    "requires": [
+     "7",
+     "8",
+     "11",
+     "26",
+     "27",
+     "114"
+    ],
+    "context": "host"
+   },
+   "114": {
+    "ref": "ComLib/6.4.1@smartmicro/stable",
+    "requires": [
+     "8",
+     "4",
+     "115",
+     "7",
+     "116",
+     "11",
+     "117"
+    ],
+    "context": "host"
+   },
+   "115": {
+    "ref": "OsalApi/2.0.4@smartmicro/stable",
+    "context": "host"
+   },
+   "116": {
+    "ref": "boost/1.83.0@smartmicro/stable",
+    "context": "host"
+   },
+   "117": {
+    "ref": "OsalWindows/3.2.3@smartmicro/testing",
+    "requires": [
+     "11",
+     "115"
+    ],
+    "context": "host"
+   },
+   "118": {
+    "ref": "OsalWindows/3.2.2@smartmicro/stable",
+    "requires": [
+     "11",
+     "3"
+    ],
+    "context": "host"
+   }
+  },
+  "revisions_enabled": false
+ },
+ "version": "0.4"
+}

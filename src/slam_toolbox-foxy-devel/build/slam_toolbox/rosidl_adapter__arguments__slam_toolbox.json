@@ -1,0 +1,15 @@
+{
+  "package_name": "slam_toolbox",
+  "non_idl_tuples": [
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/Pause.srv",
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/ClearQueue.srv",
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/ToggleInteractive.srv",
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/Clear.srv",
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/SaveMap.srv",
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/LoopClosure.srv",
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/MergeMaps.srv",
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/AddSubmap.srv",
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/DeserializePoseGraph.srv",
+    "/home/lesu0330/slam_toolbox-foxy-devel:srvs/SerializePoseGraph.srv"
+  ]
+}

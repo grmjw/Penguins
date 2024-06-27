@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"?>
+<port xmlns:xi="http://www.w3.org/2001/XInclude" name="ComDynamicsPort" port_id="81"  version="2.0.0" port_based_only="true">
+    <description> Provides the dynamics data used by the sensor. </description>
+    <segment type="static" name="GenericPortHeader" size="24" id="0">
+    </segment>
+    <segment type="header" name="StaticPortHeader" size="24" id="1">
+        <description> Static header of the dynamics data port </description>
+        <element_list>
+            <element>
+                <name>DynamicsSource</name>
+                <description> Dynamics Source </description>
+                <element_offset>4</element_offset>
+                <size>1</size>
+                <data_type>SP_UINT8</data_type>
+            </element>
+            <element>
+                <name>Speed</name>
+                <description> Ego Speed </description>
+                <element_offset>8</element_offset>
+                <size>4</size>
+                <data_type>SP_FLOAT</data_type>
+                <data_unit>_m_per_s</data_unit>
+            </element>
+            <element>
+                <name>SpeedQuality</name>
+                <description> Ego Speed Quality </description>
+                <element_offset>12</element_offset>
+                <size>4</size>
+                <data_type>SP_FLOAT</data_type>
+            </element>
+            <element>
+                <name>YawRate</name>
+                <description> Ego Yaw Rate  </description>
+                <element_offset>16</element_offset>
+                <size>4</size>
+                <data_type>SP_FLOAT</data_type>
+                <data_unit>_rad_per_s</data_unit>
+            </element>
+            <element>
+                <name>YawRateQuality</name>
+                <description> Ego Yaw Rate Quality  </description>
+                <element_offset>20</element_offset>
+                <size>4</size>
+                <data_type>SP_FLOAT</data_type>
+            </element>
+        </element_list>
+    </segment>
+</port>
+

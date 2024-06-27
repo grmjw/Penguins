@@ -1,0 +1,5 @@
+string command
+float32 value
+uint32 sensor_id
+---
+string res

@@ -1,0 +1,17 @@
+{
+   "format_version_major": 1,
+   "format_version_minor": 1,
+   "format_version_patch": 0,
+   "name": "umrra4_automotive",
+   "identifier": 13,
+   "version_major": 1,
+   "version_minor": 3,
+   "version_patch": 0,
+   "content": [
+      "auto_interface_0dim.param",
+      "auto_interface.status",
+      "auto_interface.command",
+      "comTargetBaseList_v1_0_0.port",
+      "comTargetList_v4_1_0.port"
+   ]
+}

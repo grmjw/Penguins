@@ -1,0 +1,120 @@
+[0.211s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--allow-overriding', 'slam_toolbox']
+[0.211s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=['slam_toolbox'], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f9602633460>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f9602633460>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f9602633940>)
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.258s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/lesu0330/slam_toolbox-foxy-devel'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.275s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'slam_toolbox'
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.295s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/lesu0330/slam_toolbox-foxy-devel/install
+[0.296s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 378 installed packages in /opt/ros/foxy
+[0.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'slam_toolbox' build argument 'cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'slam_toolbox' build argument 'cmake_target' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'slam_toolbox' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'slam_toolbox' build argument 'cmake_clean_cache' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'slam_toolbox' build argument 'cmake_clean_first' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'slam_toolbox' build argument 'cmake_force_configure' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'slam_toolbox' build argument 'ament_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'slam_toolbox' build argument 'catkin_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'slam_toolbox' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.368s] DEBUG:colcon.colcon_core.verb:Building package 'slam_toolbox' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox', 'merge_install': False, 'path': '/home/lesu0330/slam_toolbox-foxy-devel', 'symlink_install': False, 'test_result_base': None}
+[0.368s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.369s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.370s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lesu0330/slam_toolbox-foxy-devel' with build type 'ament_cmake'
+[0.370s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lesu0330/slam_toolbox-foxy-devel'
+[0.371s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.372s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.372s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.382s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox -- -j12 -l12
+[0.665s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox -- -j12 -l12
+[0.827s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox
+[0.887s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(slam_toolbox)
+[0.889s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/lesu0330/slam_toolbox-foxy-devel/build/slam_toolbox
+[0.891s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox' for CMake module files
+[0.892s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox' for CMake config files
+[0.892s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_toolbox', 'cmake_prefix_path')
+[0.893s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/cmake_prefix_path.ps1'
+[0.893s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/cmake_prefix_path.dsv'
+[0.894s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/cmake_prefix_path.sh'
+[0.895s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib'
+[0.895s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_toolbox', 'ld_library_path_lib')
+[0.895s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/ld_library_path_lib.ps1'
+[0.895s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/ld_library_path_lib.dsv'
+[0.896s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/ld_library_path_lib.sh'
+[0.896s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/bin'
+[0.896s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/pkgconfig/slam_toolbox.pc'
+[0.896s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages'
+[0.897s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_toolbox', 'pythonpath')
+[0.897s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/pythonpath.ps1'
+[0.897s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/pythonpath.dsv'
+[0.897s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/pythonpath.sh'
+[0.898s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/bin'
+[0.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.ps1'
+[0.899s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.dsv'
+[0.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.sh'
+[0.900s] INFO:colcon.colcon_core.shell:Creating package script '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.bash'
+[0.901s] INFO:colcon.colcon_core.shell:Creating package script '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.zsh'
+[0.901s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/colcon-core/packages/slam_toolbox)
+[1.055s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(slam_toolbox)
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox' for CMake module files
+[1.056s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox' for CMake config files
+[1.056s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_toolbox', 'cmake_prefix_path')
+[1.056s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/cmake_prefix_path.ps1'
+[1.057s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/cmake_prefix_path.dsv'
+[1.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/cmake_prefix_path.sh'
+[1.058s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib'
+[1.058s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_toolbox', 'ld_library_path_lib')
+[1.058s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/ld_library_path_lib.ps1'
+[1.058s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/ld_library_path_lib.dsv'
+[1.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/ld_library_path_lib.sh'
+[1.059s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/bin'
+[1.059s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/pkgconfig/slam_toolbox.pc'
+[1.059s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/lib/python3.8/site-packages'
+[1.059s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_toolbox', 'pythonpath')
+[1.060s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/pythonpath.ps1'
+[1.060s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/pythonpath.dsv'
+[1.060s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/hook/pythonpath.sh'
+[1.061s] Level 1:colcon.colcon_core.environment:checking '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/bin'
+[1.061s] INFO:colcon.colcon_core.shell:Creating package script '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.ps1'
+[1.062s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.dsv'
+[1.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.sh'
+[1.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.bash'
+[1.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/slam_toolbox/package.zsh'
+[1.063s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lesu0330/slam_toolbox-foxy-devel/install/slam_toolbox/share/colcon-core/packages/slam_toolbox)
+[1.064s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.064s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.064s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.064s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.069s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.069s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.069s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.080s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.081s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lesu0330/slam_toolbox-foxy-devel/install/local_setup.ps1'
+[1.082s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lesu0330/slam_toolbox-foxy-devel/install/_local_setup_util_ps1.py'
+[1.083s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lesu0330/slam_toolbox-foxy-devel/install/setup.ps1'
+[1.084s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lesu0330/slam_toolbox-foxy-devel/install/local_setup.sh'
+[1.084s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lesu0330/slam_toolbox-foxy-devel/install/_local_setup_util_sh.py'
+[1.085s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lesu0330/slam_toolbox-foxy-devel/install/setup.sh'
+[1.086s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lesu0330/slam_toolbox-foxy-devel/install/local_setup.bash'
+[1.086s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lesu0330/slam_toolbox-foxy-devel/install/setup.bash'
+[1.087s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lesu0330/slam_toolbox-foxy-devel/install/local_setup.zsh'
+[1.088s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lesu0330/slam_toolbox-foxy-devel/install/setup.zsh'

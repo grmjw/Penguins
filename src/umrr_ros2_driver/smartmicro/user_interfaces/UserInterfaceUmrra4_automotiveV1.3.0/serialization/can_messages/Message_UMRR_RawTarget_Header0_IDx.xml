@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<message _messageName="RawTarget_Header0" name="$(_messageName)$(_nameSufix)" _sensor_id="ID0" _nameSufix="" _base_id_offset="0x000"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <alias_name>Message_RawTarget_Header0$(_sensor_id)</alias_name>
+    <base_id>0x400</base_id>
+    <base_id_offset int="0x00"/>
+    <data_format>INTEL</data_format>
+    <object_type>CONTROL</object_type>
+    <signal_list>
+        <signal name="ModeBit" _mode_bit="0">
+            <alias_name>RawTarget_Mode_Bit</alias_name>
+            <start_byte>7</start_byte>
+            <end_byte>7</end_byte>
+            <start_bit>6</start_bit>
+            <end_bit>7</end_bit>
+            <data_type>SP_MODE</data_type>
+            <const_int>0</const_int>
+        </signal>
+        <!-- Signal Cycle Duration -->
+        <signal name="CycleDuration">
+            <start_byte>0</start_byte>
+            <end_byte>1</end_byte>
+            <start_bit>0</start_bit>
+            <end_bit>3</end_bit>
+            <data_unit>_s</data_unit>
+            <resolution>0.000064</resolution>
+        </signal>
+        <!-- Signal Cycle Number of Targets -->
+        <signal name="NumberOfTargets">
+            <alias_name>RawTarget_Nof_Tgts</alias_name>
+            <start_byte>5</start_byte>
+            <end_byte>6</end_byte>
+            <start_bit>7</start_bit>
+            <end_bit>6</end_bit>
+        </signal>
+        <!-- Signal Cycle Count -->
+        <signal name="CycleCount">
+            <start_byte>1</start_byte>
+            <end_byte>5</end_byte>
+            <start_bit>7</start_bit>
+            <end_bit>6</end_bit>
+        </signal>
+        <!--Signal Acquisition setup -->
+        <signal name="AcquisitionSetup">
+            <start_byte>6</start_byte>
+            <end_byte>7</end_byte>
+            <start_bit>7</start_bit>
+            <end_bit>5</end_bit>
+            <offset>0</offset>
+        </signal>
+    </signal_list>
+</message>

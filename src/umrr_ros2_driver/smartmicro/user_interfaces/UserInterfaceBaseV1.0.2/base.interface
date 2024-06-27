@@ -1,0 +1,14 @@
+{
+   "format_version_major"  : 1,
+   "format_version_minor"  : 0,
+   "format_version_patch"  : 0,
+   "name"                  : "base",
+   "identifier"            : 0,
+   "version_major"         : 1,
+   "version_minor"         : 0,
+   "version_patch"         : 2,
+   "content"               : [
+      "bootloader_info.status",
+      "software_info.status"
+   ]
+}

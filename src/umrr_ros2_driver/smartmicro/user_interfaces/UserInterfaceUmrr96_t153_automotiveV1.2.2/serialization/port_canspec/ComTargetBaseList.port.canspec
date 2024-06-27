@@ -1,0 +1,56 @@
+{
+	"format_version_major" : 1,
+	"format_version_minor" : 0,
+	"format_version_patch" : 0,
+	"name" : "ComTargetBaseList",
+	"port_id" : 150,
+	"port_version_major" : 1,
+	"port_version_minor" : 0,
+	"port_version_patch" : 0,
+	"port_data_reference":
+	[
+		{
+			"can_message" : "Message_UMRR_RawTarget_Header0_IDx.xml",
+			"can_spec_id" : 0,
+			"can_signals" : [
+							"CycleDuration",
+							"NumberOfTargets",
+							"CycleCount",
+							"AcquisitionSetup"
+							]
+		},
+		{
+			"can_message" : "Message_UMRR_RawTarget_Header1_IDx.xml",
+			"can_spec_id" : 1,
+			"can_signals" : [
+							"TimeStamp"
+							]
+		},
+		{
+			"can_message" : "Message_UMRR_RawTarget_Header2_IDx.xml",
+			"can_spec_id" : 2,
+			"can_signals" : [
+							"AcqTimeStampFraction"
+							]
+		},
+		{
+			"can_message" : "Message_RawTarget_Data_Frame0_IDx.xml",
+			"can_spec_id" : 3,
+			"can_signals" : [
+							"Range",
+							"SpeedRadial",
+							"AzimuthAngle"
+							]
+		},
+		{
+			"can_message" : "Message_RawTarget_Data_Frame1_IDx.xml",
+			"can_spec_id" : 4,
+			"can_signals" : [
+							"RCS",
+							"SignalLevel",
+							"Noise",
+							"ElevationAngle"
+							]
+		}
+	]
+}

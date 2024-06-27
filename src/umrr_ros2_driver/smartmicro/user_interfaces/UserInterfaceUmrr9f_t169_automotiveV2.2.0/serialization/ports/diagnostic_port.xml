@@ -1,0 +1,74 @@
+﻿<?xml version="1.0"?>
+<port xmlns:xi="http://www.w3.org/2001/XInclude" name="DiagnosticPort" port_id="86"  version="1.2.0" port_based_only="true">
+	<description> Provide Diagnostic Values </description>
+    <segment type="static" name="GenericPortHeader" size="24" id="0" /> 
+    <segment type="header" name="StaticPortHeader" size="16" id="1">
+        <element_list>
+            <element>
+                <name>numberOfDiagnostics</name> 
+                <description>Number of diagnostics that are in the dynamic part of the port.</description>				
+                <element_offset>0</element_offset>
+                <size>2</size>                
+                <data_type>SP_UINT16</data_type>        
+            </element>
+            <element>
+                <name>summarizedStatus</name> 
+                <description>The Summarized Status field is set to the most critical diagnostic status that is listed in the dynamic part of the port.</description>				
+                <element_offset>2</element_offset>
+                <size>1</size>                
+                <data_type>SP_UINT8</data_type>
+            </element>
+            <element>
+                <name>timestampFormat</name> 
+                <description>0 = No timestamp is set, 1 = Raw timestamp in microseconds, 2 = NTP format</description>				
+                <element_offset>3</element_offset>
+                <size>1</size>                
+                <data_type>SP_UINT8</data_type>        
+            </element>
+            <element>
+                <name>timestamp</name> 
+                <description>Timestamp when the data was collected</description>				
+                <element_offset>8</element_offset>
+                <size>8</size>                
+                <data_type>SP_UINT64</data_type>        
+            </element>
+        </element_list>
+    </segment>
+     <segment type="dynamic" name="DiagnosticObject" size="16" id="2">
+         <description> Collection of Diagnostic Outputs</description>
+         <number_of_segments_name>numberOfDiagnostics</number_of_segments_name>
+         <number_of_segments_offset>0</number_of_segments_offset>
+         <number_of_segments_size>2</number_of_segments_size>
+         <element_list>
+            <element>
+                <name>id</name> 
+                <description>Unique id for each diagnostic function</description>				
+                <element_offset>0</element_offset>
+                <size>2</size>                
+                <data_type>SP_UINT16</data_type>        
+            </element>
+            <element>
+                <name>status</name> 
+                <description>Status of the diagnostic function</description>				
+                <element_offset>2</element_offset>
+                <size>1</size>                
+                <data_type>SP_UINT8</data_type>        
+            </element>
+            <element>
+                <name>dataType</name> 
+                <description>Data type of the value field</description>				
+                <element_offset>3</element_offset>
+                <size>1</size>                
+                <data_type>SP_UINT8</data_type>        
+            </element>
+            <element>
+                <name>value</name> 
+                <description>Value set by a diagnostic function</description>				
+                <element_offset>8</element_offset>
+                <size>8</size>
+                <data_type>SP_UINT64</data_type>        
+            </element>
+         </element_list>
+      </segment>
+</port>
+
