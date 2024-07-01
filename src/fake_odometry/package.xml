@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>my_cpp_package</name>
+  <name>fake_odometry</name>
   <version>0.0.0</version>
-  <description>The my_cpp_package package</description>
+  <description>The fake_odometry package</description>
 
   <maintainer email="your_email@example.com">Your Name</maintainer>
   <license>Apache License 2.0</license>
@@ -22,6 +22,8 @@
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
+  <test_depend>ament_cpplint</test_depend>
+  <test_depend>ament_cmake_cpplint</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
