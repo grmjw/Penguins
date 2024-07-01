@@ -14,7 +14,6 @@ find_package(tf2_geometry_msgs REQUIRED)
 find_package(PCL REQUIRED)
 find_package(Curses REQUIRED)
 find_package(ament_cmake_gtest REQUIRED)
-find_package(ament_lint_auto REQUIRED)
 
 
 # Include directories
@@ -47,7 +46,3 @@ target_link_libraries(test_odometry_publisher odometry_publisher_lib)
 # Ament package macro
 ament_package()
 
-# Linting
-ament_lint_auto_find_test_dependencies()
-
-ament_lint_auto(LANGUAGE cpp)
