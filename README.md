@@ -402,3 +402,16 @@ Now in the cameraCalibration.py file change line 31 the location to the folder w
 images = glob.glob('C:/Users/nhoei/liveCameraPose/calibration/*.png')
 ```
 Run the python file on the terminal, this will generate a file named **intrinsic.npy**. Now this new calibration file can be put in the location described in the getting started section.
+
+
+## Fake odometry
+
+To run fake odometry, source the terminal:
+```
+source install/setup.bash
+```
+then to run the code
+```
+ros2 run fake_odometry odometry_publisher
+```
+Then to move the frame the w,a,s,d keys can be clicked in the same terminal.
