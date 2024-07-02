@@ -410,7 +410,7 @@ To run fake odometry, source the terminal:
 ```
 source install/setup.bash
 ```
-then to run the code
+then to run the code:
 ```
 ros2 run fake_odometry odometry_publisher
 ```
