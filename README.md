@@ -3,7 +3,26 @@
 ## General Overview
 This is the readme for Team Penguin's project for their SEP at TU/e. Every chapter in this readme includes an individual component Team Penguin worked on, important notes on it and how to set up that component on ones's computer and use it. It also contains at the end of each chapter the files which are not to be look at when grading for the course. One important set of files that should never be graded are all the files located in the folders: build, install and log. These folders can be found on the root of the workspace and are auto generated and hence shouldn't be checked. This applies to all packages and the overall codebase.
 
-In the general steps a Workspace should be created by simply making a folder then cloning the repository inside the folder. This will act as your workspace once inside the folder simpli run colcon build in order to build the whole program.
+In the general steps a Workspace should be created by simply making a folder then cloning the repository inside the folder. This will act as your workspace once inside the folder then the next steps can be followed to build the reporsitory:
+
+## Steps to build the repository
+
+## Step 1
+Navigate to src
+
+ ```
+cd src
+   ```
+Obtain permission to build:
+ ```
+./smart_extract.sh
+```
+
+Navigate back to penguins:
+ ```
+cd ..
+```
+Then finally build the repository:
  ```
 colcon build
    ```
@@ -96,31 +115,26 @@ sudo apt install ros-foxy-point-cloud-msg-wrapper
 pip install python-can
 ```
 ## Step 4 
-In the penguins directory navigate to src then to obtain permission to build and get access to updated smartmicro utilities run:
-```
-./smart_extract.sh
-```
-## Step 5 
 Now navigate back to the Penguins directory and source by running:
 ```
 source install/setup.bash
 ```
-## Step 6 
+## Step 5 
 Then run the radar code by typing:
 ```
 ros2 launch umrr_ros2_driver radar.launch.py
 ```
-## Step 7 
+## Step 6 
 To visualize the point cloud data on rviz it is possible to run:
 ```
 rviz2 -d smart_rviz_plugin/config/rviz/recorder.rviz
 ```
-## Step 8 
+## Step 7 
 To check the ROS topic on which the point cloud data is recieved from the radar with more detail, you can run:
 ```
 ros2 topic echo \smart_radar\targets_0
 ```
-## Step 9 
+## Step 8 
 To remove the warning for the visualization on rviz you can type:
 ```
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world umrr
