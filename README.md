@@ -271,11 +271,9 @@ Path to the parameters file: Penguins/src/ouster-ros/ouster-ros/config/driver_pa
 
 ## SLAM and Nav2
 
-### Getting Started
 #### Step 1
 Download the necessary packages:
-
-sudo apt install ros-foxy-slam-toolbox
+sudo apt install ros-foxy-slam-toolbox \
 sudo apt install ros-foxy-navigation2
 
 #### Step 2
