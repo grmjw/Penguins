@@ -268,6 +268,34 @@ This driver was created by ouster not by Team Penguin so the only files changed 
 Path to the rviz file: Penguins/src/ouster-ros/ouster-ros/config/viz.rviz \
 Path to the parameters file: Penguins/src/ouster-ros/ouster-ros/config/driver_params.yaml
 
+
+## SLAM and Nav2
+
+### Getting Started
+#### Step 1
+Download the necessary packages:
+
+sudo apt install ros-foxy-slam-toolbox
+sudo apt install ros-foxy-navigation2
+
+#### Step 2
+While LiDAR is running, open a new terminal and navigate to your workspace
+Source the workspace:
+```
+source install/setup.bash
+```
+
+To run SLAM, use the following launch file:
+```
+ros2 launch slam_toolbox online_async_launch.py
+```
+
+#### Step 3
+If SLAM is currently running, open a new terminal and run Nav2 using the following launch file:
+```
+ros2 launch nav2_bringup navigation_launch.py params_file:=src/nav2_bringup/params/nav2_params.yaml
+```
+
 ## Camera 
 
 ### Getting Started 
