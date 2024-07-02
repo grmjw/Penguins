@@ -54,7 +54,7 @@ The code runs with a default speed of 50% and continuously monitors the speed ch
 
 Note that the `50%` value represents power, not speed. It is analogous to pressing the gas pedal in a car. Consistently keeping it at 50% does not ensure 50% speed; it ensures 50% force from the motors at all times. Given that mass is constant, force is proportional to acceleration (F = ma).
 
-### Files not to be checked:
+### Files to be checked:
 Everything in this package is written by Team Penguin and hence can be checked.
 
 ## Radar Setup
@@ -120,6 +120,10 @@ To remove the warning for the visualization on rviz you can type:
 ```
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world umrr
 ```
+## Files to be checked:
+This driver was created by smartmicro not by Team Penguin so the only file changed and can be optionally checked were the parameters file.
+
+Path to the parameters file: Penguins/src/umrr_ros2_driver/param/radar.params.template.yaml
 
 ## LiDAR Setup
 
@@ -243,7 +247,11 @@ If it doesn't run properly, open a new terminal and run this command in parallel
 ```
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world os_sensor
 ```
+## Files to be checked:
+This driver was created by ouster not by Team Penguin so the only files changed and can be optionally checked were the parameters file and the rviz file to add different plugins like maps.
 
+Path to the rviz file: Penguins/src/ouster-ros/ouster-ros/config/viz.rviz \
+Path to the parameters file: Penguins/src/ouster-ros/ouster-ros/config/driver_params.yaml
 
 ## Camera 
 
