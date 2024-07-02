@@ -91,7 +91,7 @@ In the penguins directory navigate to src then to obtain permission to build and
 ## Step 5 
 Now navigate back to the Penguins directory and source by running:
 ```
-source intstall/setup.bash
+source install/setup.bash
 ```
 ## Step 6 
 Then run the radar code by typing:
