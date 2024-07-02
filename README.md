@@ -3,6 +3,8 @@
 ## General Overview
 This is the readme for Team Penguin's project for their SEP at TU/e. Every chapter in this readme includes an individual component Team Penguin worked on, important notes on it and how to set up that component on ones's computer and use it. It also contains at the end of each chapter the files which are not to be look at when grading for the course. One important set of files that should never be graded are all the files located in the folders: build, install and log. These folders can be found on the root of the workspace and are auto generated and hence shouldn't be checked. This applies to all packages and the overall codebase.
 
+In the general steps a Workspace should be created by simply making a folder then cloning the repository inside the folder. This will act as your workspace once inside the folder 
+
 
 ## Motors
 
@@ -202,25 +204,21 @@ sudo apt install -y         \
 
 ### Getting Started
 
-To build the driver using ROS2, you need to clone the project into the `src` folder of a ROS2 workspace as shown below:
-```
-mkdir -p ros2_ws/src && cd ros2_ws/src
-git clone -b ros2 --recurse-submodules https://github.com/ouster-lidar/ouster-ros.git
-```
+If the repository is cloned all cloning specific things for the Ouster lidar are already done for you.
+
 Next, to compile the driver, you need to source the ROS environment into the active terminal:
 ```
-source /opt/ros/<ros-distro>/setup.bash # replace <ros-distro> with 'rolling', 'humble', or 'iron'
+source /opt/ros/foxy/setup.bash
 ```
-Finally, invoke `colcon build` command from within the catkin workspace as shown below:
+Finally, invoke `colcon build` command from within the penguin workspace as shown below:
 ```
-cd ros2_ws
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+cd penguin
+colcon build
 ```
-**Note**: Specifying `Release` as the build type is important to have a reasonable performance of the driver.
 
 Once the build succeeds, you must source the install folder of your ROS2 workspace to add launch commands to your environment:
 ```
-source ros2_ws/install/setup.bash
+source install/setup.bash
 ```
 
 ### Usage
