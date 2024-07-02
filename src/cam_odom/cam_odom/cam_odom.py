@@ -279,6 +279,8 @@ class ImageSubscriber(Node):
 		# from the video_frames topic. The queue size is 10 messages.
 		self.subscription = self.create_subscription(Image, 'video_frames', self.listener_callback, 100)
 		self.subscription # prevent unused variable warning
+                #Creates instance of the odom publisher
+		self.odom = OdomPublisher() 
 
 		# Used to convert between ROS and OpenCV images
 		self.br = CvBridge()
@@ -363,6 +365,8 @@ class ImageSubscriber(Node):
 		cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 3],2)), (540,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
 		cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 3],2)), (540,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
 		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 3],2)), (540,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
+
+		self.odom.publish_odom(self.cur_pose[0, 3], self.cur_pose[1, 3], self.cur_pose[2, 3], 1, 1, 1, 1)
 
 		cv2.imshow("img", self.new_frame)
 
