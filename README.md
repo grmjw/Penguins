@@ -1,5 +1,9 @@
 # Penguin Readme
 
+## General Overview
+This is the readme for Team Penguin's project for their SEP at TU/e. Every chapter in this readme includes an individual component Team Penguin worked on, important notes on it and how to set up that component on ones's computer and use it. It also contains at the end of each chapter the files which are not to be look at when grading for the course. One important set of files that should never be graded are all the files located in the folders: build, install and log. These folders can be found on the root of the workspace and are auto generated and hence shouldn't be checked. This applies to all packages and the overall codebase.
+
+
 ## Motors
 
 The device has 4 motors and 4 motor controllers. This readme assumes the current configuration and placement of the mini cube is as provided to team Penguin in week 3. 
@@ -49,6 +53,9 @@ ros2 topic pub /motor_speed std_msgs/Float32 "data: 50.0"  # 50% duty cycle
 The code runs with a default speed of 50% and continuously monitors the speed change on a topic. This command updates the speed on that topic.
 
 Note that the `50%` value represents power, not speed. It is analogous to pressing the gas pedal in a car. Consistently keeping it at 50% does not ensure 50% speed; it ensures 50% force from the motors at all times. Given that mass is constant, force is proportional to acceleration (F = ma).
+
+### Files not to be checked:
+Everything in this package is written by Team Penguin and hence can be checked.
 
 ## Radar Setup
 ## Steps to set-up Radar with ROS Foxy on Ubuntu 20.04
