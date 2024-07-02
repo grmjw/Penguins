@@ -274,6 +274,19 @@ ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world os_sensor
 ## Files not to be checked:
 This driver was created by ouster not Team Penguin therefore the package should not be checked if configuration files are excluded.
 
+## IMU odometry
+To run odometry data from the IMU device in the Lidar, simly source the workspace by running:
+
+```
+source install/setup.bash
+```
+Then run odometry by typing:
+```
+ros2 launch rf2o_laser_odometry rf2o_laser_odometry.launch.py
+```
+
+## Files not to be checked:
+This driver was created by MAPIRlab not Team Penguin therefore the package should not be checked if configuration files are excluded.
 
 ## SLAM and Nav2
 
