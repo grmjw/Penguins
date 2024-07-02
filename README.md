@@ -22,10 +22,20 @@ Navigate back to penguins:
  ```
 cd ..
 ```
+Source ROS to be able to build files:
+
+```
+source /opt/ros/foxy/setup.bash
+```
+
 Then finally build the repository:
  ```
 colcon build
    ```
+Once the build succeeds, you must source the install folder of your ROS2 workspace to add launch commands to your environment:
+```
+source install/setup.bash
+```
 you should now proceed and be able to do all the further steps.
 
 ## Motors
