@@ -423,3 +423,6 @@ then to run the code:
 ros2 run fake_odometry odometry_publisher
 ```
 Then to move the frame the w,a,s,d keys can be clicked in the same terminal.
+
+### Files to be checked:
+Everything in this package is written by Team Penguin and hence can be checked.
