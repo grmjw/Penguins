@@ -413,6 +413,30 @@ images = glob.glob('C:/Users/nhoei/liveCameraPose/calibration/*.png')
 ```
 Run the python file on the terminal, this will generate a file named **intrinsic.npy**. Now this new calibration file can be put in the location described in the getting started section.
 
+### Files to not be checked 
+
+The following files are not to be checked in the **src/cam_driver** folder:
+```
+Entire lib folder
+Entire resource folder
+Entire tests folder
+package.xml
+setup.cfg
+setup.py
+cam_driver/__init__.py
+```
+
+The following files are not to be checked in the **src/cam_odom** folder:
+```
+Entire resource folder
+Entire tests folder
+package.xml
+setup.cfg
+setup.py
+intrinsic.npy
+cam_odom/__init__.py
+cam_odom/cameraCalibration.py
+```
 
 ## Fake odometry
 
