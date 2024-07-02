@@ -149,10 +149,9 @@ To remove the warning for the visualization on rviz you can type:
 ```
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world umrr
 ```
-## Files to be checked:
-This driver was created by smartmicro not by Team Penguin so the only file changed and can be optionally checked were the parameters file.
+## Files not to be checked:
+This driver was created by smartmicro not Team Penguin therefore the package should not be checked if configuration files are excluded.
 
-Path to the parameters file: Penguins/src/umrr_ros2_driver/param/radar.params.template.yaml
 
 ## LiDAR Setup
 
@@ -272,11 +271,8 @@ If it doesn't run properly, open a new terminal and run this command in parallel
 ```
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world os_sensor
 ```
-## Files to be checked:
-This driver was created by ouster not by Team Penguin so the only files changed and can be optionally checked were the parameters file and the rviz file to add different plugins like maps.
-
-Path to the rviz file: Penguins/src/ouster-ros/ouster-ros/config/viz.rviz \
-Path to the parameters file: Penguins/src/ouster-ros/ouster-ros/config/driver_params.yaml
+## Files not to be checked:
+This driver was created by ouster not Team Penguin therefore the package should not be checked if configuration files are excluded.
 
 
 ## SLAM and Nav2
