@@ -7,7 +7,7 @@ In the general steps a Workspace should be created by simply making a folder the
  ```
 colcon build
    ```
-you should now proceed and be able to do all the furthur steps.
+you should now proceed and be able to do all the further steps.
 
 ## Motors
 
