@@ -1,43 +1,5 @@
 # Penguin Readme
 
-## General Overview
-This is the readme for Team Penguin's project for their SEP at TU/e. Every chapter in this readme includes an individual component Team Penguin worked on, important notes on it and how to set up that component on ones's computer and use it. It also contains at the end of each chapter the files which are not to be look at when grading for the course. One important set of files that should never be graded are all the files located in the folders: build, install and log. These folders can be found on the root of the workspace and are auto generated and hence shouldn't be checked. This applies to all packages and the overall codebase.
-
-In the general steps a Workspace should be created by simply making a folder then cloning the repository inside the folder. This will act as your workspace once inside the folder then the next steps can be followed to build the reporsitory:
-
-## Steps to build the repository
-
-## Step 1
-Navigate to src
-
- ```
-cd src
-   ```
-Obtain permission to build:
- ```
-./smart_extract.sh
-```
-
-Navigate back to penguins:
- ```
-cd ..
-```
-Source ROS to be able to build files:
-
-```
-source /opt/ros/foxy/setup.bash
-```
-
-Then finally build the repository:
- ```
-colcon build
-   ```
-Once the build succeeds, you must source the install folder of your ROS2 workspace to add launch commands to your environment:
-```
-source install/setup.bash
-```
-you should now proceed and be able to do all the further steps.
-
 ## Motors
 
 The device has 4 motors and 4 motor controllers. This readme assumes the current configuration and placement of the mini cube is as provided to team Penguin in week 3. 
@@ -88,9 +50,6 @@ The code runs with a default speed of 50% and continuously monitors the speed ch
 
 Note that the `50%` value represents power, not speed. It is analogous to pressing the gas pedal in a car. Consistently keeping it at 50% does not ensure 50% speed; it ensures 50% force from the motors at all times. Given that mass is constant, force is proportional to acceleration (F = ma).
 
-### Files to be checked:
-Everything in this package is written by Team Penguin and hence can be checked.
-
 ## Radar Setup
 ## Steps to set-up Radar with ROS Foxy on Ubuntu 20.04
 ## Step 1
@@ -125,33 +84,35 @@ sudo apt install ros-foxy-point-cloud-msg-wrapper
 pip install python-can
 ```
 ## Step 4 
-Now navigate back to the Penguins directory and source by running:
+In the penguins directory navigate to src then to obtain permission to build and get access to updated smartmicro utilities run:
 ```
-source install/setup.bash
+./smart_extract.sh
 ```
 ## Step 5 
+Now navigate back to the Penguins directory and source by running:
+```
+source intstall/setup.bash
+```
+## Step 6 
 Then run the radar code by typing:
 ```
 ros2 launch umrr_ros2_driver radar.launch.py
 ```
-## Step 6 
+## Step 7 
 To visualize the point cloud data on rviz it is possible to run:
 ```
 rviz2 -d smart_rviz_plugin/config/rviz/recorder.rviz
 ```
-## Step 7 
+## Step 8 
 To check the ROS topic on which the point cloud data is recieved from the radar with more detail, you can run:
 ```
 ros2 topic echo \smart_radar\targets_0
 ```
-## Step 8 
+## Step 9 
 To remove the warning for the visualization on rviz you can type:
 ```
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world umrr
 ```
-## Files not to be checked:
-This driver was created by smartmicro not Team Penguin therefore the package should not be checked if configuration files are excluded.
-
 
 ## LiDAR Setup
 
@@ -230,21 +191,25 @@ sudo apt install -y         \
 
 ### Getting Started
 
-If the repository is cloned all cloning specific things for the Ouster lidar are already done for you.
-
+To build the driver using ROS2, you need to clone the project into the `src` folder of a ROS2 workspace as shown below:
+```
+mkdir -p ros2_ws/src && cd ros2_ws/src
+git clone -b ros2 --recurse-submodules https://github.com/ouster-lidar/ouster-ros.git
+```
 Next, to compile the driver, you need to source the ROS environment into the active terminal:
 ```
-source /opt/ros/foxy/setup.bash
+source /opt/ros/<ros-distro>/setup.bash # replace <ros-distro> with 'rolling', 'humble', or 'iron'
 ```
-Finally, invoke `colcon build` command from within the penguin workspace as shown below:
+Finally, invoke `colcon build` command from within the catkin workspace as shown below:
 ```
-cd penguin
-colcon build
+cd ros2_ws
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
+**Note**: Specifying `Release` as the build type is important to have a reasonable performance of the driver.
 
 Once the build succeeds, you must source the install folder of your ROS2 workspace to add launch commands to your environment:
 ```
-source install/setup.bash
+source ros2_ws/install/setup.bash
 ```
 
 ### Usage
@@ -271,49 +236,7 @@ If it doesn't run properly, open a new terminal and run this command in parallel
 ```
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world os_sensor
 ```
-## Files not to be checked:
-This driver was created by ouster not Team Penguin therefore the package should not be checked if configuration files are excluded.
 
-## IMU odometry
-To run odometry data from the IMU device in the Lidar, simly source the workspace by running:
-
-```
-source install/setup.bash
-```
-Then run odometry by typing:
-```
-ros2 launch rf2o_laser_odometry rf2o_laser_odometry.launch.py
-```
-
-## Files not to be checked:
-This driver was created by MAPIRlab not Team Penguin therefore the package should not be checked if configuration files are excluded.
-
-## SLAM and Nav2
-
-#### Step 1
-Download the necessary packages: 
-```
-sudo apt install ros-foxy-slam-toolbox 
-sudo apt install ros-foxy-navigation2
-```
-
-#### Step 2
-While LiDAR is running, open a new terminal and navigate to your workspace
-Source the workspace:
-```
-source install/setup.bash
-```
-
-To run SLAM, use the following launch file:
-```
-ros2 launch slam_toolbox online_async_launch.py
-```
-
-#### Step 3
-If SLAM is currently running, open a new terminal and run Nav2 using the following launch file:
-```
-ros2 launch nav2_bringup navigation_launch.py params_file:=src/nav2_bringup/params/nav2_params.yaml
-```
 
 ## Camera 
 
@@ -421,54 +344,3 @@ Now in the cameraCalibration.py file change line 31 the location to the folder w
 images = glob.glob('C:/Users/nhoei/liveCameraPose/calibration/*.png')
 ```
 Run the python file on the terminal, this will generate a file named **intrinsic.npy**. Now this new calibration file can be put in the location described in the getting started section.
-
-### Files to not be checked 
-
-The following files are not to be checked in the **src/cam_driver** folder:
-```
-Entire lib folder
-Entire resource folder
-Entire tests folder
-package.xml
-setup.cfg
-setup.py
-cam_driver/__init__.py
-```
-
-The following files are not to be checked in the **src/cam_odom** folder:
-```
-Entire resource folder
-Entire tests folder
-package.xml
-setup.cfg
-setup.py
-intrinsic.npy
-cam_odom/__init__.py
-cam_odom/cameraCalibration.py
-```
-### Files to be checked
-
-The following files are to be checked in the **src/cam_driver** folder:
-```
-cam_driver/cam_driver.py
-```
-
-The following files are to be checked in the **src/cam_odom** folder:
-```
-cam_odom/cam_odom.py
-```
-
-## Fake odometry
-
-To run fake odometry, source the terminal:
-```
-source install/setup.bash
-```
-then to run the code:
-```
-ros2 run fake_odometry odometry_publisher
-```
-Then to move the frame the w,a,s,d keys can be clicked in the same terminal.
-
-### Files to be checked:
-Everything in this package is written by Team Penguin and hence can be checked.

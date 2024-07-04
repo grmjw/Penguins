@@ -1,8 +1,7 @@
 import rclpy
 from rclpy.node import Node
 import Jetson.GPIO as GPIO
-from std_msgs.msg import Float32, Int32
-import time
+from std_msgs.msg import Float32
 import threading
 
 
@@ -48,144 +47,78 @@ class MotorController(Node):
         GPIO.setup(self.in1_pin_2, GPIO.OUT)
         GPIO.setup(self.in2_pin_2, GPIO.OUT)
 
-        # Initialize PWM manually for both wheels
-        print("Initializing PWM")
-        self.pwm_frequency = 500  # 500 Hz frequency
-        self.pwm_duty_cycle_1 = 0  # Initial duty cycle for wheel 1
-        self.pwm_duty_cycle_2 = 0  # Initial duty cycle for wheel 2
-        self.pwm_thread_1 = None
-        self.pwm_thread_2 = None
-        self.start_pwm(self.pwm_duty_cycle_1, self.enable_pin_1, 1)
-        self.start_pwm(self.pwm_duty_cycle_2, self.enable_pin_2, 2)
+        # Setup PWM for the first wheel
+        print("Setting up PWM for the first wheel")
+        self.pwm_1 = GPIO.PWM(self.enable_pin_1, 100)
+        self.pwm_1.start(0)
 
-        # Set initial direction (default: stop)
-        print("Setting initial motor direction to stop")
-        GPIO.output(self.in1_pin_1, GPIO.LOW)
-        GPIO.output(self.in2_pin_1, GPIO.LOW)
-        GPIO.output(self.in1_pin_2, GPIO.LOW)
-        GPIO.output(self.in2_pin_2, GPIO.LOW)
+        # Setup PWM for the second wheel
+        print("Setting up PWM for the second wheel")
+        self.pwm_2 = GPIO.PWM(self.enable_pin_2, 100)
+        self.pwm_2.start(0)
 
-        # Create subscribers for speed and direction
-        print("Creating subscribers for speed and direction")
-        self.speed_subscription = self.create_subscription(
+        # Initialize the motor control subscriber
+        print("Initializing the motor control subscriber")
+        self.subscription = self.create_subscription(
             Float32,
             'motor_speed',
             self.motor_speed_callback,
-            10)
-        self.direction_subscription = self.create_subscription(
-            Int32,
-            'motor_direction',
-            self.motor_direction_callback,
-            10)
-        self.speed_subscription  # prevent unused variable warning
-        self.direction_subscription  # prevent unused variable warning
-
-    def start_pwm(self, duty_cycle, enable_pin, wheel):
-        print(f"Starting PWM for wheel {wheel} with duty cycle {duty_cycle}%")
-        if wheel == 1:
-            if self.pwm_thread_1:
-                print("Stopping existing PWM thread for wheel 1")
-                self.pwm_thread_1 = None  # Stop the existing PWM thread
-            self.pwm_duty_cycle_1 = duty_cycle
-            self.pwm_thread_1 = threading.Thread(target=self.pwm_control, args=(duty_cycle, enable_pin))
-            self.pwm_thread_1.daemon = True
-            self.pwm_thread_1.start()
-        elif wheel == 2:
-            if self.pwm_thread_2:
-                print("Stopping existing PWM thread for wheel 2")
-                self.pwm_thread_2 = None  # Stop the existing PWM thread
-            self.pwm_duty_cycle_2 = duty_cycle
-            self.pwm_thread_2 = threading.Thread(target=self.pwm_control, args=(duty_cycle, enable_pin))
-            self.pwm_thread_2.daemon = True
-            self.pwm_thread_2.start()
-
-    def pwm_control(self, duty_cycle, enable_pin):
-        print(f"Controlling PWM: duty_cycle={duty_cycle}, enable_pin={enable_pin}")
-        period = 1.0 / self.pwm_frequency
-        high_time = period * (duty_cycle / 100.0)
-        low_time = period - high_time
-
-        while True:
-            GPIO.output(enable_pin, GPIO.HIGH)
-            time.sleep(high_time)
-            GPIO.output(enable_pin, GPIO.LOW)
-            time.sleep(low_time)
+            10
+        )
 
     def motor_speed_callback(self, msg):
+        print(f"Received motor speed command: {msg.data}")
         speed = msg.data
-        print(f"Received motor speed: {speed}")
-        duty_cycle = max(0, min(100, speed))  # Constrain to 0-100%
-        self.start_pwm(duty_cycle, self.enable_pin_1, 1)
-        self.start_pwm(duty_cycle, self.enable_pin_2, 2)
-        self.get_logger().info('Motor speed set to {}%'.format(speed))
 
-    def motor_direction_callback(self, msg):
-        direction = msg.data
-        print(f"Received motor direction: {direction}")
-        if direction == 1:
-            # Forward
-            print("Setting motor direction to forward")
+        # Control the motors based on received speed
+        if speed > 0:
+            print("Setting motors to move forward")
             GPIO.output(self.in1_pin_1, GPIO.HIGH)
             GPIO.output(self.in2_pin_1, GPIO.LOW)
             GPIO.output(self.in1_pin_2, GPIO.HIGH)
             GPIO.output(self.in2_pin_2, GPIO.LOW)
-        elif direction == 2:
-            # Backward
-            print("Setting motor direction to backward")
+        elif speed < 0:
+            print("Setting motors to move backward")
             GPIO.output(self.in1_pin_1, GPIO.LOW)
             GPIO.output(self.in2_pin_1, GPIO.HIGH)
-            GPIO.output(self.in1_pin_2, GPIO.LOW)
-            GPIO.output(self.in2_pin_2, GPIO.HIGH)
-        elif direction == 3:
-            # Left
-            print("Setting motor direction to left")
-            GPIO.output(self.in1_pin_1, GPIO.LOW)
-            GPIO.output(self.in2_pin_1, GPIO.HIGH)
-            GPIO.output(self.in1_pin_2, GPIO.HIGH)
-            GPIO.output(self.in2_pin_2, GPIO.LOW)
-        elif direction == 4:
-            # Right
-            print("Setting motor direction to right")
-            GPIO.output(self.in1_pin_1, GPIO.HIGH)
-            GPIO.output(self.in2_pin_1, GPIO.LOW)
             GPIO.output(self.in1_pin_2, GPIO.LOW)
             GPIO.output(self.in2_pin_2, GPIO.HIGH)
         else:
-            # Stop
-            print("Stopping motor")
-            GPIO.output(self.in1_pin_1, GPIO.HIGH)
-            GPIO.output(self.in2_pin_1, GPIO.HIGH)
-            GPIO.output(self.in1_pin_2, GPIO.HIGH)
-            GPIO.output(self.in2_pin_2, GPIO.HIGH)
-        self.get_logger().info('Motor direction set to {}'.format(direction))
+            print("Stopping motors")
+            GPIO.output(self.in1_pin_1, GPIO.LOW)
+            GPIO.output(self.in2_pin_1, GPIO.LOW)
+            GPIO.output(self.in1_pin_2, GPIO.LOW)
+            GPIO.output(self.in2_pin_2, GPIO.LOW)
 
-    def cleanup(self):
-        print("Cleaning up: stopping PWM threads and cleaning up GPIO")
-        self.pwm_thread_1 = None
-        self.pwm_thread_2 = None
-        try:
-            GPIO.cleanup()
-        except RuntimeError as e:
-            self.get_logger().error(f"Error during GPIO cleanup: {e}")
+        # Set the motor speed using PWM
+        self.pwm_1.ChangeDutyCycle(abs(speed))
+        self.pwm_2.ChangeDutyCycle(abs(speed))
+
+    def destroy(self):
+        print("Destroying MotorController Node")
+        GPIO.cleanup()
+
+    def pwm_control(self, duty_cycle, enable_pin):
+        if hasattr(self, 'pwm_thread_1') and self.pwm_thread_1.is_alive():
+            print("Stopping existing PWM thread for wheel 1")
+            self.pwm_thread_1.join()
+        if hasattr(self, 'pwm_thread_2') and self.pwm_thread_2.is_alive():
+            print("Stopping existing PWM thread for wheel 2")
+            self.pwm_thread_2.join()
+
+        print(f"Starting PWM for wheel with duty cycle {duty_cycle}%")
+        self.pwm_thread_1 = threading.Thread(target=GPIO.output, args=(enable_pin, GPIO.HIGH))
+        self.pwm_thread_2 = threading.Thread(target=GPIO.output, args=(enable_pin, GPIO.HIGH))
+        self.pwm_thread_1.start()
+        self.pwm_thread_2.start()
 
 
 def main(args=None):
-    print("Starting main function")
     rclpy.init(args=args)
     motor_controller = MotorController()
-
-    try:
-        print("Spinning node")
-        rclpy.spin(motor_controller)
-    except KeyboardInterrupt:
-        print("KeyboardInterrupt detected")
-        pass
-    finally:
-        print("Cleaning up node")
-        motor_controller.cleanup()
-        motor_controller.destroy_node()
-        rclpy.shutdown()
-        print("Shutdown rclpy")
+    rclpy.spin(motor_controller)
+    motor_controller.destroy()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

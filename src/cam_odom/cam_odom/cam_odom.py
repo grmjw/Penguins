@@ -24,6 +24,9 @@ import pytransform3d.camera as pc
 from cycler import cycle
 import os
 import numpy as np
+import logging
+
+logger = logging.getLogger(__name__)
 
 class CameraPoses():
 
@@ -112,6 +115,7 @@ class CameraPoses():
         
             return q1, q2
         else:
+            logger.error('no good matches found')
             return None, None
 
     #Function estimates the relative pose (rotation and translation)
@@ -262,150 +266,161 @@ class CameraPoses():
 #This node is responsible for subscribing to an image topic called 'video_frames' it estimates camera motion
 #And update cameras pose over time. 
 class ImageSubscriber(Node):
-	"""
-	Create an ImageSubscriber class, which is a subclass of the Node class.
-	"""
-	def __init__(self):
-		"""
-		Class constructor to set up the node
-		"""
-		# Initiate the Node class's constructor and give it a name
-		super().__init__('image_subscriber')
+    """
+    Create an ImageSubscriber class, which is a subclass of the Node class.
+    """
+    def __init__(self):
+        """
+        Class constructor to set up the node
+        """
+        # Initiate the Node class's constructor and give it a name
+        super().__init__('image_subscriber')
 
-		# Create the subscriber. This subscriber will receive an Image
-		# from the video_frames topic. The queue size is 10 messages.
-		self.subscription = self.create_subscription(Image, 'video_frames', self.listener_callback, 100)
-		self.subscription # prevent unused variable warning
+        # Create the subscriber. This subscriber will receive an Image
+        # from the video_frames topic. The queue size is 10 messages.
+        logger.debug('creating the subscriber')
+        self.subscription = self.create_subscription(Image, 'cam_frames', self.listener_callback, 100)
+        self.subscription # prevent unused variable warning
                 #Creates instance of the odom publisher
-		self.odom = OdomPublisher() 
+        self.odom = OdomPublisher() 
 
-		# Used to convert between ROS and OpenCV images
-		self.br = CvBridge()
+        # Used to convert between ROS and OpenCV images
+        logger.debug('create CV bridge object')
+        self.br = CvBridge()
 
-		with open('/home/thomas/Penguins/install/cam_odom/lib/python3.8/site-packages/cam_odom/intrinsic.npy', 'rb') as f:
-			self.intrinsic = np.load(f)
+        logger.debug('Opened camera calibration file')
+        with open('/home/thomas/Penguins/install/cam_odom/lib/python3.8/site-packages/cam_odom/intrinsic.npy', 'rb') as f:
+            self.intrinsic = np.load(f)
 
-		skip_frames = 2
-		data_dir = ''
-		self.vo = CameraPoses(data_dir, skip_frames, self.intrinsic)
-		self.gt_path = []
-		self.estimated_path = []
-		self.camera_pose_list = []
-		self.start_pose = np.ones((3,4))
-		self.start_translation = np.zeros((3,1))
-		self.start_rotation = np.identity(3)
-		self.start_pose = np.concatenate((self.start_rotation, self.start_translation), axis=1)
-		self.process_frames = False
-		self.old_frame = None
-		self.new_frame = None
-		self.frame_counter = 0
-		self.cur_pose = self.start_pose
+        skip_frames = 2
+        data_dir = ''
+        self.vo = CameraPoses(data_dir, skip_frames, self.intrinsic)
+        self.gt_path = []
+        self.estimated_path = []
+        self.camera_pose_list = []
+        self.start_pose = np.ones((3,4))
+        self.start_translation = np.zeros((3,1))
+        self.start_rotation = np.identity(3)
+        self.start_pose = np.concatenate((self.start_rotation, self.start_translation), axis=1)
+        self.process_frames = False
+        self.old_frame = None
+        self.new_frame = None
+        self.frame_counter = 0
+        self.cur_pose = self.start_pose
 
     #Callback function that processes incoming video frames received as ROS			
-	def listener_callback(self, data):
-		"""
-		Callback function.
-		"""
-		# Display the message on the console
-		self.get_logger().info('Receiving video frame')
+    def listener_callback(self, data):
+        """
+        Callback function.
+        """
+        # Display the message on the console
+        self.get_logger().info('Receiving video frame')
 
-		# Convert ROS Image message to OpenCV image
-		self.new_frame = self.br.imgmsg_to_cv2(data)
+        # Convert ROS Image message to OpenCV image
+        logger.debug('Converting ROS Image message to OpenCV image')
+        self.new_frame = self.br.imgmsg_to_cv2(data)
 
-		# Display image
-		self.start_calc()
+        # Display image
+        self.start_calc()
 
-		cv2.waitKey(1)
+        cv2.waitKey(1)
 
     #This method is for processing video frames to estimate camera motion and update
     #The camera's pose over time
-	def start_calc(self):
-		self.frame_counter += 1
-		start = time.perf_counter()
-		if self.process_frames:
-			q1, q2 = self.vo.get_matches(self.old_frame, self.new_frame)
-			if q1 is not None:
-				if len(q1) > 20 and len(q2) > 20:
-					transf = self.vo.get_pose(q1, q2)
-					self.cur_pose = self.cur_pose @ transf
+    def start_calc(self):
+        self.frame_counter += 1
+        start = time.perf_counter()
+        if self.process_frames:
+            logger.debug('Checking for matches')
+            q1, q2 = self.vo.get_matches(self.old_frame, self.new_frame)
+            if q1 is not None:
+                if len(q1) > 20 and len(q2) > 20:
+                    transf = self.vo.get_pose(q1, q2)
+                    self.cur_pose = self.cur_pose @ transf
 
-			hom_array = np.array([[0,0,0,1]])
-			hom_camera_pose = np.concatenate((self.cur_pose,hom_array), axis=0)
-			self.camera_pose_list.append(hom_camera_pose)
-			self.estimated_path.append((self.cur_pose[0, 3], self.cur_pose[2, 3]))
+            hom_array = np.array([[0,0,0,1]])
+            hom_camera_pose = np.concatenate((self.cur_pose,hom_array), axis=0)
+            self.camera_pose_list.append(hom_camera_pose)
+            logger.debug('updating estimated path')
+            self.estimated_path.append((self.cur_pose[0, 3], self.cur_pose[2, 3]))
 
-			estimated_camera_pose_x, estimated_camera_pose_y = self.cur_pose[0, 3], self.cur_pose[2, 3]
-		
-		self.old_frame = self.new_frame
+            estimated_camera_pose_x, estimated_camera_pose_y = self.cur_pose[0, 3], self.cur_pose[2, 3]
+        
+        self.old_frame = self.new_frame
     
-		self.process_frames = True
+        self.process_frames = True
 
-		end = time.perf_counter()
+        end = time.perf_counter()
 
-		total_time = end - start
-		
-		#uncomment this for visualizing the camera odometry
-		fps = 1 / total_time
+        total_time = end - start
+        
+        #uncomment this for visualizing the camera odometry
+        fps = 1 / total_time
 
-		cv2.putText(self.new_frame, f'FPS: {int(fps)}', (20,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
+        cv2.putText(self.new_frame, f'FPS: {int(fps)}', (20,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
 
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 0],2)), (260,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 1],2)), (340,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 2],2)), (420,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 0],2)), (260,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 1],2)), (340,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 2],2)), (420,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 0],2)), (260,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 1],2)), (340,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 2],2)), (420,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 0],2)), (260,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 1],2)), (340,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 2],2)), (420,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 0],2)), (260,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 1],2)), (340,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 2],2)), (420,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 0],2)), (260,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 1],2)), (340,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 2],2)), (420,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
 
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 3],2)), (540,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 3],2)), (540,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
-		cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 3],2)), (540,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[0, 3],2)), (540,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[1, 3],2)), (540,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
+        cv2.putText(self.new_frame, str(np.round(self.cur_pose[2, 3],2)), (540,130), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
 
-		self.odom.publish_odom(self.cur_pose[0, 3], self.cur_pose[1, 3], self.cur_pose[2, 3], 1, 1, 1, 1)
+        self.odom.publish_odom(self.cur_pose[0, 3], self.cur_pose[1, 3], self.cur_pose[2, 3], 1.0, 1.0, 1.0, 1.0)
 
-		cv2.imshow("img", self.new_frame)
+        logger.debug('Displaying frame %d', self.frame_counter)
+        cv2.imshow("img", self.new_frame)
 
 #This class publishes odometry information to topic called 'cam_odom'
 #With message type odom		
 class OdomPublisher(Node):
-	def __init__(self):
-		super().__init__('odom_publisher')
-		self.publisher_ = self.create_publisher(Odometry, 'cam_odom', 100)
-		
-	def publish_odom(self, x, y, z, quat_x, quat_y, quat_z, quat_w):
-		msg = Odometry()
-		msg.header.stamp = self.get_clock().now().to_msg()
-		msg.pose.pose.position.x = x
-		msg.pose.pose.position.y = y
-		msg.pose.pose.position.z = z
-		msg.pose.pose.orientation.x = quat_x
-		msg.pose.pose.orientation.y = quat_y
-		msg.pose.pose.orientation.z = quat_z
-		msg.pose.pose.orientation.w = quat_w
-		self.publisher_.publish(msg)
+    def __init__(self):
+        
+        logger.debug('Initializing the Node class constructor')		
+        super().__init__('odom_publisher')
+  
+        logger.debug('creating the publisher')        
+        self.publisher_ = self.create_publisher(Odometry, 'cam_odom', 100)
+        
+    def publish_odom(self, x, y, z, quat_x, quat_y, quat_z, quat_w):
+        msg = Odometry()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.pose.pose.position.x = x
+        msg.pose.pose.position.y = y
+        msg.pose.pose.position.z = z
+        msg.pose.pose.orientation.x = quat_x
+        msg.pose.pose.orientation.y = quat_y
+        msg.pose.pose.orientation.z = quat_z
+        msg.pose.pose.orientation.w = quat_w
+        self.publisher_.publish(msg)
 
 def main(args=None):
 
-	# Initialize the rclpy library
-	rclpy.init(args=args)
+    # Initialize the rclpy library
+    rclpy.init(args=args)
+    logger.info('Initializing image publisher node')
+    # Create the node
+    image_subscriber = ImageSubscriber()
 
-	# Create the node
-	image_subscriber = ImageSubscriber()
+    # Spin the node so the callback function is called.
+    rclpy.spin(image_subscriber)
 
-	# Spin the node so the callback function is called.
-	rclpy.spin(image_subscriber)
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    logger.info('Destroying image subscriber node')
+    image_subscriber.destroy_node()
 
-	# Destroy the node explicitly
-	# (optional - otherwise it will be done automatically
-	# when the garbage collector destroys the node object)
-	image_subscriber.destroy_node()
-
-	# Shutdown the ROS client library for Python
-	rclpy.shutdown()
+    # Shutdown the ROS client library for Python
+    rclpy.shutdown()
 
 if __name__ == '__main__':
-	main()
-
+    main()
 
