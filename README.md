@@ -446,6 +446,17 @@ intrinsic.npy
 cam_odom/__init__.py
 cam_odom/cameraCalibration.py
 ```
+### Files to be checked
+
+The following files are to be checked in the **src/cam_driver** folder:
+```
+cam_driver/cam_driver.py
+```
+
+The following files are to be checked in the **src/cam_odom** folder:
+```
+cam_odom/cam_odom.py
+```
 
 ## Fake odometry
 
